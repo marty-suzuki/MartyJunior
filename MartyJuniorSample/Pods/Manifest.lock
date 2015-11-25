@@ -1,0 +1,17 @@
+PODS:
+  - MartyJunior (0.1.0):
+    - MisterFusion (= 0.6.0)
+  - MisterFusion (0.6.0)
+
+DEPENDENCIES:
+  - MartyJunior (from `../`)
+
+EXTERNAL SOURCES:
+  MartyJunior:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MartyJunior: c911657d5bdd450c5ef378a64770dc5676ed64cc
+  MisterFusion: 4c0bed7dcee6f2d86f9900a1963a46ce4ec989b8
+
+COCOAPODS: 0.39.0
