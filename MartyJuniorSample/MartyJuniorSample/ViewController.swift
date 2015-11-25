@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MartyJunior
 
-class ViewController: UIViewController {
+class ViewController: MJViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
