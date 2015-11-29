@@ -20,6 +20,16 @@ class MJContentView: UIView {
     let tabContainerView: UIView = UIView()
     let segmentedControl = UISegmentedControl()
     
+    var titles: [String]? {
+        didSet {
+            guard let titles = titles else { return }
+            segmentedControl.removeAllSegments()
+            for (index, title) in titles.enumerate() {
+                segmentedControl.insertSegmentWithTitle(title, atIndex: index, animated: false)
+            }
+        }
+    }
+    
     weak var delegate: MJContentViewDelegate?
     
     init() {
@@ -28,9 +38,6 @@ class MJContentView: UIView {
     }
     
     private func initalize() {
-        for index in 0..<3 {
-            segmentedControl.insertSegmentWithTitle("\(index)", atIndex: index, animated: false)
-        }
         segmentedControl.addTarget(self, action: "didChangeValueOfSegmentedControl:", forControlEvents: .ValueChanged)
         
         tabContainerView.addLayoutSubview(segmentedControl, andConstraints:

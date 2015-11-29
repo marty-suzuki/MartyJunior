@@ -11,8 +11,17 @@ import MisterFusion
 
 public class MJViewController: UIViewController {
 
-    public weak var delegate: MJViewControllerDelegate?
-    public weak var dataSource: MJViewControllerDataSource?
+    public weak var delegate: MJViewControllerDelegate? {
+        didSet {
+            guard let _ = delegate else { return }
+        }
+    }
+    public weak var dataSource: MJViewControllerDataSource? {
+        didSet {
+            guard let dataSource = dataSource else { return }
+            setupViews(dataSource: dataSource)
+        }
+    }
     
     private let scrollView: UIScrollView = UIScrollView()
     private let scrollContainerView: UIView = UIView()
@@ -29,12 +38,10 @@ public class MJViewController: UIViewController {
         return viewControllers.map { $0.tableView }
     }
     
-    public var numberOfTabs: Int = 3 {
-        didSet {
-            guard let scrollContainerViewWidthConstraint = scrollContainerViewWidthConstraint else { return }
-            scrollView.removeConstraint(scrollContainerViewWidthConstraint)
-            self.scrollContainerViewWidthConstraint = scrollView.addLayoutConstraint(scrollContainerView.Width |==| view.Width |*| CGFloat(numberOfTabs))
-        }
+    public private(set) var titles: [String]?
+    
+    public var numberOfTabs: Int {
+        return titles?.count ?? 0
     }
     
     public var selectedIndex: Int {
@@ -49,6 +56,21 @@ public class MJViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+    }
+    
+    public override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+
+//MARK: - Private
+extension MJViewController {
+    private func setupViews(dataSource dataSource: MJViewControllerDataSource) {
+        titles = dataSource.mjViewControllerTitlesForTab(self)
+        contentView.titles = titles
+        
         scrollView.pagingEnabled = true
         scrollView.delegate = self
         view.addLayoutSubview(scrollView, andConstraints:
@@ -83,15 +105,7 @@ public class MJViewController: UIViewController {
         contentEscapeView.userInteractionEnabled = false
         contentEscapeView.hidden = true
     }
-
-    public override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-}
-
-//MARK: - Private
-extension MJViewController {
+    
     private func setupContainerViews() {
         for index in 0..<numberOfTabs {
             let containerView = UIView()

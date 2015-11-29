@@ -27,24 +27,32 @@ class ViewController: MJViewController {
 }
 
 extension ViewController: MJViewControllerDataSource {
-    func mjViewController(viewController: MJViewController, selectedIndex: Int, tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func mjViewControllerTitlesForTab(viewController: MJViewController) -> [String] {
+        return ["Part1", "Part2", "Part3", "Part4"]
+    }
+    
+    func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
-        switch selectedIndex % 3 {
+        switch targetIndex % 3 {
         case 1:
             cell.contentView.backgroundColor = .redColor()
         case 2:
             cell.contentView.backgroundColor = .greenColor()
+        case 3:
+            cell.contentView.backgroundColor = .brownColor()
         default:
             cell.contentView.backgroundColor = .yellowColor()
         }
         return cell
     }
     
-    func mjViewController(viewController: MJViewController, selectedIndex: Int, tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 30
     }
 }
 
 extension ViewController: MJViewControllerDelegate {
-    
+    func mjViewController(viewController: MJViewController, selectedIndex: Int, tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 88
+    }
 }
