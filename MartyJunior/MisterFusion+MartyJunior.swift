@@ -1,5 +1,5 @@
 //
-//  MartyJunior+MisterFusion.swift
+//  MisterFusion+MartyJunior.swift
 //  MartyJunior
 //
 //  Created by 鈴木大貴 on 2015/11/26.

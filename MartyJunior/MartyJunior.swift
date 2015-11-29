@@ -8,5 +8,6 @@
 
 import UIKit
 
-class MartyJunior {
+class MartyJunior: NSObject {
+    
 }

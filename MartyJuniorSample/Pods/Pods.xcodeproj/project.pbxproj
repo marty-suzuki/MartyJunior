@@ -11,6 +11,11 @@
 		2A5869CF5A51CF29AD6BE30BA92309DE /* Array+MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE503BB9FA087B4D1044E89C0F02C1DA /* Array+MisterFusion.swift */; };
 		3016E7DD4206B23BFC11E49083F07C0C /* MartyJunior-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7EDF7BE4A840FCE812556E806C9A839 /* MartyJunior-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32704937E0FF67A98869DFD49200D7F3 /* MisterFusion-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0028AD92BEB6711AE873F6A24F06FF7 /* MisterFusion-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		374899B51C0B313D00F210B4 /* MJViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374899B41C0B313D00F210B4 /* MJViewControllerDelegate.swift */; };
+		374899B71C0B316200F210B4 /* MJViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374899B61C0B316200F210B4 /* MJViewControllerDataSource.swift */; };
+		374899B91C0B31D500F210B4 /* NSIndexPath+Previous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374899B81C0B31D500F210B4 /* NSIndexPath+Previous.swift */; };
+		374899BB1C0B31F700F210B4 /* MJTableViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374899BA1C0B31F700F210B4 /* MJTableViewControllerDataSource.swift */; };
+		374899BD1C0B326800F210B4 /* MJTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374899BC1C0B326800F210B4 /* MJTableViewControllerDelegate.swift */; };
 		379DD1FC1C06186A00A7FA9D /* MJViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD1FB1C06186A00A7FA9D /* MJViewController.swift */; };
 		379DD1FE1C06216500A7FA9D /* MJTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD1FD1C06216500A7FA9D /* MJTableViewController.swift */; };
 		379DD2001C0621E800A7FA9D /* MJTableViewTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD1FF1C0621E800A7FA9D /* MJTableViewTopCell.swift */; };
@@ -21,7 +26,7 @@
 		7F17D87DE8B1ECDE12E558805B5998AF /* Pods-MartyJuniorSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B548075EDDD192DC9A07256EEFA3A0 /* Pods-MartyJuniorSample-dummy.m */; };
 		884F4DA1E4137C7744F6A63831956C6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE8DFF4A9DB0DD3B2C3C259990274EF /* Foundation.framework */; };
 		9325A67F8B7DDCBF95DCDF85BD529BD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE8DFF4A9DB0DD3B2C3C259990274EF /* Foundation.framework */; };
-		9D3FC0F01C06A5A4004328DA /* MartyJunior+MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FC0EF1C06A5A4004328DA /* MartyJunior+MisterFusion.swift */; };
+		9D3FC0F01C06A5A4004328DA /* MisterFusion+MartyJunior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3FC0EF1C06A5A4004328DA /* MisterFusion+MartyJunior.swift */; };
 		AE5C6A4035B42541489AD2F7F9E77B2F /* Pods-MartyJuniorSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98DA216C29F7CEC42A055372C81E475D /* Pods-MartyJuniorSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD724FCE8A724EA633A73FC47C3CF6BB /* MisterFusion-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 875FB32E7571C9F7C0CFDFC326F001D9 /* MisterFusion-dummy.m */; };
 		D341BC31A1B67F273A1C94CEDBCA20E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08E436454A058F090DBDBE426F469B5 /* UIKit.framework */; };
@@ -62,6 +67,11 @@
 		20A55C55B8C59912E45062F9538D8A6A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23FF4D54D9A9EB38DD12B68AC5BBB179 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		242F8878FF949EBCA8450DDBCB35382C /* MartyJunior-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MartyJunior-prefix.pch"; sourceTree = "<group>"; };
+		374899B41C0B313D00F210B4 /* MJViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJViewControllerDelegate.swift; sourceTree = "<group>"; };
+		374899B61C0B316200F210B4 /* MJViewControllerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJViewControllerDataSource.swift; sourceTree = "<group>"; };
+		374899B81C0B31D500F210B4 /* NSIndexPath+Previous.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSIndexPath+Previous.swift"; sourceTree = "<group>"; };
+		374899BA1C0B31F700F210B4 /* MJTableViewControllerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJTableViewControllerDataSource.swift; sourceTree = "<group>"; };
+		374899BC1C0B326800F210B4 /* MJTableViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJTableViewControllerDelegate.swift; sourceTree = "<group>"; };
 		379DD1FB1C06186A00A7FA9D /* MJViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJViewController.swift; sourceTree = "<group>"; };
 		379DD1FD1C06216500A7FA9D /* MJTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJTableViewController.swift; sourceTree = "<group>"; };
 		379DD1FF1C0621E800A7FA9D /* MJTableViewTopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJTableViewTopCell.swift; sourceTree = "<group>"; };
@@ -75,7 +85,7 @@
 		923B56883582E1FC49D6D91E243AE2CA /* MartyJunior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MartyJunior.swift; sourceTree = "<group>"; };
 		92B548075EDDD192DC9A07256EEFA3A0 /* Pods-MartyJuniorSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MartyJuniorSample-dummy.m"; sourceTree = "<group>"; };
 		98DA216C29F7CEC42A055372C81E475D /* Pods-MartyJuniorSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MartyJuniorSample-umbrella.h"; sourceTree = "<group>"; };
-		9D3FC0EF1C06A5A4004328DA /* MartyJunior+MisterFusion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MartyJunior+MisterFusion.swift"; sourceTree = "<group>"; };
+		9D3FC0EF1C06A5A4004328DA /* MisterFusion+MartyJunior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MisterFusion+MartyJunior.swift"; sourceTree = "<group>"; };
 		A299F9281E2C5CB95CA56AC4DEB5C9B5 /* MartyJunior.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MartyJunior.xcconfig; sourceTree = "<group>"; };
 		A7EDF7BE4A840FCE812556E806C9A839 /* MartyJunior-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MartyJunior-umbrella.h"; sourceTree = "<group>"; };
 		B08E436454A058F090DBDBE426F469B5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -209,10 +219,15 @@
 			children = (
 				923B56883582E1FC49D6D91E243AE2CA /* MartyJunior.swift */,
 				379DD1FB1C06186A00A7FA9D /* MJViewController.swift */,
+				374899B41C0B313D00F210B4 /* MJViewControllerDelegate.swift */,
+				374899B61C0B316200F210B4 /* MJViewControllerDataSource.swift */,
 				379DD1FD1C06216500A7FA9D /* MJTableViewController.swift */,
+				374899BC1C0B326800F210B4 /* MJTableViewControllerDelegate.swift */,
+				374899BA1C0B31F700F210B4 /* MJTableViewControllerDataSource.swift */,
 				379DD1FF1C0621E800A7FA9D /* MJTableViewTopCell.swift */,
 				379DD2011C0623C500A7FA9D /* MJContentView.swift */,
-				9D3FC0EF1C06A5A4004328DA /* MartyJunior+MisterFusion.swift */,
+				9D3FC0EF1C06A5A4004328DA /* MisterFusion+MartyJunior.swift */,
+				374899B81C0B31D500F210B4 /* NSIndexPath+Previous.swift */,
 			);
 			path = MartyJunior;
 			sourceTree = "<group>";
@@ -404,11 +419,16 @@
 			files = (
 				379DD2001C0621E800A7FA9D /* MJTableViewTopCell.swift in Sources */,
 				379DD2021C0623C500A7FA9D /* MJContentView.swift in Sources */,
-				9D3FC0F01C06A5A4004328DA /* MartyJunior+MisterFusion.swift in Sources */,
+				374899B51C0B313D00F210B4 /* MJViewControllerDelegate.swift in Sources */,
+				374899BD1C0B326800F210B4 /* MJTableViewControllerDelegate.swift in Sources */,
+				374899B91C0B31D500F210B4 /* NSIndexPath+Previous.swift in Sources */,
+				9D3FC0F01C06A5A4004328DA /* MisterFusion+MartyJunior.swift in Sources */,
 				379DD1FE1C06216500A7FA9D /* MJTableViewController.swift in Sources */,
 				45C9838D1BE24C0D20F6982319C2823C /* MartyJunior-dummy.m in Sources */,
+				374899B71C0B316200F210B4 /* MJViewControllerDataSource.swift in Sources */,
 				379DD1FC1C06186A00A7FA9D /* MJViewController.swift in Sources */,
 				7C0288730B01FE9C31945F609FCC96AC /* MartyJunior.swift in Sources */,
+				374899BB1C0B31F700F210B4 /* MJTableViewControllerDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

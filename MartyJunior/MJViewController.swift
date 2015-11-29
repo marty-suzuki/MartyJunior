@@ -1,9 +1,9 @@
 //
 //  MJSlideViewController.swift
-//  Pods
+//  MartyJunior
 //
 //  Created by 鈴木大貴 on 2015/11/26.
-//
+//  Copyright © 2015年 Taiki Suzuki. All rights reserved.
 //
 
 import UIKit
@@ -11,16 +11,23 @@ import MisterFusion
 
 public class MJViewController: UIViewController {
 
-    let scrollView: UIScrollView = UIScrollView()
+    public weak var delegate: MJViewControllerDelegate?
+    public weak var dataSource: MJViewControllerDataSource?
+    
+    private let scrollView: UIScrollView = UIScrollView()
     private let scrollContainerView: UIView = UIView()
     private var scrollContainerViewWidthConstraint: NSLayoutConstraint?
     
-    private var contentView: MJContentView = MJContentView()
+    private let contentView: MJContentView = MJContentView()
     private var contentViewTopConstraint: NSLayoutConstraint?
-    private var contentEscapeView: UIView = UIView()
+    private let contentEscapeView: UIView = UIView()
     
     private var containerViews: [UIView] = []
     private var viewControllers: [MJTableViewController] = []
+    
+    public var tableViews: [UITableView] {
+        return viewControllers.map { $0.tableView }
+    }
     
     public var numberOfTabs: Int = 3 {
         didSet {
@@ -69,11 +76,22 @@ public class MJViewController: UIViewController {
             contentEscapeView.Right,
             contentEscapeView.Height |=| MJContentView.Height
         )
+        
+        view.layoutIfNeeded()
+        
         contentEscapeView.backgroundColor = .clearColor()
         contentEscapeView.userInteractionEnabled = false
         contentEscapeView.hidden = true
     }
-    
+
+    public override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+
+//MARK: - Private
+extension MJViewController {
     private func setupContainerViews() {
         for index in 0..<numberOfTabs {
             let containerView = UIView()
@@ -114,6 +132,7 @@ public class MJViewController: UIViewController {
         for containerView in containerViews {
             let viewController = MJTableViewController()
             viewController.delegate = self
+            viewController.dataSource = self
             containerView.addLayoutSubview(viewController.view, andConstraints:
                 viewController.view.Top,
                 viewController.view.Left,
@@ -125,13 +144,8 @@ public class MJViewController: UIViewController {
             viewControllers += [viewController]
         }
     }
-
-    public override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    func addContentViewToCell() {
+    private func addContentViewToCell() {
         contentEscapeView.hidden = true
         contentViewTopConstraint = nil
         
@@ -141,7 +155,7 @@ public class MJViewController: UIViewController {
         contentView.segmentedControl.selectedSegmentIndex = selectedIndex
     }
     
-    func addContentViewToEscapeView() {
+    private func addContentViewToEscapeView() {
         contentEscapeView.hidden = false
         contentViewTopConstraint = contentEscapeView
             .addLayoutSubview(contentView, andConstraints:
@@ -151,8 +165,40 @@ public class MJViewController: UIViewController {
                 contentView.Height |=| MJContentView.Height
             ).firstAttribute(.Top).first
     }
+    
+    private func indexOfViewController(viewController: MJTableViewController) -> Int {
+        return viewControllers.indexOf(viewController) ?? 0
+    }
 }
 
+//MARK: - Public
+extension MJViewController {
+    public func registerNibToAllTableViews(nib: UINib?, forCellReuseIdentifier reuseIdentifier: String) {
+        for tableview in tableViews {
+            tableview.registerNib(nib, forCellReuseIdentifier: reuseIdentifier)
+        }
+    }
+    
+    public func registerNibToAllTableViews(nib: UINib?, forHeaderFooterViewReuseIdentifier reuseIdentifier: String) {
+        for tableview in tableViews {
+            tableview.registerNib(nib, forHeaderFooterViewReuseIdentifier: reuseIdentifier)
+        }
+    }
+    
+    public func registerClassToAllTableViews(aClass: AnyClass?, forCellReuseIdentifier reuseIdentifier: String) {
+        for tableview in tableViews {
+            tableview.registerClass(aClass, forCellReuseIdentifier: reuseIdentifier)
+        }
+    }
+    
+    public func registerClassToAllTableViews(aClass: AnyClass?, forHeaderFooterViewReuseIdentifier reuseIdentifier: String) {
+        for tableview in tableViews {
+            tableview.registerClass(aClass, forHeaderFooterViewReuseIdentifier: reuseIdentifier)
+        }
+    }
+}
+
+//MARK: - UIScrollViewDelegate
 extension MJViewController: UIScrollViewDelegate {
     public func scrollViewDidScroll(scrollView: UIScrollView) {
 
@@ -177,6 +223,54 @@ extension MJViewController: UIScrollViewDelegate {
     }
 }
 
+//MARK: - MJTableViewControllerDataSource
+extension MJViewController: MJTableViewControllerDataSource {
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell? {
+        return dataSource?.mjViewController(self, targetIndex: indexOfViewController(viewController), tableView: tableView, cellForRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, numberOfRowsInSection section: Int) -> Int? {
+        return dataSource?.mjViewController(self, targetIndex: indexOfViewController(viewController), tableView: tableView, numberOfRowsInSection: section)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, numberOfSectionsInTableView tableView: UITableView) -> Int? {
+        return dataSource?.mjViewController?(self, targetIndex: indexOfViewController(viewController), numberOfSectionsInTableView: tableView)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return dataSource?.mjViewController?(self, targetIndex: indexOfViewController(viewController), tableView: tableView, titleForHeaderInSection: section)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return dataSource?.mjViewController?(self, targetIndex: indexOfViewController(viewController), tableView: tableView, titleForFooterInSection: section)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool? {
+        return dataSource?.mjViewController?(self, targetIndex: indexOfViewController(viewController), tableView: tableView, canEditRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool? {
+        return dataSource?.mjViewController?(self, targetIndex: indexOfViewController(viewController), tableView: tableView, canMoveRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, sectionIndexTitlesForTableView tableView: UITableView) -> [String]? {
+        return dataSource?.mjViewController?(self, targetIndex: indexOfViewController(viewController), sectionIndexTitlesForTableView: tableView)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int? {
+        return dataSource?.mjViewController?(self, targetIndex: indexOfViewController(viewController), tableView: tableView, sectionForSectionIndexTitle: title, atIndex: index)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        dataSource?.mjViewController?(self, targetIndex: indexOfViewController(viewController), tableView: tableView, commitEditingStyle: editingStyle, forRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        dataSource?.mjViewController?(self, targetIndex: indexOfViewController(viewController), tableView: tableView, moveRowAtIndexPath: sourceIndexPath, toIndexPath: destinationIndexPath)
+    }
+}
+
+//MARK: - MJTableViewControllerDelegate
 extension MJViewController: MJTableViewControllerDelegate {
     func tableViewController(viewController: MJTableViewController, tableViewTopCell cell: MJTableViewTopCell) {
         if viewController != selectedViewController { return }
@@ -188,10 +282,13 @@ extension MJViewController: MJTableViewControllerDelegate {
         for vc in viewControllers {
             vc.tableView.setContentOffset(scrollView.contentOffset, animated: false)
         }
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, scrollViewDidEndDecelerating: scrollView)
     }
     
     func tableViewController(viewController: MJTableViewController, scrollViewDidScroll scrollView: UIScrollView) {
-        
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, scrollViewDidScroll: scrollView)
     }
     
     func tableViewController(viewController: MJTableViewController, scrollViewDidEndDragging scrollView: UIScrollView, willDecelerate decelerate: Bool) {
@@ -199,9 +296,250 @@ extension MJViewController: MJTableViewControllerDelegate {
         for vc in viewControllers {
             vc.tableView.setContentOffset(scrollView.contentOffset, animated: false)
         }
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, scrollViewDidEndDragging: scrollView, willDecelerate: decelerate)
+    }
+
+    func tableViewController(viewController: MJTableViewController, scrollViewDidZoom scrollView: UIScrollView) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, scrollViewDidZoom: scrollView)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, scrollViewWillBeginDragging scrollView: UIScrollView) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, scrollViewWillBeginDragging: scrollView)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, scrollViewWillEndDragging scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, scrollViewWillEndDragging: scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
+    }
+    
+    func tableViewController(viewController: MJTableViewController,  scrollViewWillBeginDecelerating scrollView: UIScrollView) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, scrollViewWillBeginDecelerating: scrollView)
+    }
+
+    func tableViewController(viewController: MJTableViewController, scrollViewDidEndScrollingAnimation scrollView: UIScrollView) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, scrollViewDidEndScrollingAnimation: scrollView)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, viewForZoomingInScrollView scrollView: UIScrollView) -> UIView? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, viewForZoomingInScrollView: scrollView)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, scrollViewWillBeginZooming scrollView: UIScrollView, withView view: UIView?) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, scrollViewWillBeginZooming: scrollView, withView: view)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, scrollViewDidEndZooming scrollView: UIScrollView, withView view: UIView?, atScale scale: CGFloat) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, scrollViewDidEndZooming: scrollView, withView: view, atScale: scale)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, scrollViewShouldScrollToTop scrollView: UIScrollView) -> Bool? {
+        if viewController != selectedViewController { return false }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, scrollViewShouldScrollToTop: scrollView)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, scrollViewDidScrollToTop scrollView: UIScrollView) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, scrollViewDidScrollToTop: scrollView)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, willDisplayCell: cell, forRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, willDisplayHeaderView: view, forSection: section)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, willDisplayFooterView: view, forSection: section)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, didEndDisplayingCell: cell, forRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, didEndDisplayingHeaderView: view, forSection: section)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, didEndDisplayingFooterView view: UIView, forSection section: Int) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, didEndDisplayingFooterView: view, forSection: section)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, heightForRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, heightForHeaderInSection: section)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, heightForFooterInSection: section)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, estimatedHeightForRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, estimatedHeightForHeaderInSection: section)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, estimatedHeightForFooterInSection: section)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, viewForHeaderInSection: section)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, viewForFooterInSection: section)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, accessoryButtonTappedForRowWithIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, shouldHighlightRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, didHighlightRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, didUnhighlightRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, willSelectRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, willDeselectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, willDeselectRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, didSelectRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, didDeselectRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, editingStyleForRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, titleForDeleteConfirmationButtonForRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, editActionsForRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, shouldIndentWhileEditingRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, willBeginEditingRowAtIndexPath indexPath: NSIndexPath) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, willBeginEditingRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, didEndEditingRowAtIndexPath indexPath: NSIndexPath) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, didEndEditingRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, targetIndexPathForMoveFromRowAtIndexPath sourceIndexPath: NSIndexPath, toProposedIndexPath proposedDestinationIndexPath: NSIndexPath) -> NSIndexPath? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, targetIndexPathForMoveFromRowAtIndexPath: sourceIndexPath, toProposedIndexPath: proposedDestinationIndexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, indentationLevelForRowAtIndexPath indexPath: NSIndexPath) -> Int? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, indentationLevelForRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, shouldShowMenuForRowAtIndexPath indexPath: NSIndexPath) -> Bool? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, shouldShowMenuForRowAtIndexPath: indexPath)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, canPerformAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, canPerformAction: action, forRowAtIndexPath: indexPath, withSender: sender)
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, performAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, performAction: action, forRowAtIndexPath: indexPath, withSender: sender)
+    }
+    
+    @available(iOS 9.0, *)
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, canFocusRowAtIndexPath indexPath: NSIndexPath) -> Bool? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, canFocusRowAtIndexPath: indexPath)
+    }
+    
+    @available(iOS 9.0, *)
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, shouldUpdateFocusInContext context: UITableViewFocusUpdateContext) -> Bool? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, shouldUpdateFocusInContext: context)
+    }
+    
+    @available(iOS 9.0, *)
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, didUpdateFocusInContext context: UITableViewFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
+        if viewController != selectedViewController { return }
+        delegate?.mjViewController?(self, selectedIndex: selectedIndex, tableView: tableView, didUpdateFocusInContext: context, withAnimationCoordinator: coordinator)
+    }
+    
+    @available(iOS 9.0, *)
+    func tableViewController(viewController: MJTableViewController, indexPathForPreferredFocusedViewInTableView tableView: UITableView) -> NSIndexPath? {
+        if viewController != selectedViewController { return nil }
+        return delegate?.mjViewController?(self, selectedIndex: viewControllers.indexOf(viewController)!, indexPathForPreferredFocusedViewInTableView: tableView)
     }
 }
 
+//MARK: - MJContentViewDelegate
 extension MJViewController: MJContentViewDelegate {
     func contentView(contentView: MJContentView, didChangeValueOfSegmentedControl segmentedControl: UISegmentedControl) {
         addContentViewToEscapeView()
