@@ -24,11 +24,20 @@ class ViewController: MJViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        //view.addSubview(UINib(nibName: "ProfileView", bundle: nil).instantiateWithOwner(nil, options: nil).first as! UIView)
+    }
 }
 
 extension ViewController: MJViewControllerDataSource {
+    func mjViewControllerContentViewForTop(viewController: MJViewController) -> UIView {
+        return UINib(nibName: "ProfileView", bundle: nil).instantiateWithOwner(nil, options: nil).first as! UIView
+    }
+    
     func mjViewControllerTitlesForTab(viewController: MJViewController) -> [String] {
-        return ["Part1", "Part2", "Part3", "Part4"]
+        return ["Part1", "Part2", "Part3"]
     }
     
     func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

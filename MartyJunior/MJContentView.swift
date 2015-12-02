@@ -15,18 +15,32 @@ protocol MJContentViewDelegate: class {
 
 class MJContentView: UIView {
 
-    static let Height: CGFloat = 300
+    //static let Height: CGFloat = 300
+    var height: CGFloat {
+        guard let userDefinedView = userDefinedView else { return 50 }
+        return CGRectGetHeight(userDefinedView.frame) + 50
+    }
     
+    var userDefinedView: UIView? {
+        didSet {
+            guard let userDefinedView = userDefinedView else { return }
+            addLayoutSubview(userDefinedView, andConstraints:
+                userDefinedView.Top,
+                userDefinedView.Left,
+                userDefinedView.Right,
+                userDefinedView.Height |=| CGRectGetHeight(userDefinedView.frame)
+            )
+            sendSubviewToBack(userDefinedView)
+        }
+    }
     let tabContainerView: UIView = UIView()
-    let segmentedControl = UISegmentedControl()
+    let segmentedControl: UISegmentedControl = UISegmentedControl()
     
     var titles: [String]? {
         didSet {
             guard let titles = titles else { return }
             segmentedControl.removeAllSegments()
-            for (index, title) in titles.enumerate() {
-                segmentedControl.insertSegmentWithTitle(title, atIndex: index, animated: false)
-            }
+            titles.enumerate().forEach { segmentedControl.insertSegmentWithTitle($1, atIndex: $0, animated: false) }
         }
     }
     

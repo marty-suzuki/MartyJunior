@@ -10,18 +10,25 @@ import UIKit
 import MisterFusion
 
 public class MJViewController: UIViewController {
+    private class RegisterCellContainer {
+        struct NibAndIdentifierContainer {
+            let nib: UINib?
+            let reuseIdentifier: String
+        }
+        struct ClassAndIdentifierContainer {
+            let aClass: AnyClass?
+            let reuseIdentifier: String
+        }
+        var cellNib: [NibAndIdentifierContainer] = []
+        var cellClass: [ClassAndIdentifierContainer] = []
+        var headerFooterNib: [NibAndIdentifierContainer] = []
+        var headerFooterClass: [ClassAndIdentifierContainer] = []
+    }
+    
+    public weak var delegate: MJViewControllerDelegate?
+    public weak var dataSource: MJViewControllerDataSource?
 
-    public weak var delegate: MJViewControllerDelegate? {
-        didSet {
-            guard let _ = delegate else { return }
-        }
-    }
-    public weak var dataSource: MJViewControllerDataSource? {
-        didSet {
-            guard let dataSource = dataSource else { return }
-            setupViews(dataSource: dataSource)
-        }
-    }
+    private var onceToken: dispatch_once_t = 0
     
     private let scrollView: UIScrollView = UIScrollView()
     private let scrollContainerView: UIView = UIView()
@@ -33,6 +40,7 @@ public class MJViewController: UIViewController {
     
     private var containerViews: [UIView] = []
     private var viewControllers: [MJTableViewController] = []
+    private let registerCellContainer: RegisterCellContainer = RegisterCellContainer()
     
     public var tableViews: [UITableView] {
         return viewControllers.map { $0.tableView }
@@ -45,7 +53,12 @@ public class MJViewController: UIViewController {
     }
     
     public var selectedIndex: Int {
-        return Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
+        get {
+            return Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
+        }
+        set {
+            scrollView.setContentOffset(CGPoint(x: 0, y: scrollView.bounds.size.width * CGFloat(newValue)), animated: false)
+        }
     }
     
     public var selectedViewController: MJTableViewController {
@@ -56,7 +69,12 @@ public class MJViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+    }
+    
+    public override func viewWillAppear(animated: Bool) {
+        dispatch_once(&onceToken) {
+            self.setupViews()
+        }
     }
     
     public override func didReceiveMemoryWarning() {
@@ -67,9 +85,12 @@ public class MJViewController: UIViewController {
 
 //MARK: - Private
 extension MJViewController {
-    private func setupViews(dataSource dataSource: MJViewControllerDataSource) {
+    private func setupViews() {
+        guard let dataSource = dataSource else { return }
         titles = dataSource.mjViewControllerTitlesForTab(self)
         contentView.titles = titles
+        contentView.segmentedControl.selectedSegmentIndex = 0
+        contentView.userDefinedView = dataSource.mjViewControllerContentViewForTop(self)
         
         scrollView.pagingEnabled = true
         scrollView.delegate = self
@@ -91,12 +112,13 @@ extension MJViewController {
         
         setupContainerViews()
         setupTableViewControllers()
+        registerNibAndClassForTableViews()
         
         view.addLayoutSubview(contentEscapeView, andConstraints:
             contentEscapeView.Top,
             contentEscapeView.Left,
             contentEscapeView.Right,
-            contentEscapeView.Height |=| MJContentView.Height
+            contentEscapeView.Height |=| contentView.height
         )
         
         view.layoutIfNeeded()
@@ -107,24 +129,24 @@ extension MJViewController {
     }
     
     private func setupContainerViews() {
-        for index in 0..<numberOfTabs {
+        (0..<numberOfTabs).forEach {
             let containerView = UIView()
             let misterFusions: [MisterFusion]
-            switch index {
+            switch $0 {
             case 0:
                 misterFusions = [
                     containerView.Left,
                 ]
                 
             case (numberOfTabs - 1):
-                guard let previousContainerView = containerViews.last else { continue }
+                guard let previousContainerView = containerViews.last else { return }
                 misterFusions = [
                     containerView.Right,
                     containerView.Left |==| previousContainerView.Right,
                 ]
                 
             default:
-                guard let previousContainerView = containerViews.last else { continue }
+                guard let previousContainerView = containerViews.last else { return }
                 misterFusions = [
                     containerView.Left |==| previousContainerView.Right,
                 ]
@@ -138,16 +160,15 @@ extension MJViewController {
             scrollContainerView.addLayoutSubview(containerView, andConstraints: misterFusions + commomMisterFusions)
             containerViews += [containerView]
         }
-        
         contentView.delegate = self
     }
     
     private func setupTableViewControllers() {
-        for containerView in containerViews {
+        containerViews.forEach {
             let viewController = MJTableViewController()
             viewController.delegate = self
             viewController.dataSource = self
-            containerView.addLayoutSubview(viewController.view, andConstraints:
+            $0.addLayoutSubview(viewController.view, andConstraints:
                 viewController.view.Top,
                 viewController.view.Left,
                 viewController.view.Right,
@@ -176,39 +197,40 @@ extension MJViewController {
                 contentView.Top |-| selectedViewController.tableView.contentOffset.y,
                 contentView.Left,
                 contentView.Right,
-                contentView.Height |=| MJContentView.Height
+                contentView.Height |=| contentView.height
             ).firstAttribute(.Top).first
     }
     
     private func indexOfViewController(viewController: MJTableViewController) -> Int {
         return viewControllers.indexOf(viewController) ?? 0
     }
+    
+    private func registerNibAndClassForTableViews() {
+        tableViews.forEach { tableView in
+            registerCellContainer.cellNib.forEach { tableView.registerNib($0.nib, forCellReuseIdentifier: $0.reuseIdentifier) }
+            registerCellContainer.headerFooterNib.forEach { tableView.registerNib($0.nib, forHeaderFooterViewReuseIdentifier: $0.reuseIdentifier) }
+            registerCellContainer.cellClass.forEach { tableView.registerClass($0.aClass, forCellReuseIdentifier: $0.reuseIdentifier) }
+            registerCellContainer.headerFooterClass.forEach { tableView.registerClass($0.aClass, forHeaderFooterViewReuseIdentifier: $0.reuseIdentifier) }
+        }
+    }
 }
 
 //MARK: - Public
 extension MJViewController {
     public func registerNibToAllTableViews(nib: UINib?, forCellReuseIdentifier reuseIdentifier: String) {
-        for tableview in tableViews {
-            tableview.registerNib(nib, forCellReuseIdentifier: reuseIdentifier)
-        }
+        registerCellContainer.cellNib += [RegisterCellContainer.NibAndIdentifierContainer(nib: nib, reuseIdentifier: reuseIdentifier)]
     }
     
     public func registerNibToAllTableViews(nib: UINib?, forHeaderFooterViewReuseIdentifier reuseIdentifier: String) {
-        for tableview in tableViews {
-            tableview.registerNib(nib, forHeaderFooterViewReuseIdentifier: reuseIdentifier)
-        }
+        registerCellContainer.headerFooterNib += [RegisterCellContainer.NibAndIdentifierContainer(nib: nib, reuseIdentifier: reuseIdentifier)]
     }
     
     public func registerClassToAllTableViews(aClass: AnyClass?, forCellReuseIdentifier reuseIdentifier: String) {
-        for tableview in tableViews {
-            tableview.registerClass(aClass, forCellReuseIdentifier: reuseIdentifier)
-        }
+        registerCellContainer.cellClass += [RegisterCellContainer.ClassAndIdentifierContainer(aClass: aClass, reuseIdentifier: reuseIdentifier)]
     }
     
     public func registerClassToAllTableViews(aClass: AnyClass?, forHeaderFooterViewReuseIdentifier reuseIdentifier: String) {
-        for tableview in tableViews {
-            tableview.registerClass(aClass, forHeaderFooterViewReuseIdentifier: reuseIdentifier)
-        }
+        registerCellContainer.headerFooterClass += [RegisterCellContainer.ClassAndIdentifierContainer(aClass: aClass, reuseIdentifier: reuseIdentifier)]
     }
 }
 
@@ -286,6 +308,14 @@ extension MJViewController: MJTableViewControllerDataSource {
 
 //MARK: - MJTableViewControllerDelegate
 extension MJViewController: MJTableViewControllerDelegate {
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, estimatedHeightForTopCellAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return contentView.height
+    }
+    
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, heightForTopCellAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return contentView.height
+    }
+    
     func tableViewController(viewController: MJTableViewController, tableViewTopCell cell: MJTableViewTopCell) {
         if viewController != selectedViewController { return }
         cell.mainContentView = contentView
@@ -293,9 +323,7 @@ extension MJViewController: MJTableViewControllerDelegate {
     
     func tableViewController(viewController: MJTableViewController, scrollViewDidEndDecelerating scrollView: UIScrollView) {
         let viewControllers = self.viewControllers.filter { $0 != selectedViewController }
-        for vc in viewControllers {
-            vc.tableView.setContentOffset(scrollView.contentOffset, animated: false)
-        }
+        viewControllers.forEach { $0.tableView.setContentOffset(scrollView.contentOffset, animated: false) }
         if viewController != selectedViewController { return }
         delegate?.mjViewController?(self, selectedIndex: selectedIndex, scrollViewDidEndDecelerating: scrollView)
     }
@@ -307,9 +335,7 @@ extension MJViewController: MJTableViewControllerDelegate {
     
     func tableViewController(viewController: MJTableViewController, scrollViewDidEndDragging scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         let viewControllers = self.viewControllers.filter { $0 != selectedViewController }
-        for vc in viewControllers {
-            vc.tableView.setContentOffset(scrollView.contentOffset, animated: false)
-        }
+        viewControllers.forEach { $0.tableView.setContentOffset(scrollView.contentOffset, animated: false) }
         if viewController != selectedViewController { return }
         delegate?.mjViewController?(self, selectedIndex: selectedIndex, scrollViewDidEndDragging: scrollView, willDecelerate: decelerate)
     }

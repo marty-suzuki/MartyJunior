@@ -11,7 +11,7 @@ import MisterFusion
 
 class MJTableViewTopCell: UITableViewCell {
 
-    static let ReuseIdentifier = "MJTableViewTopCell"
+    static let ReuseIdentifier: String = "MJTableViewTopCell"
     
     weak var mainContentView: MJContentView? {
         didSet {
@@ -20,7 +20,7 @@ class MJTableViewTopCell: UITableViewCell {
                 mainContentView.Top,
                 mainContentView.Left,
                 mainContentView.Right,
-                mainContentView.Height |=| MJContentView.Height
+                mainContentView.Height |=| mainContentView.height
             )
         }
     }

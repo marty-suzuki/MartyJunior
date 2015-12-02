@@ -39,12 +39,14 @@ protocol MJTableViewControllerDelegate: class, MJTableViewControllerScrollDelega
     
     func tableViewController(viewController: MJTableViewController, tableView: UITableView, didEndDisplayingFooterView view: UIView, forSection section: Int)
     
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, heightForTopCellAtIndexPath indexPath: NSIndexPath) -> CGFloat
     func tableViewController(viewController: MJTableViewController, tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat?
     
     func tableViewController(viewController: MJTableViewController, tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat?
     
     func tableViewController(viewController: MJTableViewController, tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat?
     
+    func tableViewController(viewController: MJTableViewController, tableView: UITableView, estimatedHeightForTopCellAtIndexPath indexPath: NSIndexPath) -> CGFloat
     func tableViewController(viewController: MJTableViewController, tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat?
     
     func tableViewController(viewController: MJTableViewController, tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat?

@@ -10,6 +10,7 @@ import UIKit
 
 @objc public protocol MJViewControllerDataSource: class {
     func mjViewControllerTitlesForTab(viewController: MJViewController) -> [String]
+    func mjViewControllerContentViewForTop(viewController: MJViewController) -> UIView
     func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     optional func mjViewController(viewController: MJViewController, targetIndex: Int, numberOfSectionsInTableView tableView: UITableView) -> Int

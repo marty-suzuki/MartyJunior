@@ -9,9 +9,11 @@
 import UIKit
 import MisterFusion
 
+private class MJDummyCell: UITableViewCell {}
+
 public class MJTableViewController: UIViewController {
     
-    private static let ReuseIdentifier = "Cell"
+    private static let ReuseIdentifier = "MJDummyCell"
     
     public let tableView: UITableView = UITableView()
     
@@ -32,7 +34,7 @@ public class MJTableViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.registerClass(MJTableViewTopCell.self, forCellReuseIdentifier: MJTableViewTopCell.ReuseIdentifier)
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: MJTableViewController.ReuseIdentifier)
+        tableView.registerClass(MJDummyCell.self, forCellReuseIdentifier: MJTableViewController.ReuseIdentifier)
     }
     
     public override func didReceiveMemoryWarning() {
@@ -115,9 +117,9 @@ extension MJTableViewController: UITableViewDataSource {
 extension MJTableViewController: UITableViewDelegate {
     public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return MJContentView.Height
+            return delegate?.tableViewController(self, tableView: tableView, heightForTopCellAtIndexPath: indexPath) ?? 0
         }
-        return delegate?.tableViewController(self, tableView: tableView, heightForRowAtIndexPath: indexPath) ?? 44
+        return delegate?.tableViewController(self, tableView: tableView, heightForRowAtIndexPath: indexPath.previousSection()) ?? 44
     }
     
     public func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -162,7 +164,7 @@ extension MJTableViewController: UITableViewDelegate {
 
     public func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return MJContentView.Height
+            return delegate?.tableViewController(self, tableView: tableView, estimatedHeightForTopCellAtIndexPath: indexPath) ?? 0
         }
         return delegate?.tableViewController(self, tableView: tableView, estimatedHeightForRowAtIndexPath: indexPath.previousSection()) ?? 0
     }
