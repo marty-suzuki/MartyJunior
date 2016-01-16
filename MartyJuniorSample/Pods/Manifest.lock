@@ -1,17 +1,20 @@
 PODS:
   - MartyJunior (0.1.0):
-    - MisterFusion (= 0.6.0)
-  - MisterFusion (0.6.0)
+    - MisterFusion
+  - MisterFusion (0.8.0)
+  - ReuseCellConfigure (0.1.0)
 
 DEPENDENCIES:
   - MartyJunior (from `../`)
+  - ReuseCellConfigure
 
 EXTERNAL SOURCES:
   MartyJunior:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  MartyJunior: c911657d5bdd450c5ef378a64770dc5676ed64cc
-  MisterFusion: 4c0bed7dcee6f2d86f9900a1963a46ce4ec989b8
+  MartyJunior: 90c0a5d73feb4bb85dbaea0b1df5472033ac106a
+  MisterFusion: 3b20851bc79eeaba59070922102f1bd2866dfe02
+  ReuseCellConfigure: ecebae2b0aef0677c9f0428006d20088697221ae
 
 COCOAPODS: 0.39.0

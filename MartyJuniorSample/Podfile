@@ -5,5 +5,6 @@ use_frameworks!
 
 target 'MartyJuniorSample' do
 pod 'MartyJunior', :path => '../'
+pod 'ReuseCellConfigure'
 end
 

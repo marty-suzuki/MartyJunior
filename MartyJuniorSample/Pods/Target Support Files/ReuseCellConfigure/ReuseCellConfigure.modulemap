@@ -1,0 +1,6 @@
+framework module ReuseCellConfigure {
+  umbrella header "ReuseCellConfigure-umbrella.h"
+
+  export *
+  module * { export * }
+}

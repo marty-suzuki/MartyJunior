@@ -86,8 +86,10 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-MartyJuniorSample/MartyJunior.framework"
   install_framework "Pods-MartyJuniorSample/MisterFusion.framework"
+  install_framework "Pods-MartyJuniorSample/ReuseCellConfigure.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-MartyJuniorSample/MartyJunior.framework"
   install_framework "Pods-MartyJuniorSample/MisterFusion.framework"
+  install_framework "Pods-MartyJuniorSample/ReuseCellConfigure.framework"
 fi
