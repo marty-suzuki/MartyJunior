@@ -9,17 +9,35 @@
 import UIKit
 import MisterFusion
 
+//MAKR: - MJDummyCell
 private class MJDummyCell: UITableViewCell {}
 
+//MARK: - MJTableViewController
 public class MJTableViewController: UIViewController {
-    
+    //MARK: - Static constants
     private static let ReuseIdentifier = "MJDummyCell"
     
-    public let tableView: UITableView = UITableView()
-    
+    //MARK: - Properties
+    public let tableView = UITableView()
+    weak var contentView: MJContentView?
     weak var delegate: MJTableViewControllerDelegate?
     weak var dataSource: MJTableViewControllerDataSource?
+    private var cellHeightList: [String : CGFloat] = [:]
+    private var headerHeightList: [String : CGFloat] = [:]
+    private var footerHeightList: [String : CGFloat] = [:]
     
+    private var dummyCellHeight: CGFloat {
+        let cellHeight = cellHeightList.map{ $0.1 }.reduce(0, combine: +)
+        let headerHeight = headerHeightList.map{ $0.1 }.reduce(0, combine: +)
+        let footerHeight = footerHeightList.map{ $0.1 }.reduce(0, combine: +)
+        let tabHeight = contentView?.tabContainerView.frame.size.height ?? 0
+        let sharedApplication = UIApplication.sharedApplication()
+        let statusBarHeight = sharedApplication.statusBarHidden ? 0 : sharedApplication.statusBarFrame.size.height
+        let maxmumHeight  = view.frame.size.height - (tabHeight + statusBarHeight)
+        return min(maxmumHeight, max(0, maxmumHeight - (cellHeight + headerHeight + footerHeight)))
+    }
+    
+    //MARK: - Life cycle
     public override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,26 +59,31 @@ public class MJTableViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    private func isDummySection(section: Int) -> Bool {
+        return section == tableView.numberOfSections - 1
+    }
 }
 
 //MARK: - UITableViewDataSource
 extension MJTableViewController: UITableViewDataSource {
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if indexPath.section == 0 && indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier(MJTableViewTopCell.ReuseIdentifier) as! MJTableViewTopCell
-            delegate?.tableViewController(self, tableViewTopCell: cell)
-            return cell
+        if !isDummySection(indexPath.section) {
+            if indexPath.section == 0 && indexPath.row == 0 {
+                let cell = tableView.dequeueReusableCellWithIdentifier(MJTableViewTopCell.ReuseIdentifier) as! MJTableViewTopCell
+                delegate?.tableViewController(self, tableViewTopCell: cell)
+                return cell
+            }
+            
+            if let cell = dataSource?.tableViewController(self, tableView: tableView, cellForRowAtIndexPath: indexPath.previousSection()) {
+                return cell
+            }
         }
-        
-        if let cell = dataSource?.tableViewController(self, tableView: tableView, cellForRowAtIndexPath: indexPath.previousSection()) {
-            return cell
-        }
-        
         return tableView.dequeueReusableCellWithIdentifier(MJTableViewController.ReuseIdentifier)!
     }
     
     public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
+        if section == 0 || isDummySection(section) {
             return 1
         }
         return dataSource?.tableViewController(self, tableView: tableView, numberOfRowsInSection: section - 1) ?? 0
@@ -68,9 +91,9 @@ extension MJTableViewController: UITableViewDataSource {
     
     public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         guard let numberOfSections = dataSource?.tableViewController(self, numberOfSectionsInTableView: tableView) else {
-            return 2
+            return 3
         }
-        return numberOfSections + 1
+        return numberOfSections + 2
     }
 
     public func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -95,7 +118,7 @@ extension MJTableViewController: UITableViewDataSource {
     
     public func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
         guard let titles = dataSource?.tableViewController(self, sectionIndexTitlesForTableView: tableView) else { return nil }
-        return [""] + titles
+        return Array([[""], titles].flatten())
     }
     
     public func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
@@ -116,10 +139,16 @@ extension MJTableViewController: UITableViewDataSource {
 //MARK: - UITableViewDelegate
 extension MJTableViewController: UITableViewDelegate {
     public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return delegate?.tableViewController(self, tableView: tableView, heightForTopCellAtIndexPath: indexPath) ?? 0
+        let height: CGFloat
+        if isDummySection(indexPath.section) {
+            height = dummyCellHeight
+        } else if indexPath.section == 0 {
+            height = delegate?.tableViewController(self, tableView: tableView, heightForTopCellAtIndexPath: indexPath) ?? 0
+        } else {
+            height = delegate?.tableViewController(self, tableView: tableView, heightForRowAtIndexPath: indexPath.previousSection()) ?? 44
+            cellHeightList[indexPath.sectionRowString] = height
         }
-        return delegate?.tableViewController(self, tableView: tableView, heightForRowAtIndexPath: indexPath.previousSection()) ?? 44
+        return height
     }
     
     public func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -153,30 +182,60 @@ extension MJTableViewController: UITableViewDelegate {
     }
     
     public func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0 { return 0 }
-        return delegate?.tableViewController(self, tableView: tableView, heightForHeaderInSection: section - 1) ?? 0
+        let height: CGFloat
+        if section == 0 || isDummySection(section) {
+            height = 0
+        } else {
+            height = delegate?.tableViewController(self, tableView: tableView, heightForHeaderInSection: section - 1) ?? 0
+        }
+        headerHeightList["\(section)"] = height
+        return height
     }
     
     public func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        if section == 0 { return 0 }
-        return delegate?.tableViewController(self, tableView: tableView, heightForFooterInSection: section - 1) ?? 0
+        let height: CGFloat
+        if section == 0 || isDummySection(section) {
+            height = 0
+        } else {
+            height = delegate?.tableViewController(self, tableView: tableView, heightForFooterInSection: section - 1) ?? 0
+        }
+        footerHeightList["\(section)"] = height
+        return height
     }
 
     public func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return delegate?.tableViewController(self, tableView: tableView, estimatedHeightForTopCellAtIndexPath: indexPath) ?? 0
+        let height: CGFloat
+        if isDummySection(indexPath.section) {
+            height = dummyCellHeight
+        } else if indexPath.section == 0 {
+            height = delegate?.tableViewController(self, tableView: tableView, estimatedHeightForTopCellAtIndexPath: indexPath) ?? 0
+        } else {
+            height = delegate?.tableViewController(self, tableView: tableView, estimatedHeightForRowAtIndexPath: indexPath.previousSection()) ?? 0
+            cellHeightList[indexPath.sectionRowString] = height
         }
-        return delegate?.tableViewController(self, tableView: tableView, estimatedHeightForRowAtIndexPath: indexPath.previousSection()) ?? 0
+        return height
     }
     
     public func tableView(tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0 { return 0 }
-        return delegate?.tableViewController(self, tableView: tableView, estimatedHeightForHeaderInSection: section - 1) ?? 0
+        let height: CGFloat
+        if section == 0 || isDummySection(section) {
+            height = 0
+        } else {
+            height = delegate?.tableViewController(self, tableView: tableView, estimatedHeightForHeaderInSection: section - 1) ?? 0
+        }
+        headerHeightList["\(section)"] = height
+        return height
     }
     
     public func tableView(tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
-        if section == 0 { return 0 }
-        return delegate?.tableViewController(self, tableView: tableView, estimatedHeightForFooterInSection: section - 1) ?? 0
+        let height: CGFloat
+        if section == 0 || isDummySection(section) {
+            height = 0
+        } else {
+            height = delegate?.tableViewController(self, tableView: tableView, estimatedHeightForFooterInSection: section - 1) ?? 0
+        }
+        footerHeightList["\(section)"] = height
+        return height
     }
     
     public func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
