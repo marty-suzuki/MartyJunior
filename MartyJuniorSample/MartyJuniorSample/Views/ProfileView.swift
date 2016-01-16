@@ -8,6 +8,18 @@
 
 import UIKit
 
+extension NSObject {
+    static var className: String {
+        return NSStringFromClass(self).componentsSeparatedByString(".").last! as String
+    }
+}
+
+extension UIView {
+    static var Nib: UINib {
+        return UINib(nibName: className, bundle: nil)
+    }
+}
+
 class ProfileView: UIView {
 
     /*

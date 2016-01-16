@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		372CDE421C0F65E200A5D7B0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372CDE411C0F65E200A5D7B0 /* ProfileView.swift */; };
-		372CDE441C0F65F500A5D7B0 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372CDE431C0F65F500A5D7B0 /* ProfileView.xib */; };
+		3718F4F51C4AB36C00DABDFC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3718F4F31C4AB36C00DABDFC /* ProfileView.swift */; };
+		3718F4F61C4AB36C00DABDFC /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3718F4F41C4AB36C00DABDFC /* ProfileView.xib */; };
+		3718F4FA1C4AB3BD00DABDFC /* ProfileTweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3718F4F81C4AB3BD00DABDFC /* ProfileTweetCell.swift */; };
+		3718F4FB1C4AB3BD00DABDFC /* ProfileTweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3718F4F91C4AB3BD00DABDFC /* ProfileTweetCell.xib */; };
+		3718F5001C4AB3E300DABDFC /* ProfileUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3718F4FE1C4AB3E300DABDFC /* ProfileUserCell.swift */; };
+		3718F5011C4AB3E300DABDFC /* ProfileUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3718F4FF1C4AB3E300DABDFC /* ProfileUserCell.xib */; };
 		379DD1E81C0615BB00A7FA9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD1E71C0615BB00A7FA9D /* AppDelegate.swift */; };
 		379DD1EA1C0615BB00A7FA9D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD1E91C0615BB00A7FA9D /* ProfileViewController.swift */; };
 		379DD1ED1C0615BB00A7FA9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379DD1EB1C0615BB00A7FA9D /* Main.storyboard */; };
@@ -19,8 +23,12 @@
 
 /* Begin PBXFileReference section */
 		23C4260EC0736D367CE0D23C /* Pods-MartyJuniorSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MartyJuniorSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MartyJuniorSample/Pods-MartyJuniorSample.release.xcconfig"; sourceTree = "<group>"; };
-		372CDE411C0F65E200A5D7B0 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		372CDE431C0F65F500A5D7B0 /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		3718F4F31C4AB36C00DABDFC /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3718F4F41C4AB36C00DABDFC /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		3718F4F81C4AB3BD00DABDFC /* ProfileTweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTweetCell.swift; sourceTree = "<group>"; };
+		3718F4F91C4AB3BD00DABDFC /* ProfileTweetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTweetCell.xib; sourceTree = "<group>"; };
+		3718F4FE1C4AB3E300DABDFC /* ProfileUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUserCell.swift; sourceTree = "<group>"; };
+		3718F4FF1C4AB3E300DABDFC /* ProfileUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileUserCell.xib; sourceTree = "<group>"; };
 		379DD1E41C0615BB00A7FA9D /* MartyJuniorSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MartyJuniorSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		379DD1E71C0615BB00A7FA9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		379DD1E91C0615BB00A7FA9D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +52,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3718F4F21C4AB36C00DABDFC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3718F4F31C4AB36C00DABDFC /* ProfileView.swift */,
+				3718F4F41C4AB36C00DABDFC /* ProfileView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3718F4F71C4AB38F00DABDFC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3718F4F81C4AB3BD00DABDFC /* ProfileTweetCell.swift */,
+				3718F4F91C4AB3BD00DABDFC /* ProfileTweetCell.xib */,
+				3718F4FE1C4AB3E300DABDFC /* ProfileUserCell.swift */,
+				3718F4FF1C4AB3E300DABDFC /* ProfileUserCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		379DD1DB1C0615BB00A7FA9D = {
 			isa = PBXGroup;
 			children = (
@@ -67,9 +95,9 @@
 			children = (
 				379DD1E71C0615BB00A7FA9D /* AppDelegate.swift */,
 				379DD1E91C0615BB00A7FA9D /* ProfileViewController.swift */,
-				372CDE411C0F65E200A5D7B0 /* ProfileView.swift */,
-				372CDE431C0F65F500A5D7B0 /* ProfileView.xib */,
 				379DD1EB1C0615BB00A7FA9D /* Main.storyboard */,
+				3718F4F21C4AB36C00DABDFC /* Views */,
+				3718F4F71C4AB38F00DABDFC /* Cells */,
 				379DD1EE1C0615BB00A7FA9D /* Assets.xcassets */,
 				379DD1F01C0615BB00A7FA9D /* LaunchScreen.storyboard */,
 				379DD1F31C0615BB00A7FA9D /* Info.plist */,
@@ -155,9 +183,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				372CDE441C0F65F500A5D7B0 /* ProfileView.xib in Resources */,
 				379DD1F21C0615BB00A7FA9D /* LaunchScreen.storyboard in Resources */,
+				3718F4F61C4AB36C00DABDFC /* ProfileView.xib in Resources */,
+				3718F5011C4AB3E300DABDFC /* ProfileUserCell.xib in Resources */,
 				379DD1EF1C0615BB00A7FA9D /* Assets.xcassets in Resources */,
+				3718F4FB1C4AB3BD00DABDFC /* ProfileTweetCell.xib in Resources */,
 				379DD1ED1C0615BB00A7FA9D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,8 +248,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				379DD1EA1C0615BB00A7FA9D /* ProfileViewController.swift in Sources */,
-				372CDE421C0F65E200A5D7B0 /* ProfileView.swift in Sources */,
+				3718F4F51C4AB36C00DABDFC /* ProfileView.swift in Sources */,
 				379DD1E81C0615BB00A7FA9D /* AppDelegate.swift in Sources */,
+				3718F4FA1C4AB3BD00DABDFC /* ProfileTweetCell.swift in Sources */,
+				3718F5001C4AB3E300DABDFC /* ProfileUserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
