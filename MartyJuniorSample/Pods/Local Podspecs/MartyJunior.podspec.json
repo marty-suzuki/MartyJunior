@@ -20,7 +20,7 @@
   "frameworks": "UIKit",
   "dependencies": {
     "MisterFusion": [
-      "0.6.0"
+
     ]
   }
 }
