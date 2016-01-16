@@ -5,6 +5,10 @@
 [![License](https://img.shields.io/cocoapods/l/MartyJunior.svg?style=flat)](http://cocoapods.org/pods/MartyJunior)
 [![Platform](https://img.shields.io/cocoapods/p/MartyJunior.svg?style=flat)](http://cocoapods.org/pods/MartyJunior)
 
+![](./Images/sample.gif)
+
+You can change tab contents with swipe gesture on middle of `UITableView`!!
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -17,7 +21,8 @@ MartyJunior is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "MartyJunior"
+# coming soon
+# pod "MartyJunior"
 ```
 
 ## Author

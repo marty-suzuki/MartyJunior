@@ -14,8 +14,6 @@ protocol MJContentViewDelegate: class {
 }
 
 class MJContentView: UIView {
-
-    //static let Height: CGFloat = 300
     var height: CGFloat {
         guard let userDefinedView = userDefinedView else { return 50 }
         return CGRectGetHeight(userDefinedView.frame) + 50
@@ -58,9 +56,11 @@ class MJContentView: UIView {
             segmentedControl.Left |+| 8,
             segmentedControl.Right |-| 8,
             segmentedControl.Bottom |-| 8,
-            segmentedControl.Top,
+            segmentedControl.Top |+| 8,
             segmentedControl.Height |=| 34
         )
+        
+        tabContainerView.backgroundColor = .whiteColor()
         
         addLayoutSubview(tabContainerView, andConstraints:
             tabContainerView.Left,
