@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ProfileViewController.swift
 //  MartyJuniorSample
 //
 //  Created by 鈴木大貴 on 2015/11/26.
@@ -9,7 +9,7 @@
 import UIKit
 import MartyJunior
 
-class ViewController: MJViewController {
+class ProfileViewController: MJViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,17 +27,19 @@ class ViewController: MJViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        print("viewDidapper")
+        
         //view.addSubview(UINib(nibName: "ProfileView", bundle: nil).instantiateWithOwner(nil, options: nil).first as! UIView)
     }
 }
 
-extension ViewController: MJViewControllerDataSource {
+extension ProfileViewController: MJViewControllerDataSource {
     func mjViewControllerContentViewForTop(viewController: MJViewController) -> UIView {
         return UINib(nibName: "ProfileView", bundle: nil).instantiateWithOwner(nil, options: nil).first as! UIView
     }
     
     func mjViewControllerTitlesForTab(viewController: MJViewController) -> [String] {
-        return ["Part1", "Part2", "Part3"]
+        return ["Tweets", "Following", "Followers"]
     }
     
     func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -60,7 +62,7 @@ extension ViewController: MJViewControllerDataSource {
     }
 }
 
-extension ViewController: MJViewControllerDelegate {
+extension ProfileViewController: MJViewControllerDelegate {
     func mjViewController(viewController: MJViewController, selectedIndex: Int, tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 88
     }
