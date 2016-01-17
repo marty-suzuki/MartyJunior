@@ -20,4 +20,5 @@ protocol MJTableViewControllerDataSource: class {
     func tableViewController(viewController: MJTableViewController, tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int?
     func tableViewController(viewController: MJTableViewController, tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
     func tableViewController(viewController: MJTableViewController, tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath)
+    func tableViewControllerHeaderHeight(viewController: MJTableViewController) -> CGFloat
 }

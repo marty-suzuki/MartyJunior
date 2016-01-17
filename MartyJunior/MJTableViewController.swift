@@ -30,10 +30,8 @@ public class MJTableViewController: UIViewController {
         let cellHeight = cellHeightList.map{ $0.1 }.reduce(0, combine: +)
         let headerHeight = headerHeightList.map{ $0.1 }.reduce(0, combine: +)
         let footerHeight = footerHeightList.map{ $0.1 }.reduce(0, combine: +)
-        let tabHeight = contentView?.tabContainerView.frame.size.height ?? 0
-        let sharedApplication = UIApplication.sharedApplication()
-        let statusBarHeight = sharedApplication.statusBarHidden ? 0 : sharedApplication.statusBarFrame.size.height
-        let maxmumHeight  = view.frame.size.height - (tabHeight + statusBarHeight)
+        let navigationContainerViewHeight = dataSource?.tableViewControllerHeaderHeight(self) ?? 0
+        let maxmumHeight  = view.frame.size.height - navigationContainerViewHeight
         return min(maxmumHeight, max(0, maxmumHeight - (cellHeight + headerHeight + footerHeight)))
     }
     
