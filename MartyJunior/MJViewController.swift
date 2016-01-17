@@ -40,9 +40,13 @@ public class MJViewController: UIViewController {
     private let contentEscapeView: UIView = UIView()
     private var contentEscapeViewTopConstraint: NSLayoutConstraint?
     
+    private let navigationContainerView = UIView()
+    
     private var containerViews: [UIView] = []
     private var viewControllers: [MJTableViewController] = []
     private let registerCellContainer: RegisterCellContainer = RegisterCellContainer()
+    
+    public var hiddenNavigationView: Bool = false
     
     public var tableViews: [UITableView] {
         return viewControllers.map { $0.tableView }
@@ -63,10 +67,15 @@ public class MJViewController: UIViewController {
         }
     }
     
-    private var headerHeight: CGFloat {
+    private var navigationContainerViewHeight: CGFloat {
         let sharedApplication = UIApplication.sharedApplication()
         let statusBarHeight = sharedApplication.statusBarHidden ? 0 : sharedApplication.statusBarFrame.size.height
-        return contentView.tabContainerView.frame.size.height + statusBarHeight
+        let navigationViewHeight: CGFloat = hiddenNavigationView ? 0 : 44
+        return statusBarHeight + navigationViewHeight
+    }
+    
+    private var headerHeight: CGFloat {
+        return contentView.tabContainerView.frame.size.height + navigationContainerViewHeight
     }
     
     public var selectedViewController: MJTableViewController {
@@ -112,6 +121,7 @@ extension MJViewController {
         contentView.segmentedControl.selectedSegmentIndex = 0
         contentView.userDefinedView = dataSource.mjViewControllerContentViewForTop(self)
         
+        scrollView.scrollsToTop = false
         scrollView.pagingEnabled = true
         scrollView.delegate = self
         scrollView.showsHorizontalScrollIndicator = false
@@ -147,6 +157,28 @@ extension MJViewController {
         contentEscapeView.backgroundColor = .clearColor()
         contentEscapeView.userInteractionEnabled = false
         contentEscapeView.hidden = true
+        
+        setNavigationView()
+    }
+    
+    private func setNavigationView() {
+        view.addLayoutSubview(navigationContainerView, andConstraints:
+            navigationContainerView.Top,
+            navigationContainerView.Left,
+            navigationContainerView.Right,
+            navigationContainerView.Height |=| navigationContainerViewHeight
+        )
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didTapNavigationContainerView:")
+        tapGestureRecognizer.numberOfTapsRequired = 1
+        tapGestureRecognizer.numberOfTouchesRequired = 1
+        navigationContainerView.addGestureRecognizer(tapGestureRecognizer)
+        
+        navigationContainerView.backgroundColor = .grayColor()
+    }
+    
+    func didTapNavigationContainerView(gestureRecognizer: UITapGestureRecognizer) {
+        viewControllers.forEach { $0.tableView.setContentOffset(.zero, animated: true) }
     }
     
     private func setupContainerViews() {
@@ -302,6 +334,10 @@ extension MJViewController: UIScrollViewDelegate {
 
 //MARK: - MJTableViewControllerDataSource
 extension MJViewController: MJTableViewControllerDataSource {
+    func tableViewControllerHeaderHeight(viewController: MJTableViewController) -> CGFloat {
+        return headerHeight
+    }
+    
     func tableViewController(viewController: MJTableViewController, tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell? {
         return dataSource?.mjViewController(self, targetIndex: indexOfViewController(viewController), tableView: tableView, cellForRowAtIndexPath: indexPath)
     }
