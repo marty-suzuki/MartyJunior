@@ -8,37 +8,59 @@
 
 /* Begin PBXBuildFile section */
 		01258B2D8ED5EC049A7D5C7B097D9BE9 /* MJTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4596F3C4AFCC290EB230C6FE557EA02 /* MJTableViewControllerDelegate.swift */; };
-		04436AC970C32F64F2E682C6BA5A4179 /* ReuseCellConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD1341E0D958DC83B0C7EDF649E60A1 /* ReuseCellConfigure.swift */; };
-		0964EC51C3ECF2C7F0800DD414A6CAC4 /* MisterFusion-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DE17C0E3AA0EA0148636ABE9DE1F6E32 /* MisterFusion-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		055C206A9AEAAFA34AB030DD52A8AFF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FC882A8692179A1FD4D9C215FAEFDD /* Foundation.framework */; };
+		0964EC51C3ECF2C7F0800DD414A6CAC4 /* MisterFusion-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF8CA609F546CEF725A05C2297C9B95 /* MisterFusion-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D3074B6EF3717847E90A6CC33C37C39 /* SABlurImageView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEAAA691DCCE9ECEBC416E34C7A8518 /* SABlurImageView-dummy.m */; };
+		115B2074CBD5319AA47C8A2760674850 /* SABlurImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D99017B7A1D7C6BD99BBF838BFEB790 /* SABlurImageView.swift */; };
 		1390948DAF5DCE4592169F02120D97A8 /* MJViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E21E2A47A6F2EC0DEB21600D6D0F8F3 /* MJViewControllerDataSource.swift */; };
 		13CD8888097EB28B716BA63025F00CBC /* MisterFusion+MartyJunior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D779D5487DC69F881CED441B49CEE66 /* MisterFusion+MartyJunior.swift */; };
 		1656FB26763F981944140F29351C0D1C /* MJTableViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B595BF4974EAC56B2C6C04F541BDCF /* MJTableViewControllerDataSource.swift */; };
-		186AA80CF065341E31EE46753BC59138 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE8DFF4A9DB0DD3B2C3C259990274EF /* Foundation.framework */; };
-		1987860E187BC6B3A4146667031D8D99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE8DFF4A9DB0DD3B2C3C259990274EF /* Foundation.framework */; };
+		186AA80CF065341E31EE46753BC59138 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FC882A8692179A1FD4D9C215FAEFDD /* Foundation.framework */; };
 		233E5ECF7EEBE7C7DE305FED2B9F78CC /* MJContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8416EEFB40CA553893AA60ABDCC725 /* MJContentView.swift */; };
+		274F497A667F1080F2802DDCDFAF7E9E /* Pods-MartyJuniorSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B548075EDDD192DC9A07256EEFA3A0 /* Pods-MartyJuniorSample-dummy.m */; };
 		2F14EB6FA14CA9FB0EE4953241272600 /* MartyJunior-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B481455AE5502B55723F65EEDC0A6661 /* MartyJunior-dummy.m */; };
-		38F9C5E49AB33E36013A82FD2E897357 /* ReuseCellConfigure-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B152AE7BB1193E46DD5719B2453055D /* ReuseCellConfigure-dummy.m */; };
-		39D2303E61B9A0EDF68CA9C3C7263170 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08E436454A058F090DBDBE426F469B5 /* UIKit.framework */; };
-		44E0E577DDB98B5EED15C8FB2C45EDFB /* ReuseCellConfigure-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F551F0A249D4E8A9BB893FC3AC1204A9 /* ReuseCellConfigure-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4649BD145F6E71EAE0F0A87CD1A2A5E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08E436454A058F090DBDBE426F469B5 /* UIKit.framework */; };
-		5279474F9C9C0F76047E4EF7D0676F33 /* MisterFusion-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA4097E4B48E68AB4E40296BBD9B5E8 /* MisterFusion-dummy.m */; };
+		34A370A9C5CE9BD6977A7374F91D2AD4 /* ReuseCellConfigure-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48B5451DE8F4914F587EB3DC140F6C36 /* ReuseCellConfigure-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E5B8BCFDC41B32C68B95A1934C925CE /* SABlurImageView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FE8B1DD146B8A5C3DDEE745D1910629 /* SABlurImageView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4649BD145F6E71EAE0F0A87CD1A2A5E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE85F4526EC1B4B5DDCB5F19B0B1784 /* UIKit.framework */; };
+		4A471766E157C3DFA8588E490B4A57EE /* ReuseCellConfigure-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B33643C30E721EBD9E605BCD6D8E0E /* ReuseCellConfigure-dummy.m */; };
+		4DD348D2DD2E5A783477F4B832E726F0 /* UIImage+BlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1541E5AE5C263B0D51573A1E1CA615AE /* UIImage+BlurEffect.swift */; };
+		5279474F9C9C0F76047E4EF7D0676F33 /* MisterFusion-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B672319951F7413AD96F3B825340E /* MisterFusion-dummy.m */; };
+		5605B71F5B044E661A0EBAFD3DD147E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FC882A8692179A1FD4D9C215FAEFDD /* Foundation.framework */; };
+		678AD8E88CD5D36E302535C4A1885DAE /* Pods-MartyJuniorSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98DA216C29F7CEC42A055372C81E475D /* Pods-MartyJuniorSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		777FC8DF8C119982756A21CD22911B72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE85F4526EC1B4B5DDCB5F19B0B1784 /* UIKit.framework */; };
+		81D9D47C642DDB1119FFBB9E0368BBCA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D770B921A334F68B5C6A90E93927C4 /* QuartzCore.framework */; };
+		8273F3D2FFDD0842CFFF407EE813E30F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE85F4526EC1B4B5DDCB5F19B0B1784 /* UIKit.framework */; };
 		8BD4955F5A7B65F16AEC2B39B8259BB5 /* MJViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1B3FB48904384B100631A1D0E2636A /* MJViewControllerDelegate.swift */; };
 		AB4D58828DF4EF79E49AFC49101E0BD2 /* MartyJunior-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8810024E44624AB3CB6D58C6DAFDA658 /* MartyJunior-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B25ED254F3BD50F7FDFEFC0316C78BC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE8DFF4A9DB0DD3B2C3C259990274EF /* Foundation.framework */; };
-		C08E1E211369E63ABE02148B7167FFB4 /* Pods-MartyJuniorSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B548075EDDD192DC9A07256EEFA3A0 /* Pods-MartyJuniorSample-dummy.m */; };
+		B25ED254F3BD50F7FDFEFC0316C78BC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FC882A8692179A1FD4D9C215FAEFDD /* Foundation.framework */; };
 		CE242B69F0776EB1296733A53C3D9E9B /* NSIndexPath+Previous.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A07CA001B7E92A7A04870220EE838 /* NSIndexPath+Previous.swift */; };
-		DA4FBAC8A5AC355C10888DE814450243 /* MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5751292D9C65573B5A8EB67F4620B63E /* MisterFusion.swift */; };
-		DAC085D9A3C194D199A7D6D55CF65A5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08E436454A058F090DBDBE426F469B5 /* UIKit.framework */; };
+		DA4FBAC8A5AC355C10888DE814450243 /* MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1190043EC6246F36148DB9AFA889D35 /* MisterFusion.swift */; };
+		DAC085D9A3C194D199A7D6D55CF65A5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE85F4526EC1B4B5DDCB5F19B0B1784 /* UIKit.framework */; };
 		DC2653255BADE412CA0B81942D835A58 /* MJViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A508E992F3A88E931E7FBF2117BD0 /* MJViewController.swift */; };
+		E1CDFDE9F36E1FE761BF3D2FA4617F36 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7C7527658AA804AD548DBEA20FD0B6 /* Accelerate.framework */; };
 		E81B09D078F830E7AA1E8A7450A233EF /* MJTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDE02E1C1A116B0E32A517E0EC11436 /* MJTableViewController.swift */; };
 		EDCDD2329A19B9E5EF9CF7A0ED5AE17F /* MJTableViewTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3836932E5C57F4390801F43E6357BBD /* MJTableViewTopCell.swift */; };
-		F3B6CE36F8B6DF7A2D27C04876350E93 /* MisterFusion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2935E17DC126D987EF4144AFC60EE96 /* MisterFusion.framework */; };
-		FA675728BD52654258427CA5ACD31C05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE8DFF4A9DB0DD3B2C3C259990274EF /* Foundation.framework */; };
-		FC5544B0BC6D4435EF0D270759E5F863 /* Pods-MartyJuniorSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98DA216C29F7CEC42A055372C81E475D /* Pods-MartyJuniorSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FF9288827294AD328879DF62FF80C0F6 /* Array+MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD86EDE9A9D25FEE1807FBD3D5288528 /* Array+MisterFusion.swift */; };
+		EDD198DEA289E82F22D9681BA899C215 /* ReuseCellConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3ADBE41DEB921342EE1C169ED3C3F /* ReuseCellConfigure.swift */; };
+		F3B6CE36F8B6DF7A2D27C04876350E93 /* MisterFusion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 120C454255883818FA9A95517AF5FE3B /* MisterFusion.framework */; };
+		F96712CDE1E44F6B71AA20E9C0AE04C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FC882A8692179A1FD4D9C215FAEFDD /* Foundation.framework */; };
+		FF9288827294AD328879DF62FF80C0F6 /* Array+MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA3FA48714779DD6511CD7198695428 /* Array+MisterFusion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		13F8C3EEA4C78F886C8F120F65D8BE30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00C46CB1EB9D802D86862029DC7B7C5D;
+			remoteInfo = ReuseCellConfigure;
+		};
+		22F3765417B8C078A2C9DEA4C144B52A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E38A7CF040961F22A1E6D000029120B8;
+			remoteInfo = SABlurImageView;
+		};
 		2E91CDACB6B9768535B43821E78B50BD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -46,79 +68,83 @@
 			remoteGlobalIDString = 7FF462E55223A7DFB476FD28F9E96BE6;
 			remoteInfo = MisterFusion;
 		};
-		8F275D41EB94D024D4D4DB34CCE989F4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 83C3817FB1B695365D17C8D0E55F8E57;
-			remoteInfo = ReuseCellConfigure;
-		};
-		9A0914A74255A33BC926C284D9C4EA8C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3C455BC0EBCC0F7478FEEC76FC46DC5C;
-			remoteInfo = MartyJunior;
-		};
-		DF0A7409C40A5A147C82AD60702DCB52 /* PBXContainerItemProxy */ = {
+		C7A9CA9603AAAD18CC8454BB9BB2B8C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7FF462E55223A7DFB476FD28F9E96BE6;
 			remoteInfo = MisterFusion;
 		};
+		FB5779F8EE722EB53F9704E577B66503 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C455BC0EBCC0F7478FEEC76FC46DC5C;
+			remoteInfo = MartyJunior;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03CB7A2095BC396C671FF34F4A48C0A2 /* Pods_MartyJuniorSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MartyJuniorSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		042BCF729EBC063AFA259E78394CFB8C /* ReuseCellConfigure.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ReuseCellConfigure.modulemap; sourceTree = "<group>"; };
 		0B1B3FB48904384B100631A1D0E2636A /* MJViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJViewControllerDelegate.swift; sourceTree = "<group>"; };
-		0CA4097E4B48E68AB4E40296BBD9B5E8 /* MisterFusion-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MisterFusion-dummy.m"; sourceTree = "<group>"; };
-		16BB9A7F4250624530E93557614E0895 /* Pods_MartyJuniorSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MartyJuniorSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DD1341E0D958DC83B0C7EDF649E60A1 /* ReuseCellConfigure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReuseCellConfigure.swift; path = ReuseCellConfigure/ReuseCellConfigure.swift; sourceTree = "<group>"; };
+		0D6B672319951F7413AD96F3B825340E /* MisterFusion-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MisterFusion-dummy.m"; sourceTree = "<group>"; };
+		120C454255883818FA9A95517AF5FE3B /* MisterFusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MisterFusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1541E5AE5C263B0D51573A1E1CA615AE /* UIImage+BlurEffect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+BlurEffect.swift"; path = "SABlurImageView/UIImage+BlurEffect.swift"; sourceTree = "<group>"; };
+		1D99017B7A1D7C6BD99BBF838BFEB790 /* SABlurImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SABlurImageView.swift; path = SABlurImageView/SABlurImageView.swift; sourceTree = "<group>"; };
 		1DE7A9037D01870CAE72CAA8FF8A6A54 /* Pods-MartyJuniorSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MartyJuniorSample.release.xcconfig"; sourceTree = "<group>"; };
-		1E1024CB740AE16D1A0491ECB99F5F9A /* MisterFusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MisterFusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		213E7788018ED8D5EB748A8B07E33C71 /* ReuseCellConfigure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReuseCellConfigure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23FF4D54D9A9EB38DD12B68AC5BBB179 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27E287672DB9846CA21AE4D2F79673C5 /* MisterFusion-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MisterFusion-prefix.pch"; sourceTree = "<group>"; };
+		2DF8CA609F546CEF725A05C2297C9B95 /* MisterFusion-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MisterFusion-umbrella.h"; sourceTree = "<group>"; };
+		2ECA7932F367AA39A0132463DCF2EFE0 /* ReuseCellConfigure-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReuseCellConfigure-prefix.pch"; sourceTree = "<group>"; };
+		3005BCCDA69613BD4FA3A9FA5E7F8BC9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38FC882A8692179A1FD4D9C215FAEFDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3F63E98AB9117458C25BE81793AB7549 /* MartyJunior.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MartyJunior.xcconfig; sourceTree = "<group>"; };
-		40531F01487E51F3C81B5DAB038678B7 /* ReuseCellConfigure.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ReuseCellConfigure.modulemap; sourceTree = "<group>"; };
+		48B5451DE8F4914F587EB3DC140F6C36 /* ReuseCellConfigure-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReuseCellConfigure-umbrella.h"; sourceTree = "<group>"; };
 		49DD1F9C816EF8F427C261D1E1CB4F02 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4AE8DFF4A9DB0DD3B2C3C259990274EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5751292D9C65573B5A8EB67F4620B63E /* MisterFusion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MisterFusion.swift; path = MisterFusion/MisterFusion.swift; sourceTree = "<group>"; };
+		50D770B921A334F68B5C6A90E93927C4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		54EC995B0351A6D4F3143DED7EE5B320 /* MisterFusion-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MisterFusion-prefix.pch"; sourceTree = "<group>"; };
+		5B7C7527658AA804AD548DBEA20FD0B6 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
 		668220EB7740AFED9982BDDF29F56B4E /* Pods-MartyJuniorSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MartyJuniorSample-acknowledgements.plist"; sourceTree = "<group>"; };
-		67B6002D243947BF439F362DC9338064 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6856F4A18423C0AB8E701D4E173C71DF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68A9FB14F6E943694365C6F91C045C49 /* SABlurImageView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SABlurImageView.modulemap; sourceTree = "<group>"; };
 		6D33BCC4513BA314163F698B11120DB4 /* MartyJunior-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MartyJunior-prefix.pch"; sourceTree = "<group>"; };
-		73DB960E37E13CB7BF56244FDA4BCB78 /* MartyJunior.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MartyJunior.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D779D5487DC69F881CED441B49CEE66 /* MisterFusion+MartyJunior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "MisterFusion+MartyJunior.swift"; sourceTree = "<group>"; };
 		7F9B2D29ACC3FA42B84906159BA5D41B /* MartyJunior.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MartyJunior.modulemap; sourceTree = "<group>"; };
 		7FDE02E1C1A116B0E32A517E0EC11436 /* MJTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJTableViewController.swift; sourceTree = "<group>"; };
 		87C5C867DDC885107CC7819566618CE3 /* Pods-MartyJuniorSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MartyJuniorSample.modulemap"; sourceTree = "<group>"; };
 		8810024E44624AB3CB6D58C6DAFDA658 /* MartyJunior-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MartyJunior-umbrella.h"; sourceTree = "<group>"; };
+		8CA3FA48714779DD6511CD7198695428 /* Array+MisterFusion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+MisterFusion.swift"; path = "MisterFusion/Array+MisterFusion.swift"; sourceTree = "<group>"; };
+		8FE8B1DD146B8A5C3DDEE745D1910629 /* SABlurImageView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SABlurImageView-umbrella.h"; sourceTree = "<group>"; };
 		92B548075EDDD192DC9A07256EEFA3A0 /* Pods-MartyJuniorSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MartyJuniorSample-dummy.m"; sourceTree = "<group>"; };
 		98DA216C29F7CEC42A055372C81E475D /* Pods-MartyJuniorSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MartyJuniorSample-umbrella.h"; sourceTree = "<group>"; };
-		9B152AE7BB1193E46DD5719B2453055D /* ReuseCellConfigure-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ReuseCellConfigure-dummy.m"; sourceTree = "<group>"; };
+		9AFE5B48B6706B52B955001A80F5C684 /* MisterFusion.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MisterFusion.xcconfig; sourceTree = "<group>"; };
+		9C2C063DD8956FC23FFCDA954E3A2E74 /* SABlurImageView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SABlurImageView.xcconfig; sourceTree = "<group>"; };
 		9E21E2A47A6F2EC0DEB21600D6D0F8F3 /* MJViewControllerDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJViewControllerDataSource.swift; sourceTree = "<group>"; };
-		A21AD4DBE03F1D990F6F4670E9C363C7 /* ReuseCellConfigure.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ReuseCellConfigure.xcconfig; sourceTree = "<group>"; };
-		A402A6D86EF5C1B2297462206A1ACA52 /* MisterFusion.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MisterFusion.xcconfig; sourceTree = "<group>"; };
-		B08E436454A058F090DBDBE426F469B5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		B2935E17DC126D987EF4144AFC60EE96 /* MisterFusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MisterFusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E88D3D4D7D5E1F811FD4B13917FC500 /* MisterFusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MisterFusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EA3BCE00D8E79896DFF7A1823D55044 /* MartyJunior.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MartyJunior.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEE85F4526EC1B4B5DDCB5F19B0B1784 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B1190043EC6246F36148DB9AFA889D35 /* MisterFusion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MisterFusion.swift; path = MisterFusion/MisterFusion.swift; sourceTree = "<group>"; };
 		B4596F3C4AFCC290EB230C6FE557EA02 /* MJTableViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJTableViewControllerDelegate.swift; sourceTree = "<group>"; };
 		B481455AE5502B55723F65EEDC0A6661 /* MartyJunior-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MartyJunior-dummy.m"; sourceTree = "<group>"; };
 		B826B79B392B058D3B63DD917DEFB923 /* Pods-MartyJuniorSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MartyJuniorSample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BCEAAA691DCCE9ECEBC416E34C7A8518 /* SABlurImageView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SABlurImageView-dummy.m"; sourceTree = "<group>"; };
 		BF5A508E992F3A88E931E7FBF2117BD0 /* MJViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJViewController.swift; sourceTree = "<group>"; };
 		BF8416EEFB40CA553893AA60ABDCC725 /* MJContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJContentView.swift; sourceTree = "<group>"; };
-		C06BBB924C32BF68414D46DB36E5D23F /* ReuseCellConfigure-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReuseCellConfigure-prefix.pch"; sourceTree = "<group>"; };
-		CC0E8BAD1E82E72B0142BEAB167DF561 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD86EDE9A9D25FEE1807FBD3D5288528 /* Array+MisterFusion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+MisterFusion.swift"; path = "MisterFusion/Array+MisterFusion.swift"; sourceTree = "<group>"; };
-		DB5C0DAF61BEDD45046D8A91218FDC60 /* MisterFusion.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MisterFusion.modulemap; sourceTree = "<group>"; };
-		DE17C0E3AA0EA0148636ABE9DE1F6E32 /* MisterFusion-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MisterFusion-umbrella.h"; sourceTree = "<group>"; };
+		C0C3ADBE41DEB921342EE1C169ED3C3F /* ReuseCellConfigure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReuseCellConfigure.swift; path = ReuseCellConfigure/ReuseCellConfigure.swift; sourceTree = "<group>"; };
+		CA4D6C2B0FC9555C601A95E04B26EB6F /* SABlurImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SABlurImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA798D835DC94129BA97FDC14919E28E /* SABlurImageView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SABlurImageView-prefix.pch"; sourceTree = "<group>"; };
+		CF4378ADCEE690601A8BCB3107F9C695 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2B33643C30E721EBD9E605BCD6D8E0E /* ReuseCellConfigure-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ReuseCellConfigure-dummy.m"; sourceTree = "<group>"; };
+		D8462AED845FC9A9BCE5796852CFFED6 /* ReuseCellConfigure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReuseCellConfigure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2693CFE4FEEFACE09F850488DF1CEA4 /* Pods-MartyJuniorSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MartyJuniorSample-frameworks.sh"; sourceTree = "<group>"; };
 		E3836932E5C57F4390801F43E6357BBD /* MJTableViewTopCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJTableViewTopCell.swift; sourceTree = "<group>"; };
 		E7B595BF4974EAC56B2C6C04F541BDCF /* MJTableViewControllerDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJTableViewControllerDataSource.swift; sourceTree = "<group>"; };
 		EA6A07CA001B7E92A7A04870220EE838 /* NSIndexPath+Previous.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSIndexPath+Previous.swift"; sourceTree = "<group>"; };
+		EACB24FD43BE399D5E5451538EE6ED81 /* ReuseCellConfigure.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ReuseCellConfigure.xcconfig; sourceTree = "<group>"; };
 		EBA38EDA4A07B4CFABE4E6504CD16389 /* Pods-MartyJuniorSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MartyJuniorSample.debug.xcconfig"; sourceTree = "<group>"; };
+		ECFAFCCF6CCFA893409B01E7B5DF9ADA /* MisterFusion.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MisterFusion.modulemap; sourceTree = "<group>"; };
 		F0730B6B176AFFD305693C76CC810BF0 /* Pods-MartyJuniorSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MartyJuniorSample-resources.sh"; sourceTree = "<group>"; };
-		F551F0A249D4E8A9BB893FC3AC1204A9 /* ReuseCellConfigure-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReuseCellConfigure-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,20 +157,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		61FB63802FEBA4983C5F558334883C2A /* Frameworks */ = {
+		43ADDD6189D5D492A53462D36B328E0E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1987860E187BC6B3A4146667031D8D99 /* Foundation.framework in Frameworks */,
+				E1CDFDE9F36E1FE761BF3D2FA4617F36 /* Accelerate.framework in Frameworks */,
+				055C206A9AEAAFA34AB030DD52A8AFF9 /* Foundation.framework in Frameworks */,
+				81D9D47C642DDB1119FFBB9E0368BBCA /* QuartzCore.framework in Frameworks */,
+				777FC8DF8C119982756A21CD22911B72 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		72E7D66414B45D02A0F5E4EE91FF7F2F /* Frameworks */ = {
+		661BCD2A992CE12CF2F0E7B6B7C2292B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA675728BD52654258427CA5ACD31C05 /* Foundation.framework in Frameworks */,
-				39D2303E61B9A0EDF68CA9C3C7263170 /* UIKit.framework in Frameworks */,
+				5605B71F5B044E661A0EBAFD3DD147E5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3C16221FE0DD416C96B59C9501C7E28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F96712CDE1E44F6B71AA20E9C0AE04C8 /* Foundation.framework in Frameworks */,
+				8273F3D2FFDD0842CFFF407EE813E30F /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,25 +198,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		26B1D64981D86B3EEB801D45CF494379 /* MisterFusion */ = {
+		31D0197B1C1AF1253A90E83C73B6C8C6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD86EDE9A9D25FEE1807FBD3D5288528 /* Array+MisterFusion.swift */,
-				5751292D9C65573B5A8EB67F4620B63E /* MisterFusion.swift */,
-				886A3B729A2E8D683465608698306FDE /* Support Files */,
-			);
-			path = MisterFusion;
-			sourceTree = "<group>";
-		};
-		2722336C42352F0909404E7FDF29D19F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				73DB960E37E13CB7BF56244FDA4BCB78 /* MartyJunior.framework */,
-				1E1024CB740AE16D1A0491ECB99F5F9A /* MisterFusion.framework */,
-				16BB9A7F4250624530E93557614E0895 /* Pods_MartyJuniorSample.framework */,
-				213E7788018ED8D5EB748A8B07E33C71 /* ReuseCellConfigure.framework */,
+				9EA3BCE00D8E79896DFF7A1823D55044 /* MartyJunior.framework */,
+				9E88D3D4D7D5E1F811FD4B13917FC500 /* MisterFusion.framework */,
+				03CB7A2095BC396C671FF34F4A48C0A2 /* Pods_MartyJuniorSample.framework */,
+				D8462AED845FC9A9BCE5796852CFFED6 /* ReuseCellConfigure.framework */,
+				CA4D6C2B0FC9555C601A95E04B26EB6F /* SABlurImageView.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		32BAD0FDEF7D2EBAC88FD7DE5AC96797 /* SABlurImageView */ = {
+			isa = PBXGroup;
+			children = (
+				1D99017B7A1D7C6BD99BBF838BFEB790 /* SABlurImageView.swift */,
+				1541E5AE5C263B0D51573A1E1CA615AE /* UIImage+BlurEffect.swift */,
+				BE2F02D1788C77FADE2534667C2A6370 /* Support Files */,
+			);
+			path = SABlurImageView;
 			sourceTree = "<group>";
 		};
 		3484838E9A1EE933606B930317182DF4 /* Development Pods */ = {
@@ -188,6 +226,37 @@
 				E00349F681407B5B17FDD9193D3B397E /* MartyJunior */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		438B4F4CD2DCBB84F470C1788B8444AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				583F255BDC25DE2F0F3F541A2BAC35D7 /* MisterFusion */,
+				FD0771E7D2E93C003EC133E1F2A013E0 /* ReuseCellConfigure */,
+				32BAD0FDEF7D2EBAC88FD7DE5AC96797 /* SABlurImageView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5727E0768DE0952C75201FDB8AB059E3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5B7C7527658AA804AD548DBEA20FD0B6 /* Accelerate.framework */,
+				38FC882A8692179A1FD4D9C215FAEFDD /* Foundation.framework */,
+				50D770B921A334F68B5C6A90E93927C4 /* QuartzCore.framework */,
+				AEE85F4526EC1B4B5DDCB5F19B0B1784 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		583F255BDC25DE2F0F3F541A2BAC35D7 /* MisterFusion */ = {
+			isa = PBXGroup;
+			children = (
+				8CA3FA48714779DD6511CD7198695428 /* Array+MisterFusion.swift */,
+				B1190043EC6246F36148DB9AFA889D35 /* MisterFusion.swift */,
+				9EF8415E4F6533929E1594287A68E432 /* Support Files */,
+			);
+			path = MisterFusion;
 			sourceTree = "<group>";
 		};
 		70931852AF5C4E8F7AF9E908ED61F163 /* Pods-MartyJuniorSample */ = {
@@ -213,25 +282,20 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				3484838E9A1EE933606B930317182DF4 /* Development Pods */,
-				A9775E712DD7E2C2663D3A2A0E1DE428 /* Frameworks */,
-				C63A81CB52B5FB926A298640ECE1DEB6 /* Pods */,
-				2722336C42352F0909404E7FDF29D19F /* Products */,
+				843B2891B58701BB407C301E79B82F48 /* Frameworks */,
+				438B4F4CD2DCBB84F470C1788B8444AF /* Pods */,
+				31D0197B1C1AF1253A90E83C73B6C8C6 /* Products */,
 				E9FD2F84A0B85FD65E1B687ACE48F8C9 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		886A3B729A2E8D683465608698306FDE /* Support Files */ = {
+		843B2891B58701BB407C301E79B82F48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CC0E8BAD1E82E72B0142BEAB167DF561 /* Info.plist */,
-				DB5C0DAF61BEDD45046D8A91218FDC60 /* MisterFusion.modulemap */,
-				A402A6D86EF5C1B2297462206A1ACA52 /* MisterFusion.xcconfig */,
-				0CA4097E4B48E68AB4E40296BBD9B5E8 /* MisterFusion-dummy.m */,
-				27E287672DB9846CA21AE4D2F79673C5 /* MisterFusion-prefix.pch */,
-				DE17C0E3AA0EA0148636ABE9DE1F6E32 /* MisterFusion-umbrella.h */,
+				120C454255883818FA9A95517AF5FE3B /* MisterFusion.framework */,
+				5727E0768DE0952C75201FDB8AB059E3 /* iOS */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MisterFusion";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		89BDA4B8F7FD61ED186F07EE0F622F14 /* Support Files */ = {
@@ -246,6 +310,20 @@
 			);
 			name = "Support Files";
 			path = "MartyJuniorSample/Pods/Target Support Files/MartyJunior";
+			sourceTree = "<group>";
+		};
+		9EF8415E4F6533929E1594287A68E432 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3005BCCDA69613BD4FA3A9FA5E7F8BC9 /* Info.plist */,
+				ECFAFCCF6CCFA893409B01E7B5DF9ADA /* MisterFusion.modulemap */,
+				9AFE5B48B6706B52B955001A80F5C684 /* MisterFusion.xcconfig */,
+				0D6B672319951F7413AD96F3B825340E /* MisterFusion-dummy.m */,
+				54EC995B0351A6D4F3143DED7EE5B320 /* MisterFusion-prefix.pch */,
+				2DF8CA609F546CEF725A05C2297C9B95 /* MisterFusion-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MisterFusion";
 			sourceTree = "<group>";
 		};
 		A4870E49CC213E3AB328477615924108 /* MartyJunior */ = {
@@ -265,40 +343,32 @@
 			path = MartyJunior;
 			sourceTree = "<group>";
 		};
-		A9775E712DD7E2C2663D3A2A0E1DE428 /* Frameworks */ = {
+		A508D24AE8078CD54D8F5EF27F7C4DD7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B2935E17DC126D987EF4144AFC60EE96 /* MisterFusion.framework */,
-				BF642F40E4C5542FFBE0C645D0B8A465 /* iOS */,
+				CF4378ADCEE690601A8BCB3107F9C695 /* Info.plist */,
+				042BCF729EBC063AFA259E78394CFB8C /* ReuseCellConfigure.modulemap */,
+				EACB24FD43BE399D5E5451538EE6ED81 /* ReuseCellConfigure.xcconfig */,
+				D2B33643C30E721EBD9E605BCD6D8E0E /* ReuseCellConfigure-dummy.m */,
+				2ECA7932F367AA39A0132463DCF2EFE0 /* ReuseCellConfigure-prefix.pch */,
+				48B5451DE8F4914F587EB3DC140F6C36 /* ReuseCellConfigure-umbrella.h */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/ReuseCellConfigure";
 			sourceTree = "<group>";
 		};
-		BF642F40E4C5542FFBE0C645D0B8A465 /* iOS */ = {
+		BE2F02D1788C77FADE2534667C2A6370 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4AE8DFF4A9DB0DD3B2C3C259990274EF /* Foundation.framework */,
-				B08E436454A058F090DBDBE426F469B5 /* UIKit.framework */,
+				6856F4A18423C0AB8E701D4E173C71DF /* Info.plist */,
+				68A9FB14F6E943694365C6F91C045C49 /* SABlurImageView.modulemap */,
+				9C2C063DD8956FC23FFCDA954E3A2E74 /* SABlurImageView.xcconfig */,
+				BCEAAA691DCCE9ECEBC416E34C7A8518 /* SABlurImageView-dummy.m */,
+				CA798D835DC94129BA97FDC14919E28E /* SABlurImageView-prefix.pch */,
+				8FE8B1DD146B8A5C3DDEE745D1910629 /* SABlurImageView-umbrella.h */,
 			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		C63A81CB52B5FB926A298640ECE1DEB6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				26B1D64981D86B3EEB801D45CF494379 /* MisterFusion */,
-				D0FDCA4BFD906382EC297F9C3840CD88 /* ReuseCellConfigure */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		D0FDCA4BFD906382EC297F9C3840CD88 /* ReuseCellConfigure */ = {
-			isa = PBXGroup;
-			children = (
-				1DD1341E0D958DC83B0C7EDF649E60A1 /* ReuseCellConfigure.swift */,
-				F4527B48264139458DC1C56ACB398D6F /* Support Files */,
-			);
-			path = ReuseCellConfigure;
+			name = "Support Files";
+			path = "../Target Support Files/SABlurImageView";
 			sourceTree = "<group>";
 		};
 		E00349F681407B5B17FDD9193D3B397E /* MartyJunior */ = {
@@ -319,36 +389,23 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		F4527B48264139458DC1C56ACB398D6F /* Support Files */ = {
+		FD0771E7D2E93C003EC133E1F2A013E0 /* ReuseCellConfigure */ = {
 			isa = PBXGroup;
 			children = (
-				67B6002D243947BF439F362DC9338064 /* Info.plist */,
-				40531F01487E51F3C81B5DAB038678B7 /* ReuseCellConfigure.modulemap */,
-				A21AD4DBE03F1D990F6F4670E9C363C7 /* ReuseCellConfigure.xcconfig */,
-				9B152AE7BB1193E46DD5719B2453055D /* ReuseCellConfigure-dummy.m */,
-				C06BBB924C32BF68414D46DB36E5D23F /* ReuseCellConfigure-prefix.pch */,
-				F551F0A249D4E8A9BB893FC3AC1204A9 /* ReuseCellConfigure-umbrella.h */,
+				C0C3ADBE41DEB921342EE1C169ED3C3F /* ReuseCellConfigure.swift */,
+				A508D24AE8078CD54D8F5EF27F7C4DD7 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/ReuseCellConfigure";
+			path = ReuseCellConfigure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		35D31A6147CF51B09D0D7E750F0AFF17 /* Headers */ = {
+		19032C496A8B8DB35ADE4525CD646108 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44E0E577DDB98B5EED15C8FB2C45EDFB /* ReuseCellConfigure-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5FBC94F407A04676A4CF77F6EBDF6627 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FC5544B0BC6D4435EF0D270759E5F863 /* Pods-MartyJuniorSample-umbrella.h in Headers */,
+				678AD8E88CD5D36E302535C4A1885DAE /* Pods-MartyJuniorSample-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +414,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB4D58828DF4EF79E49AFC49101E0BD2 /* MartyJunior-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76C6C49E561C5BF1C1290EDF65A41A38 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34A370A9C5CE9BD6977A7374F91D2AD4 /* ReuseCellConfigure-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2DB3512CE49036C75377641ACF6CDAD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E5B8BCFDC41B32C68B95A1934C925CE /* SABlurImageView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +444,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		00C46CB1EB9D802D86862029DC7B7C5D /* ReuseCellConfigure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1026C21753D782A477BA7D87A64B7D89 /* Build configuration list for PBXNativeTarget "ReuseCellConfigure" */;
+			buildPhases = (
+				604099372274DB00C046DFB64021C451 /* Sources */,
+				D3C16221FE0DD416C96B59C9501C7E28 /* Frameworks */,
+				76C6C49E561C5BF1C1290EDF65A41A38 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReuseCellConfigure;
+			productName = ReuseCellConfigure;
+			productReference = D8462AED845FC9A9BCE5796852CFFED6 /* ReuseCellConfigure.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		3C455BC0EBCC0F7478FEEC76FC46DC5C /* MartyJunior */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DA7AC3F6361FBFE3F0938EA4F3D89ED /* Build configuration list for PBXNativeTarget "MartyJunior" */;
@@ -386,27 +476,7 @@
 			);
 			name = MartyJunior;
 			productName = MartyJunior;
-			productReference = 73DB960E37E13CB7BF56244FDA4BCB78 /* MartyJunior.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		436C307A2895DE8351A506EF921DB12B /* Pods-MartyJuniorSample */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 330AD46DD66D942E0CB694D9BE6C5980 /* Build configuration list for PBXNativeTarget "Pods-MartyJuniorSample" */;
-			buildPhases = (
-				9827581C30565D284AF6A9E6166FA889 /* Sources */,
-				61FB63802FEBA4983C5F558334883C2A /* Frameworks */,
-				5FBC94F407A04676A4CF77F6EBDF6627 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AE0B5D0BFA6E989768E18D8F0500BA41 /* PBXTargetDependency */,
-				F6241D01CFDDC5E7BAF49F5E4B584EB1 /* PBXTargetDependency */,
-				B5BB8D3B651DFC29EFD6A0E52F576FE6 /* PBXTargetDependency */,
-			);
-			name = "Pods-MartyJuniorSample";
-			productName = "Pods-MartyJuniorSample";
-			productReference = 16BB9A7F4250624530E93557614E0895 /* Pods_MartyJuniorSample.framework */;
+			productReference = 9EA3BCE00D8E79896DFF7A1823D55044 /* MartyJunior.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7FF462E55223A7DFB476FD28F9E96BE6 /* MisterFusion */ = {
@@ -423,24 +493,45 @@
 			);
 			name = MisterFusion;
 			productName = MisterFusion;
-			productReference = 1E1024CB740AE16D1A0491ECB99F5F9A /* MisterFusion.framework */;
+			productReference = 9E88D3D4D7D5E1F811FD4B13917FC500 /* MisterFusion.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		83C3817FB1B695365D17C8D0E55F8E57 /* ReuseCellConfigure */ = {
+		BF5F5AEE66F5AE452F7AADB77D5CD415 /* Pods-MartyJuniorSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D396B73C31A4B7AB21730E70298058BA /* Build configuration list for PBXNativeTarget "ReuseCellConfigure" */;
+			buildConfigurationList = FB8A2102BC2CC1FA436E3BFCACF5EBC9 /* Build configuration list for PBXNativeTarget "Pods-MartyJuniorSample" */;
 			buildPhases = (
-				3315C2BCA16CE1F04CA601C1738C74EE /* Sources */,
-				72E7D66414B45D02A0F5E4EE91FF7F2F /* Frameworks */,
-				35D31A6147CF51B09D0D7E750F0AFF17 /* Headers */,
+				5545C3431B494FACA9EC707FD8A8D4F2 /* Sources */,
+				661BCD2A992CE12CF2F0E7B6B7C2292B /* Frameworks */,
+				19032C496A8B8DB35ADE4525CD646108 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDFE5489E3FB7A4D52DC1C9919726629 /* PBXTargetDependency */,
+				589B562D36F104A93524D0296FCD1AA2 /* PBXTargetDependency */,
+				A8320CBFBF3301A67FB36E3255229DAE /* PBXTargetDependency */,
+				CF56675AE85E575C57E29DD875DA0B57 /* PBXTargetDependency */,
+			);
+			name = "Pods-MartyJuniorSample";
+			productName = "Pods-MartyJuniorSample";
+			productReference = 03CB7A2095BC396C671FF34F4A48C0A2 /* Pods_MartyJuniorSample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E38A7CF040961F22A1E6D000029120B8 /* SABlurImageView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C15BE48E2261A19F24FD3EA025C5A8B5 /* Build configuration list for PBXNativeTarget "SABlurImageView" */;
+			buildPhases = (
+				B88A13729F06D9DD9573301C051AFC32 /* Sources */,
+				43ADDD6189D5D492A53462D36B328E0E /* Frameworks */,
+				C2DB3512CE49036C75377641ACF6CDAD /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ReuseCellConfigure;
-			productName = ReuseCellConfigure;
-			productReference = 213E7788018ED8D5EB748A8B07E33C71 /* ReuseCellConfigure.framework */;
+			name = SABlurImageView;
+			productName = SABlurImageView;
+			productReference = CA4D6C2B0FC9555C601A95E04B26EB6F /* SABlurImageView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -460,14 +551,15 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 2722336C42352F0909404E7FDF29D19F /* Products */;
+			productRefGroup = 31D0197B1C1AF1253A90E83C73B6C8C6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				3C455BC0EBCC0F7478FEEC76FC46DC5C /* MartyJunior */,
 				7FF462E55223A7DFB476FD28F9E96BE6 /* MisterFusion */,
-				436C307A2895DE8351A506EF921DB12B /* Pods-MartyJuniorSample */,
-				83C3817FB1B695365D17C8D0E55F8E57 /* ReuseCellConfigure */,
+				BF5F5AEE66F5AE452F7AADB77D5CD415 /* Pods-MartyJuniorSample */,
+				00C46CB1EB9D802D86862029DC7B7C5D /* ReuseCellConfigure */,
+				E38A7CF040961F22A1E6D000029120B8 /* SABlurImageView */,
 			);
 		};
 /* End PBXProject section */
@@ -491,20 +583,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3315C2BCA16CE1F04CA601C1738C74EE /* Sources */ = {
+		5545C3431B494FACA9EC707FD8A8D4F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38F9C5E49AB33E36013A82FD2E897357 /* ReuseCellConfigure-dummy.m in Sources */,
-				04436AC970C32F64F2E682C6BA5A4179 /* ReuseCellConfigure.swift in Sources */,
+				274F497A667F1080F2802DDCDFAF7E9E /* Pods-MartyJuniorSample-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9827581C30565D284AF6A9E6166FA889 /* Sources */ = {
+		604099372274DB00C046DFB64021C451 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C08E1E211369E63ABE02148B7167FFB4 /* Pods-MartyJuniorSample-dummy.m in Sources */,
+				4A471766E157C3DFA8588E490B4A57EE /* ReuseCellConfigure-dummy.m in Sources */,
+				EDD198DEA289E82F22D9681BA899C215 /* ReuseCellConfigure.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B88A13729F06D9DD9573301C051AFC32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D3074B6EF3717847E90A6CC33C37C39 /* SABlurImageView-dummy.m in Sources */,
+				115B2074CBD5319AA47C8A2760674850 /* SABlurImageView.swift in Sources */,
+				4DD348D2DD2E5A783477F4B832E726F0 /* UIImage+BlurEffect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,17 +623,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AE0B5D0BFA6E989768E18D8F0500BA41 /* PBXTargetDependency */ = {
+		589B562D36F104A93524D0296FCD1AA2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = MartyJunior;
-			target = 3C455BC0EBCC0F7478FEEC76FC46DC5C /* MartyJunior */;
-			targetProxy = 9A0914A74255A33BC926C284D9C4EA8C /* PBXContainerItemProxy */;
+			name = MisterFusion;
+			target = 7FF462E55223A7DFB476FD28F9E96BE6 /* MisterFusion */;
+			targetProxy = C7A9CA9603AAAD18CC8454BB9BB2B8C7 /* PBXContainerItemProxy */;
 		};
-		B5BB8D3B651DFC29EFD6A0E52F576FE6 /* PBXTargetDependency */ = {
+		A8320CBFBF3301A67FB36E3255229DAE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ReuseCellConfigure;
-			target = 83C3817FB1B695365D17C8D0E55F8E57 /* ReuseCellConfigure */;
-			targetProxy = 8F275D41EB94D024D4D4DB34CCE989F4 /* PBXContainerItemProxy */;
+			target = 00C46CB1EB9D802D86862029DC7B7C5D /* ReuseCellConfigure */;
+			targetProxy = 13F8C3EEA4C78F886C8F120F65D8BE30 /* PBXContainerItemProxy */;
 		};
 		BE0BBA54DA7027C8D9E2440022B8C096 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -539,42 +641,21 @@
 			target = 7FF462E55223A7DFB476FD28F9E96BE6 /* MisterFusion */;
 			targetProxy = 2E91CDACB6B9768535B43821E78B50BD /* PBXContainerItemProxy */;
 		};
-		F6241D01CFDDC5E7BAF49F5E4B584EB1 /* PBXTargetDependency */ = {
+		CF56675AE85E575C57E29DD875DA0B57 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = MisterFusion;
-			target = 7FF462E55223A7DFB476FD28F9E96BE6 /* MisterFusion */;
-			targetProxy = DF0A7409C40A5A147C82AD60702DCB52 /* PBXContainerItemProxy */;
+			name = SABlurImageView;
+			target = E38A7CF040961F22A1E6D000029120B8 /* SABlurImageView */;
+			targetProxy = 22F3765417B8C078A2C9DEA4C144B52A /* PBXContainerItemProxy */;
+		};
+		EDFE5489E3FB7A4D52DC1C9919726629 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MartyJunior;
+			target = 3C455BC0EBCC0F7478FEEC76FC46DC5C /* MartyJunior */;
+			targetProxy = FB5779F8EE722EB53F9704E577B66503 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		01DB4E04895344D744025D602D469D95 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A21AD4DBE03F1D990F6F4670E9C363C7 /* ReuseCellConfigure.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ReuseCellConfigure/ReuseCellConfigure-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ReuseCellConfigure/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ReuseCellConfigure/ReuseCellConfigure.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ReuseCellConfigure;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		3A1C43C6C0394D46A4D08637054AE57E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3F63E98AB9117458C25BE81793AB7549 /* MartyJunior.xcconfig */;
@@ -602,9 +683,92 @@
 			};
 			name = Release;
 		};
+		43D0771BFC2A05149FF0BD1591DCAF13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EACB24FD43BE399D5E5451538EE6ED81 /* ReuseCellConfigure.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ReuseCellConfigure/ReuseCellConfigure-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReuseCellConfigure/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ReuseCellConfigure/ReuseCellConfigure.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ReuseCellConfigure;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4A112E232F4F9442F46F94893E15D1DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EACB24FD43BE399D5E5451538EE6ED81 /* ReuseCellConfigure.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ReuseCellConfigure/ReuseCellConfigure-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReuseCellConfigure/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ReuseCellConfigure/ReuseCellConfigure.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ReuseCellConfigure;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4F90FE78EE410D415BC5540065734D6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C2C063DD8956FC23FFCDA954E3A2E74 /* SABlurImageView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SABlurImageView/SABlurImageView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SABlurImageView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SABlurImageView/SABlurImageView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SABlurImageView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		604FB2FB38C8D2D1EB4636D71B05CB44 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A402A6D86EF5C1B2297462206A1ACA52 /* MisterFusion.xcconfig */;
+			baseConfigurationReference = 9AFE5B48B6706B52B955001A80F5C684 /* MisterFusion.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -630,39 +794,9 @@
 			};
 			name = Debug;
 		};
-		8BD8684E5499E8128366F8946ECB9564 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DE7A9037D01870CAE72CAA8FF8A6A54 /* Pods-MartyJuniorSample.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MartyJuniorSample/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MartyJuniorSample/Pods-MartyJuniorSample.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_MartyJuniorSample;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		8C578CDD02B403ABD103837CC0667C27 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A402A6D86EF5C1B2297462206A1ACA52 /* MisterFusion.xcconfig */;
+			baseConfigurationReference = 9AFE5B48B6706B52B955001A80F5C684 /* MisterFusion.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -715,9 +849,9 @@
 			};
 			name = Debug;
 		};
-		8FE2578FA6FE3617B7582F60E73FBA7C /* Debug */ = {
+		944B9E66D65AE4B880200FA8B2396013 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBA38EDA4A07B4CFABE4E6504CD16389 /* Pods-MartyJuniorSample.debug.xcconfig */;
+			baseConfigurationReference = 1DE7A9037D01870CAE72CAA8FF8A6A54 /* Pods-MartyJuniorSample.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -732,23 +866,22 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-MartyJuniorSample/Pods-MartyJuniorSample.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = Pods_MartyJuniorSample;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		A18C4215DFFA532A39B6413807574177 /* Debug */ = {
+		A02619840164F0470390990B4CF606AA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A21AD4DBE03F1D990F6F4670E9C363C7 /* ReuseCellConfigure.xcconfig */;
+			baseConfigurationReference = 9C2C063DD8956FC23FFCDA954E3A2E74 /* SABlurImageView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -757,22 +890,21 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ReuseCellConfigure/ReuseCellConfigure-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ReuseCellConfigure/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SABlurImageView/SABlurImageView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SABlurImageView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ReuseCellConfigure/ReuseCellConfigure.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = ReuseCellConfigure;
+				MODULEMAP_FILE = "Target Support Files/SABlurImageView/SABlurImageView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SABlurImageView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -810,6 +942,37 @@
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F33DA25DE6F3609A80A09268B34C4CE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBA38EDA4A07B4CFABE4E6504CD16389 /* Pods-MartyJuniorSample.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MartyJuniorSample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MartyJuniorSample/Pods-MartyJuniorSample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MartyJuniorSample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -859,20 +1022,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		1026C21753D782A477BA7D87A64B7D89 /* Build configuration list for PBXNativeTarget "ReuseCellConfigure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43D0771BFC2A05149FF0BD1591DCAF13 /* Debug */,
+				4A112E232F4F9442F46F94893E15D1DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
 				FB45FFD90572718D82AB9092B750F0CA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		330AD46DD66D942E0CB694D9BE6C5980 /* Build configuration list for PBXNativeTarget "Pods-MartyJuniorSample" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8FE2578FA6FE3617B7582F60E73FBA7C /* Debug */,
-				8BD8684E5499E8128366F8946ECB9564 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -886,11 +1049,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D396B73C31A4B7AB21730E70298058BA /* Build configuration list for PBXNativeTarget "ReuseCellConfigure" */ = {
+		C15BE48E2261A19F24FD3EA025C5A8B5 /* Build configuration list for PBXNativeTarget "SABlurImageView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A18C4215DFFA532A39B6413807574177 /* Debug */,
-				01DB4E04895344D744025D602D469D95 /* Release */,
+				4F90FE78EE410D415BC5540065734D6C /* Debug */,
+				A02619840164F0470390990B4CF606AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB8A2102BC2CC1FA436E3BFCACF5EBC9 /* Build configuration list for PBXNativeTarget "Pods-MartyJuniorSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F33DA25DE6F3609A80A09268B34C4CE3 /* Debug */,
+				944B9E66D65AE4B880200FA8B2396013 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

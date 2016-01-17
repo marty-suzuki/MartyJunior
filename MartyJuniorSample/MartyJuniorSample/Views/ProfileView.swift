@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SABlurImageView
 
 extension NSObject {
     static var className: String {
@@ -21,13 +22,13 @@ extension UIView {
 }
 
 class ProfileView: UIView {
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var backgroundImageView: SABlurImageView!
+    @IBOutlet weak var userIconImageView: UIImageView!
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var followButton: UIButton!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        backgroundImageView.configrationForBlurAnimation(20)
     }
-    */
-
 }

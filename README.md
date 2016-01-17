@@ -7,13 +7,25 @@
 
 ![](./Images/sample.gif)
 
+
 You can change tab contents with swipe gesture on middle of `UITableView`!!
+
+## Features
+
+- [x] Change tab middle of `UITableView`.
+- [x] Auto fill content space when content size is not enough.
+- [x] flexible top content.
+- [] customizable tab view.
 
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the `MartyJuniorSample` directory first.
 
 ## Requirements
+- Xcode 7 or greater
+- iOS 8.0 or greater
+- [MisterFusion](https://github.com/szk-atmosphere/MisterFusion) (Swift DSL for AutoLayout)
+- UIKit
 
 ## Installation
 
@@ -24,6 +36,13 @@ it, simply add the following line to your Podfile:
 # coming soon
 # pod "MartyJunior"
 ```
+
+## Other
+
+[A sample of this project](./MartyJuniorSample) uses
+
+- [SABlurImageView](https://github.com/szk-atmosphere/SABlurImageView) (for animation blur)
+- [ReuseCellConfigure](https://github.com/szk-atmosphere/ReuseCellConfigure) (for cell configuration)
 
 ## Author
 
