@@ -13,7 +13,44 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="87.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="szk" translatesAutoresizingMaskIntoConstraints="NO" id="hO8-jb-fxE">
+                        <rect key="frame" x="12" y="8" width="48" height="48"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.79539331896551724" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="IUC-tT-N88"/>
+                            <constraint firstAttribute="height" constant="48" id="f0W-Db-9FT"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="24"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="59o-uv-wSo">
+                        <rect key="frame" x="72" y="12" width="236" height="64"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="59o-uv-wSo" firstAttribute="leading" secondItem="hO8-jb-fxE" secondAttribute="trailing" constant="12" id="Gss-8F-Gmz"/>
+                    <constraint firstAttribute="trailing" secondItem="59o-uv-wSo" secondAttribute="trailing" constant="12" id="Ie2-ru-7JO"/>
+                    <constraint firstItem="59o-uv-wSo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="SMS-S7-p0L"/>
+                    <constraint firstItem="hO8-jb-fxE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Z4n-cY-WxU"/>
+                    <constraint firstAttribute="bottom" secondItem="59o-uv-wSo" secondAttribute="bottom" constant="11.5" id="lhZ-ay-gt6"/>
+                    <constraint firstItem="hO8-jb-fxE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="mwr-U0-pHh"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="textView" destination="59o-uv-wSo" id="4QU-mx-eBM"/>
+            </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="szk" width="350" height="350"/>
+    </resources>
 </document>

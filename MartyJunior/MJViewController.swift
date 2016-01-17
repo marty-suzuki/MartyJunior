@@ -67,19 +67,19 @@ public class MJViewController: UIViewController {
         }
     }
     
-    private var navigationContainerViewHeight: CGFloat {
-        let sharedApplication = UIApplication.sharedApplication()
-        let statusBarHeight = sharedApplication.statusBarHidden ? 0 : sharedApplication.statusBarFrame.size.height
-        let navigationViewHeight: CGFloat = hiddenNavigationView ? 0 : 44
-        return statusBarHeight + navigationViewHeight
-    }
-    
-    private var headerHeight: CGFloat {
+    public var headerHeight: CGFloat {
         return contentView.tabContainerView.frame.size.height + navigationContainerViewHeight
     }
     
     public var selectedViewController: MJTableViewController {
         return viewControllers[selectedIndex]
+    }
+    
+    private var navigationContainerViewHeight: CGFloat {
+        let sharedApplication = UIApplication.sharedApplication()
+        let statusBarHeight = sharedApplication.statusBarHidden ? 0 : sharedApplication.statusBarFrame.size.height
+        let navigationViewHeight: CGFloat = hiddenNavigationView ? 0 : 44
+        return statusBarHeight + navigationViewHeight
     }
     
     private func indexOfViewController(viewController: MJTableViewController) -> Int {
@@ -173,8 +173,6 @@ extension MJViewController {
         tapGestureRecognizer.numberOfTapsRequired = 1
         tapGestureRecognizer.numberOfTouchesRequired = 1
         navigationContainerView.addGestureRecognizer(tapGestureRecognizer)
-        
-        navigationContainerView.backgroundColor = .grayColor()
     }
     
     func didTapNavigationContainerView(gestureRecognizer: UITapGestureRecognizer) {

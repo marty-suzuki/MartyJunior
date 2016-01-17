@@ -17,9 +17,12 @@ extension UITableViewCell {
 class ProfileTweetCell: UITableViewCell {
     static var Height: CGFloat = 88
     
+    @IBOutlet weak var textView: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        textView.textContainerInset = UIEdgeInsetsZero
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -27,5 +30,4 @@ class ProfileTweetCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

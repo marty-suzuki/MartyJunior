@@ -1,38 +1,129 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProfileView" customModule="MartyJuniorSample" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1i6-fV-ZW5">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marty" translatesAutoresizingMaskIntoConstraints="NO" id="1i6-fV-ZW5" customClass="SABlurImageView" customModule="SABlurImageView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zah-9s-LG3">
-                    <rect key="frame" x="159" y="196" width="56" height="34"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                    <state key="normal" title="Follow"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="szk" translatesAutoresizingMaskIntoConstraints="NO" id="zpJ-PP-51P">
+                    <rect key="frame" x="137" y="30" width="100" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Cux-Aq-sYB"/>
+                        <constraint firstAttribute="width" constant="100" id="vab-KM-Eaj"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2l-ng-Xh1">
+                    <rect key="frame" x="147" y="240" width="80" height="40"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.79641702586206897" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="5u1-At-BSd"/>
+                        <constraint firstAttribute="width" constant="80" id="kJT-tg-Gp0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Follow">
+                        <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgN-MQ-hGD">
+                    <rect key="frame" x="37" y="150" width="300" height="70"/>
+                    <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="AL3-Kg-QEf"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="@szk-atmophere">
+                            <attributes>
+                                <color key="NSColor" red="0.18778044871794874" green="0.18778044871794874" blue="0.18778044871794874" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content">
+I'm an iOS application engineer.</string>
+                            <attributes>
+                                <color key="NSColor" red="0.18778044871794874" green="0.18778044871794874" blue="0.18778044871794874" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                            <attributes>
+                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="https://github.com/szk-atmosphere">
+                            <attributes>
+                                <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                <string key="NSLink">https://github.com/szk-atmosphere</string>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </textView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="MgN-MQ-hGD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="83G-6L-IlY"/>
                 <constraint firstItem="1i6-fV-ZW5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ASh-V5-NsZ"/>
-                <constraint firstItem="Zah-9s-LG3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KKj-to-Dhr"/>
-                <constraint firstAttribute="bottom" secondItem="Zah-9s-LG3" secondAttribute="bottom" constant="20" id="Qgs-MJ-TLe"/>
+                <constraint firstItem="j2l-ng-Xh1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IOJ-q7-IPI"/>
+                <constraint firstItem="j2l-ng-Xh1" firstAttribute="top" secondItem="MgN-MQ-hGD" secondAttribute="bottom" constant="20" id="JXh-9g-BCc"/>
+                <constraint firstAttribute="bottom" secondItem="j2l-ng-Xh1" secondAttribute="bottom" constant="20" id="RR7-Ik-NuY"/>
+                <constraint firstItem="zpJ-PP-51P" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="RTk-Wy-lhI"/>
+                <constraint firstItem="zpJ-PP-51P" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="cuq-Kn-LrY"/>
                 <constraint firstItem="1i6-fV-ZW5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="haf-LY-bj8"/>
                 <constraint firstAttribute="trailing" secondItem="1i6-fV-ZW5" secondAttribute="trailing" id="lef-dl-Qun"/>
                 <constraint firstAttribute="bottom" secondItem="1i6-fV-ZW5" secondAttribute="bottom" id="nPk-I2-fav"/>
+                <constraint firstItem="MgN-MQ-hGD" firstAttribute="top" secondItem="zpJ-PP-51P" secondAttribute="bottom" constant="20" id="sia-YV-4ec"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backgroundImageView" destination="1i6-fV-ZW5" id="35F-mp-zmD"/>
+                <outlet property="followButton" destination="j2l-ng-Xh1" id="p1h-Z0-ggC"/>
+                <outlet property="textView" destination="MgN-MQ-hGD" id="Z5G-Hu-3EQ"/>
+                <outlet property="userIconImageView" destination="zpJ-PP-51P" id="4VV-fw-xAY"/>
+            </connections>
             <point key="canvasLocation" x="403.5" y="408"/>
         </view>
     </objects>
+    <resources>
+        <image name="marty" width="375" height="300"/>
+        <image name="szk" width="350" height="350"/>
+    </resources>
 </document>

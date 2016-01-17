@@ -10,24 +10,10 @@ import UIKit
 import MartyJunior
 import ReuseCellConfigure
 
-class ProfileViewLayoutManager {
-    enum TabType: String {
-        case Tweets = "Tweets"
-        case Following = "Following"
-        case Followers = "Followers"
-    }
-    
-    static let TabTypes: [TabType] = [.Tweets, .Following, .Followers]
-    
-    subscript(index: Int) -> TabType {
-        return self.dynamicType.TabTypes[index]
-    }
-}
-
 class ProfileViewController: MJViewController {
     //MARK: - Properties
     private let layoutManager = ProfileViewLayoutManager()
-    private let profileView = ProfileView.Nib.instantiateWithOwner(nil, options: nil).first as! UIView
+    private let profileView = ProfileView.Nib.instantiateWithOwner(nil, options: nil).first as! ProfileView
     
     //MARK: - Life cycle
     override func viewDidLoad() {
@@ -35,9 +21,12 @@ class ProfileViewController: MJViewController {
         // Do any additional setup after loading the view, typically from a nib.
         delegate = self
         dataSource = self
-        
         registerNibToAllTableViews(ProfileTweetCell.Nib, forCellReuseIdentifier: ProfileTweetCell.ReuseIdentifier)
         registerNibToAllTableViews(ProfileUserCell.Nib, forCellReuseIdentifier: ProfileUserCell.ReuseIdentifier)
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,37 +45,24 @@ extension ProfileViewController: MJViewControllerDataSource {
     }
     
     func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        switch layoutManager[targetIndex] {
-            case .Tweets:
-                return tableView.dequeueReusableCellWithIdentifier(ProfileTweetCell.ReuseIdentifier, classForCell: ProfileTweetCell.self) {
-                    $0.contentView.backgroundColor = indexPath.row % 2 == 0 ? .redColor() : .brownColor()
-                }!
-            case .Following:
-                return tableView.dequeueReusableCellWithIdentifier(ProfileUserCell.ReuseIdentifier, classForCell: ProfileUserCell.self) {
-                    $0.contentView.backgroundColor = indexPath.row % 2 == 0 ? .greenColor() : .whiteColor()
-                }!
-            case .Followers:
-                return tableView.dequeueReusableCellWithIdentifier(ProfileUserCell.ReuseIdentifier, classForCell: ProfileUserCell.self) {
-                    $0.contentView.backgroundColor = indexPath.row % 2 == 0 ? .yellowColor() : .blackColor()
-                }!
-        }
+        return layoutManager.cellForTargetIndex(targetIndex, indexPath: indexPath, tableView: tableView)
     }
     
     func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch layoutManager[targetIndex] {
-            case .Tweets: return 5
-            case .Following: return 20
-            case .Followers: return 5
-        }
+        return layoutManager.numberOfRowsInTargetIndex(targetIndex)
     }
 }
 
 extension ProfileViewController: MJViewControllerDelegate {
+    func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewDidScroll scrollView: UIScrollView) {
+        let value = min(1, max(0, scrollView.contentOffset.y / headerHeight))
+        profileView.backgroundImageView.blur(Float(value))
+        profileView.userIconImageView.alpha = 1 - value
+        profileView.textView.alpha = 1 - value
+        profileView.followButton.alpha = 1 - value
+    }
+    
     func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        switch layoutManager[targetIndex] {
-            case .Tweets: return ProfileTweetCell.Height
-            case .Following: return ProfileUserCell.Height
-            case .Followers: return ProfileUserCell.Height
-        }
+        return layoutManager.heightForTargetIndex(targetIndex)
     }
 }

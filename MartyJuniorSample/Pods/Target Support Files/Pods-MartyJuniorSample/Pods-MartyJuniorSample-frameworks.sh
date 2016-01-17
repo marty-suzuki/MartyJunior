@@ -87,9 +87,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-MartyJuniorSample/MartyJunior.framework"
   install_framework "Pods-MartyJuniorSample/MisterFusion.framework"
   install_framework "Pods-MartyJuniorSample/ReuseCellConfigure.framework"
+  install_framework "Pods-MartyJuniorSample/SABlurImageView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-MartyJuniorSample/MartyJunior.framework"
   install_framework "Pods-MartyJuniorSample/MisterFusion.framework"
   install_framework "Pods-MartyJuniorSample/ReuseCellConfigure.framework"
+  install_framework "Pods-MartyJuniorSample/SABlurImageView.framework"
 fi
