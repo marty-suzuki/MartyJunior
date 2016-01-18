@@ -16,7 +16,7 @@ You can change tab contents with swipe gesture on middle of `UITableView`!!
 - [x] Auto fill content space when content size is not enough.
 - [x] flexible top content.
 - [x] customizable tab view.
-- [ ] customizable navigation view
+- [x] navigation view
 
 ## Usage
 

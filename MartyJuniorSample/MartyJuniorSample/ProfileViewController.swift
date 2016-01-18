@@ -26,6 +26,13 @@ class ProfileViewController: MJViewController {
         registerNibToAllTableViews(ProfileUserCell.Nib, forCellReuseIdentifier: ProfileUserCell.ReuseIdentifier)
         
         tabView.delegate = self
+        
+        title = "@szk-atmosphere"
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationView?.titleLabel.alpha = 0
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -75,6 +82,7 @@ extension ProfileViewController: MJViewControllerDelegate {
         profileView.userIconImageView.alpha = 1 - value
         profileView.textView.alpha = 1 - value
         profileView.followButton.alpha = 1 - value
+        navigationView?.titleLabel.alpha = value
     }
     
     func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
