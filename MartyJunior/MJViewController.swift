@@ -40,6 +40,7 @@ public class MJViewController: UIViewController {
     private let contentEscapeView: UIView = UIView()
     private var contentEscapeViewTopConstraint: NSLayoutConstraint?
     
+    public private(set) var navigationView: MJNavigationView?
     private let navigationContainerView = UIView()
     
     private var containerViews: [UIView] = []
@@ -113,6 +114,7 @@ public class MJViewController: UIViewController {
     }
     
     public override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         dispatch_once(&onceToken) {
             self.setupViews()
         }
@@ -189,6 +191,17 @@ extension MJViewController {
             navigationContainerView.Right,
             navigationContainerView.Height |=| navigationContainerViewHeight
         )
+        
+        if hiddenNavigationView { return }
+        let navigationView = MJNavigationView()
+        navigationContainerView.addLayoutSubview(navigationView, andConstraints:
+            navigationView.Height |=| MJNavigationView.Height,
+            navigationView.Left,
+            navigationView.Bottom,
+            navigationView.Right
+        )
+        navigationView.titleLabel.text = title
+        self.navigationView = navigationView
     }
     
     func didTapNavigationContainerView(gestureRecognizer: UITapGestureRecognizer) {

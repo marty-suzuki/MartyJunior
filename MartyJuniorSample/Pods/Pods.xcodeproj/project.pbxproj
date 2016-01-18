@@ -20,6 +20,7 @@
 		274F497A667F1080F2802DDCDFAF7E9E /* Pods-MartyJuniorSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B548075EDDD192DC9A07256EEFA3A0 /* Pods-MartyJuniorSample-dummy.m */; };
 		2F14EB6FA14CA9FB0EE4953241272600 /* MartyJunior-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B481455AE5502B55723F65EEDC0A6661 /* MartyJunior-dummy.m */; };
 		34A370A9C5CE9BD6977A7374F91D2AD4 /* ReuseCellConfigure-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48B5451DE8F4914F587EB3DC140F6C36 /* ReuseCellConfigure-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37588D8B1C4D6CFF0037CB96 /* MJNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37588D8A1C4D6CFF0037CB96 /* MJNavigationView.swift */; };
 		3E5B8BCFDC41B32C68B95A1934C925CE /* SABlurImageView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FE8B1DD146B8A5C3DDEE745D1910629 /* SABlurImageView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4649BD145F6E71EAE0F0A87CD1A2A5E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE85F4526EC1B4B5DDCB5F19B0B1784 /* UIKit.framework */; };
 		4A471766E157C3DFA8588E490B4A57EE /* ReuseCellConfigure-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B33643C30E721EBD9E605BCD6D8E0E /* ReuseCellConfigure-dummy.m */; };
@@ -97,6 +98,7 @@
 		2DF8CA609F546CEF725A05C2297C9B95 /* MisterFusion-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MisterFusion-umbrella.h"; sourceTree = "<group>"; };
 		2ECA7932F367AA39A0132463DCF2EFE0 /* ReuseCellConfigure-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReuseCellConfigure-prefix.pch"; sourceTree = "<group>"; };
 		3005BCCDA69613BD4FA3A9FA5E7F8BC9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37588D8A1C4D6CFF0037CB96 /* MJNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJNavigationView.swift; sourceTree = "<group>"; };
 		38FC882A8692179A1FD4D9C215FAEFDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3F63E98AB9117458C25BE81793AB7549 /* MartyJunior.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MartyJunior.xcconfig; sourceTree = "<group>"; };
 		48B5451DE8F4914F587EB3DC140F6C36 /* ReuseCellConfigure-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReuseCellConfigure-umbrella.h"; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				9E21E2A47A6F2EC0DEB21600D6D0F8F3 /* MJViewControllerDataSource.swift */,
 				0B1B3FB48904384B100631A1D0E2636A /* MJViewControllerDelegate.swift */,
 				EA6A07CA001B7E92A7A04870220EE838 /* NSIndexPath+String.swift */,
+				37588D8A1C4D6CFF0037CB96 /* MJNavigationView.swift */,
 			);
 			path = MartyJunior;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				2F14EB6FA14CA9FB0EE4953241272600 /* MartyJunior-dummy.m in Sources */,
 				13CD8888097EB28B716BA63025F00CBC /* MisterFusion+MartyJunior.swift in Sources */,
 				233E5ECF7EEBE7C7DE305FED2B9F78CC /* MJContentView.swift in Sources */,
+				37588D8B1C4D6CFF0037CB96 /* MJNavigationView.swift in Sources */,
 				E81B09D078F830E7AA1E8A7450A233EF /* MJTableViewController.swift in Sources */,
 				1656FB26763F981944140F29351C0D1C /* MJTableViewControllerDataSource.swift in Sources */,
 				01258B2D8ED5EC049A7D5C7B097D9BE9 /* MJTableViewControllerDelegate.swift in Sources */,
