@@ -73,7 +73,7 @@ extension MJTableViewController: UITableViewDataSource {
                 return cell
             }
             
-            if let cell = dataSource?.tableViewController(self, tableView: tableView, cellForRowAtIndexPath: indexPath.previousSection()) {
+            if let cell = dataSource?.tableViewController(self, tableView: tableView, cellForRowAtIndexPath: indexPath) {
                 return cell
             }
         }
@@ -106,12 +106,12 @@ extension MJTableViewController: UITableViewDataSource {
    
     public func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         if indexPath.section == 0 { return false }
-        return dataSource?.tableViewController(self, tableView: tableView, canEditRowAtIndexPath: indexPath.previousSection()) ?? false
+        return dataSource?.tableViewController(self, tableView: tableView, canEditRowAtIndexPath: indexPath) ?? false
     }
 
     public func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         if indexPath.section == 0 { return false }
-        return dataSource?.tableViewController(self, tableView: tableView, canMoveRowAtIndexPath: indexPath.previousSection()) ?? false
+        return dataSource?.tableViewController(self, tableView: tableView, canMoveRowAtIndexPath: indexPath) ?? false
     }
     
     public func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
@@ -125,12 +125,12 @@ extension MJTableViewController: UITableViewDataSource {
     
     public func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 { return }
-        dataSource?.tableViewController(self, tableView: tableView, commitEditingStyle: editingStyle, forRowAtIndexPath: indexPath.previousSection())
+        dataSource?.tableViewController(self, tableView: tableView, commitEditingStyle: editingStyle, forRowAtIndexPath: indexPath)
     }
  
     public func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
         if (sourceIndexPath.section == 0 || destinationIndexPath.section == 0) { return }
-        dataSource?.tableViewController(self, tableView: tableView, moveRowAtIndexPath: sourceIndexPath.previousSection(), toIndexPath: destinationIndexPath.previousSection())
+        dataSource?.tableViewController(self, tableView: tableView, moveRowAtIndexPath: sourceIndexPath, toIndexPath: destinationIndexPath)
     }
 }
 
@@ -143,7 +143,7 @@ extension MJTableViewController: UITableViewDelegate {
         } else if indexPath.section == 0 {
             height = delegate?.tableViewController(self, tableView: tableView, heightForTopCellAtIndexPath: indexPath) ?? 0
         } else {
-            height = delegate?.tableViewController(self, tableView: tableView, heightForRowAtIndexPath: indexPath.previousSection()) ?? 44
+            height = delegate?.tableViewController(self, tableView: tableView, heightForRowAtIndexPath: indexPath) ?? 44
             cellHeightList[indexPath.sectionRowString] = height
         }
         return height
@@ -151,7 +151,7 @@ extension MJTableViewController: UITableViewDelegate {
     
     public func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 { return }
-        delegate?.tableViewController(self, tableView: tableView, willDisplayCell: cell, forRowAtIndexPath: indexPath.previousSection())
+        delegate?.tableViewController(self, tableView: tableView, willDisplayCell: cell, forRowAtIndexPath: indexPath)
     }
     
     public func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -166,7 +166,7 @@ extension MJTableViewController: UITableViewDelegate {
     
     public func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 { return }
-        delegate?.tableViewController(self, tableView: tableView, didEndDisplayingCell: cell, forRowAtIndexPath: indexPath.previousSection())
+        delegate?.tableViewController(self, tableView: tableView, didEndDisplayingCell: cell, forRowAtIndexPath: indexPath)
     }
     
     public func tableView(tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int) {
@@ -208,7 +208,7 @@ extension MJTableViewController: UITableViewDelegate {
         } else if indexPath.section == 0 {
             height = delegate?.tableViewController(self, tableView: tableView, estimatedHeightForTopCellAtIndexPath: indexPath) ?? 0
         } else {
-            height = delegate?.tableViewController(self, tableView: tableView, estimatedHeightForRowAtIndexPath: indexPath.previousSection()) ?? 0
+            height = delegate?.tableViewController(self, tableView: tableView, estimatedHeightForRowAtIndexPath: indexPath) ?? 0
             cellHeightList[indexPath.sectionRowString] = height
         }
         return height
@@ -248,73 +248,76 @@ extension MJTableViewController: UITableViewDelegate {
     
     public func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 { return }
-        delegate?.tableViewController(self, tableView: tableView, accessoryButtonTappedForRowWithIndexPath: indexPath.previousSection())
+        delegate?.tableViewController(self, tableView: tableView, accessoryButtonTappedForRowWithIndexPath: indexPath)
     }
     
     public func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         if indexPath.section == 0 { return false }
-        return delegate?.tableViewController(self, tableView: tableView, shouldHighlightRowAtIndexPath: indexPath.previousSection()) ?? false
+        return delegate?.tableViewController(self, tableView: tableView, shouldHighlightRowAtIndexPath: indexPath) ?? true
     }
     
     public func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 { return }
-        delegate?.tableViewController(self, tableView: tableView, didHighlightRowAtIndexPath: indexPath.previousSection())
+        delegate?.tableViewController(self, tableView: tableView, didHighlightRowAtIndexPath: indexPath)
     }
     
     public func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 { return }
-        delegate?.tableViewController(self, tableView: tableView, didUnhighlightRowAtIndexPath: indexPath.previousSection())
+        delegate?.tableViewController(self, tableView: tableView, didUnhighlightRowAtIndexPath: indexPath)
     }
     
     public func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         if indexPath.section == 0 { return nil }
-        return delegate?.tableViewController(self, tableView: tableView, willSelectRowAtIndexPath: indexPath.previousSection())
+        return delegate?.tableViewController(self, tableView: tableView, willSelectRowAtIndexPath: indexPath) ?? indexPath
     }
     
     public func tableView(tableView: UITableView, willDeselectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         if indexPath.section == 0 { return nil }
-        return delegate?.tableViewController(self, tableView: tableView, willDeselectRowAtIndexPath: indexPath.previousSection())
+        let ip =  delegate?.tableViewController(self, tableView: tableView, willDeselectRowAtIndexPath: indexPath) ?? indexPath
+        print("willDeselectRowAtIndexPath \(ip)")
+        return ip
     }
     
     public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 { return }
-        delegate?.tableViewController(self, tableView: tableView, didSelectRowAtIndexPath: indexPath.previousSection())
+        delegate?.tableViewController(self, tableView: tableView, didSelectRowAtIndexPath: indexPath)
     }
     
     public func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        print("didDeselectRowAtIndexPath = \(indexPath)")
         if indexPath.section == 0 { return }
-        delegate?.tableViewController(self, tableView: tableView, didDeselectRowAtIndexPath: indexPath.previousSection())
+        delegate?.tableViewController(self, tableView: tableView, didDeselectRowAtIndexPath: indexPath)
     }
     
     public func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
         if indexPath.section == 0 { return .None }
-        return delegate?.tableViewController(self, tableView: tableView, editingStyleForRowAtIndexPath: indexPath.previousSection()) ?? .None
+        return delegate?.tableViewController(self, tableView: tableView, editingStyleForRowAtIndexPath: indexPath) ?? .None
     }
     
     public func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
         if indexPath.section == 0 { return nil }
-        return delegate?.tableViewController(self, tableView: tableView, titleForDeleteConfirmationButtonForRowAtIndexPath: indexPath.previousSection())
+        return delegate?.tableViewController(self, tableView: tableView, titleForDeleteConfirmationButtonForRowAtIndexPath: indexPath)
     }
     
     @available(iOS 8.0, *)
     public func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         if indexPath.section == 0 { return nil }
-        return delegate?.tableViewController(self, tableView: tableView, editActionsForRowAtIndexPath: indexPath.previousSection())
+        return delegate?.tableViewController(self, tableView: tableView, editActionsForRowAtIndexPath: indexPath)
     }
     
     public func tableView(tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         if indexPath.section == 0 { return false }
-        return delegate?.tableViewController(self, tableView: tableView, shouldIndentWhileEditingRowAtIndexPath: indexPath.previousSection()) ?? false
+        return delegate?.tableViewController(self, tableView: tableView, shouldIndentWhileEditingRowAtIndexPath: indexPath) ?? true
     }
     
     public func tableView(tableView: UITableView, willBeginEditingRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 { return }
-        delegate?.tableViewController(self, tableView: tableView, willBeginEditingRowAtIndexPath: indexPath.previousSection())
+        delegate?.tableViewController(self, tableView: tableView, willBeginEditingRowAtIndexPath: indexPath)
     }
     
     public func tableView(tableView: UITableView, didEndEditingRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 { return }
-        delegate?.tableViewController(self, tableView: tableView, didEndEditingRowAtIndexPath: indexPath.previousSection())
+        delegate?.tableViewController(self, tableView: tableView, didEndEditingRowAtIndexPath: indexPath)
     }
     
     public func tableView(tableView: UITableView, targetIndexPathForMoveFromRowAtIndexPath sourceIndexPath: NSIndexPath, toProposedIndexPath proposedDestinationIndexPath: NSIndexPath) -> NSIndexPath {
@@ -326,33 +329,33 @@ extension MJTableViewController: UITableViewDelegate {
     
     public func tableView(tableView: UITableView, indentationLevelForRowAtIndexPath indexPath: NSIndexPath) -> Int {
         if indexPath.section == 0 { return 0 }
-        return delegate?.tableViewController(self, tableView: tableView, indentationLevelForRowAtIndexPath: indexPath.previousSection()) ?? 1
+        return delegate?.tableViewController(self, tableView: tableView, indentationLevelForRowAtIndexPath: indexPath) ?? 1
     }
     
     public func tableView(tableView: UITableView, shouldShowMenuForRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         if indexPath.section == 0 { return false }
-        return delegate?.tableViewController(self, tableView: tableView, shouldShowMenuForRowAtIndexPath: indexPath.previousSection()) ?? false
+        return delegate?.tableViewController(self, tableView: tableView, shouldShowMenuForRowAtIndexPath: indexPath) ?? false
     }
     
     public func tableView(tableView: UITableView, canPerformAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
         if indexPath.section == 0 { return false }
-        return delegate?.tableViewController(self, tableView: tableView, canPerformAction: action, forRowAtIndexPath: indexPath.previousSection(), withSender: sender) ?? false
+        return delegate?.tableViewController(self, tableView: tableView, canPerformAction: action, forRowAtIndexPath: indexPath, withSender: sender) ?? false
     }
     
     public func tableView(tableView: UITableView, performAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
         if indexPath.section == 0 { return }
-        delegate?.tableViewController(self, tableView: tableView, performAction: action, forRowAtIndexPath: indexPath.previousSection(), withSender: sender)
+        delegate?.tableViewController(self, tableView: tableView, performAction: action, forRowAtIndexPath: indexPath, withSender: sender)
     }
     
     @available(iOS 9.0, *)
     public func tableView(tableView: UITableView, canFocusRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         if indexPath.section == 0 { return false }
-        return delegate?.tableViewController(self, tableView: tableView, canFocusRowAtIndexPath: indexPath.previousSection()) ?? false
+        return delegate?.tableViewController(self, tableView: tableView, canFocusRowAtIndexPath: indexPath) ?? true
     }
     
     @available(iOS 9.0, *)
     public func tableView(tableView: UITableView, shouldUpdateFocusInContext context: UITableViewFocusUpdateContext) -> Bool {
-        return delegate?.tableViewController(self, tableView: tableView, shouldUpdateFocusInContext: context) ?? false
+        return delegate?.tableViewController(self, tableView: tableView, shouldUpdateFocusInContext: context) ?? true
     }
     
     @available(iOS 9.0, *)
@@ -413,7 +416,7 @@ extension MJTableViewController: UIScrollViewDelegate {
     }
     
     public func scrollViewShouldScrollToTop(scrollView: UIScrollView) -> Bool {
-        return delegate?.tableViewController(self, scrollViewShouldScrollToTop: scrollView) ?? false
+        return delegate?.tableViewController(self, scrollViewShouldScrollToTop: scrollView) ?? true
     }
     
     public func scrollViewDidScrollToTop(scrollView: UIScrollView) {

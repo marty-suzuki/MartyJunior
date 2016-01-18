@@ -169,10 +169,10 @@ extension MJViewController {
             navigationContainerView.Height |=| navigationContainerViewHeight
         )
         
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didTapNavigationContainerView:")
-        tapGestureRecognizer.numberOfTapsRequired = 1
-        tapGestureRecognizer.numberOfTouchesRequired = 1
-        navigationContainerView.addGestureRecognizer(tapGestureRecognizer)
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didTapNavigationContainerView:")
+//        tapGestureRecognizer.numberOfTapsRequired = 1
+//        tapGestureRecognizer.numberOfTouchesRequired = 1
+//        navigationContainerView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     func didTapNavigationContainerView(gestureRecognizer: UITapGestureRecognizer) {

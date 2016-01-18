@@ -65,4 +65,9 @@ extension ProfileViewController: MJViewControllerDelegate {
     func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return layoutManager.heightForTargetIndex(targetIndex)
     }
+    
+    func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        print("targetIndex = \(targetIndex) indexPath = \(indexPath)")
+    }
 }
