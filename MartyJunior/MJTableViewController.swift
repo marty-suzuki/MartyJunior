@@ -273,9 +273,7 @@ extension MJTableViewController: UITableViewDelegate {
     
     public func tableView(tableView: UITableView, willDeselectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         if indexPath.section == 0 { return nil }
-        let ip =  delegate?.tableViewController(self, tableView: tableView, willDeselectRowAtIndexPath: indexPath) ?? indexPath
-        print("willDeselectRowAtIndexPath \(ip)")
-        return ip
+        return delegate?.tableViewController(self, tableView: tableView, willDeselectRowAtIndexPath: indexPath) ?? indexPath
     }
     
     public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -284,7 +282,6 @@ extension MJTableViewController: UITableViewDelegate {
     }
     
     public func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        print("didDeselectRowAtIndexPath = \(indexPath)")
         if indexPath.section == 0 { return }
         delegate?.tableViewController(self, tableView: tableView, didDeselectRowAtIndexPath: indexPath)
     }

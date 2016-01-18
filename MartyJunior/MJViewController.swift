@@ -60,7 +60,9 @@ public class MJViewController: UIViewController {
     
     public var selectedIndex: Int {
         get {
-            return Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
+            let index = Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
+            viewControllers.enumerate().forEach { $0.element.tableView.scrollsToTop = $0.index == index }
+            return index
         }
         set {
             scrollView.setContentOffset(CGPoint(x: 0, y: scrollView.bounds.size.width * CGFloat(newValue)), animated: false)
@@ -168,11 +170,6 @@ extension MJViewController {
             navigationContainerView.Right,
             navigationContainerView.Height |=| navigationContainerViewHeight
         )
-        
-//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didTapNavigationContainerView:")
-//        tapGestureRecognizer.numberOfTapsRequired = 1
-//        tapGestureRecognizer.numberOfTouchesRequired = 1
-//        navigationContainerView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     func didTapNavigationContainerView(gestureRecognizer: UITapGestureRecognizer) {
@@ -468,6 +465,7 @@ extension MJViewController: MJTableViewControllerDelegate {
     }
     
     func tableViewController(viewController: MJTableViewController, scrollViewDidScrollToTop scrollView: UIScrollView) {
+        viewControllers.filter { $0 != self.selectedViewController }.forEach { $0.tableView.setContentOffset(.zero, animated: false) }
         if viewController != selectedViewController { return }
         delegate?.mjViewController?(self, selectedIndex: selectedIndex, scrollViewDidScrollToTop: scrollView)
     }
