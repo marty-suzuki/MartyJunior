@@ -13,6 +13,8 @@
 		3718F4FB1C4AB3BD00DABDFC /* ProfileTweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3718F4F91C4AB3BD00DABDFC /* ProfileTweetCell.xib */; };
 		3718F5001C4AB3E300DABDFC /* ProfileUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3718F4FE1C4AB3E300DABDFC /* ProfileUserCell.swift */; };
 		3718F5011C4AB3E300DABDFC /* ProfileUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3718F4FF1C4AB3E300DABDFC /* ProfileUserCell.xib */; };
+		37588D871C4D51790037CB96 /* ProfileTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37588D861C4D51790037CB96 /* ProfileTabView.swift */; };
+		37588D891C4D51870037CB96 /* ProfileTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37588D881C4D51870037CB96 /* ProfileTabView.xib */; };
 		379DD1E81C0615BB00A7FA9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD1E71C0615BB00A7FA9D /* AppDelegate.swift */; };
 		379DD1EA1C0615BB00A7FA9D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD1E91C0615BB00A7FA9D /* ProfileViewController.swift */; };
 		379DD1ED1C0615BB00A7FA9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379DD1EB1C0615BB00A7FA9D /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 		3718F4F91C4AB3BD00DABDFC /* ProfileTweetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTweetCell.xib; sourceTree = "<group>"; };
 		3718F4FE1C4AB3E300DABDFC /* ProfileUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUserCell.swift; sourceTree = "<group>"; };
 		3718F4FF1C4AB3E300DABDFC /* ProfileUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileUserCell.xib; sourceTree = "<group>"; };
+		37588D861C4D51790037CB96 /* ProfileTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTabView.swift; sourceTree = "<group>"; };
+		37588D881C4D51870037CB96 /* ProfileTabView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTabView.xib; sourceTree = "<group>"; };
 		379DD1E41C0615BB00A7FA9D /* MartyJuniorSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MartyJuniorSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		379DD1E71C0615BB00A7FA9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		379DD1E91C0615BB00A7FA9D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 			children = (
 				3718F4F31C4AB36C00DABDFC /* ProfileView.swift */,
 				3718F4F41C4AB36C00DABDFC /* ProfileView.xib */,
+				37588D861C4D51790037CB96 /* ProfileTabView.swift */,
+				37588D881C4D51870037CB96 /* ProfileTabView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				379DD1F21C0615BB00A7FA9D /* LaunchScreen.storyboard in Resources */,
+				37588D891C4D51870037CB96 /* ProfileTabView.xib in Resources */,
 				3718F4F61C4AB36C00DABDFC /* ProfileView.xib in Resources */,
 				3718F5011C4AB3E300DABDFC /* ProfileUserCell.xib in Resources */,
 				379DD1EF1C0615BB00A7FA9D /* Assets.xcassets in Resources */,
@@ -258,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37588D871C4D51790037CB96 /* ProfileTabView.swift in Sources */,
 				37A7D0081C4C10390073D7C4 /* ProfileViewLayoutManager.swift in Sources */,
 				379DD1EA1C0615BB00A7FA9D /* ProfileViewController.swift in Sources */,
 				3718F4F51C4AB36C00DABDFC /* ProfileView.swift in Sources */,

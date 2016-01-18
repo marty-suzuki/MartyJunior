@@ -14,6 +14,7 @@ class ProfileViewController: MJViewController {
     //MARK: - Properties
     private let layoutManager = ProfileViewLayoutManager()
     private let profileView = ProfileView.Nib.instantiateWithOwner(nil, options: nil).first as! ProfileView
+    private let tabView = ProfileTabView.Nib.instantiateWithOwner(nil, options: nil).first as! ProfileTabView
     
     //MARK: - Life cycle
     override func viewDidLoad() {
@@ -23,6 +24,8 @@ class ProfileViewController: MJViewController {
         dataSource = self
         registerNibToAllTableViews(ProfileTweetCell.Nib, forCellReuseIdentifier: ProfileTweetCell.ReuseIdentifier)
         registerNibToAllTableViews(ProfileUserCell.Nib, forCellReuseIdentifier: ProfileUserCell.ReuseIdentifier)
+        
+        tabView.delegate = self
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -40,6 +43,14 @@ extension ProfileViewController: MJViewControllerDataSource {
         return profileView
     }
     
+    func mjViewControllerTabViewForTop(viewController: MJViewController) -> UIView {
+        return tabView
+    }
+    
+    func mjViewController(viewController: MJViewController, didChangeSelectedIndex selectedIndex: Int) {
+        tabView.selectedIndex = selectedIndex
+    }
+    
     func mjViewControllerTitlesForTab(viewController: MJViewController) -> [String] {
         return ProfileViewLayoutManager.TabTypes.map { $0.rawValue }
     }
@@ -54,6 +65,10 @@ extension ProfileViewController: MJViewControllerDataSource {
 }
 
 extension ProfileViewController: MJViewControllerDelegate {
+    func mjViewController(viewController: MJViewController, contentScrollViewDidScroll scrollView: UIScrollView) {
+        tabView.syncOtherScrollView(scrollView)
+    }
+    
     func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewDidScroll scrollView: UIScrollView) {
         let value = min(1, max(0, scrollView.contentOffset.y / headerHeight))
         profileView.backgroundImageView.blur(Float(value))
@@ -64,5 +79,16 @@ extension ProfileViewController: MJViewControllerDelegate {
     
     func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return layoutManager.heightForTargetIndex(targetIndex)
+    }
+    
+    func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        print("targetIndex = \(targetIndex) indexPath = \(indexPath)")
+    }
+}
+
+extension ProfileViewController: ProfileTabViewDelegate {
+    func profileTabView(view: ProfileTabView, didTapTab button: UIButton, index: Int) {
+        selectedIndex = index
     }
 }

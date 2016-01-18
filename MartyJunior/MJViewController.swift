@@ -58,12 +58,31 @@ public class MJViewController: UIViewController {
         return titles?.count ?? 0
     }
     
+    private var _selectedIndex: Int = 0 {
+        didSet {
+            delegate?.mjViewController?(self, didChangeSelectedIndex: _selectedIndex)
+        }
+    }
+    
     public var selectedIndex: Int {
         get {
-            return Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
+            let index = Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
+            if _selectedIndex != index {
+                _selectedIndex = index
+                viewControllers.enumerate().forEach { $0.element.tableView.scrollsToTop = $0.index == index }
+            }
+            return index
         }
         set {
-            scrollView.setContentOffset(CGPoint(x: 0, y: scrollView.bounds.size.width * CGFloat(newValue)), animated: false)
+            _selectedIndex = newValue
+            addContentViewToEscapeView()
+            UIView.animateWithDuration(0.25, animations: {
+                self.scrollView.setContentOffset(CGPoint(x: self.scrollView.bounds.size.width * CGFloat(newValue), y: 0), animated: false)
+            }) { _ in
+                if self.contentView.superview == self.contentEscapeView && self.scrollView.contentOffset.y < self.contentEscapeViewTopConstraint?.constant {
+                    self.addContentViewToCell()
+                }
+            }
         }
     }
     
@@ -120,6 +139,8 @@ extension MJViewController {
         contentView.titles = titles
         contentView.segmentedControl.selectedSegmentIndex = 0
         contentView.userDefinedView = dataSource.mjViewControllerContentViewForTop(self)
+        contentView.userDefinedTabView = dataSource.mjViewControllerTabViewForTop(self)
+        contentView.setupTabView()
         
         scrollView.scrollsToTop = false
         scrollView.pagingEnabled = true
@@ -168,11 +189,6 @@ extension MJViewController {
             navigationContainerView.Right,
             navigationContainerView.Height |=| navigationContainerViewHeight
         )
-        
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didTapNavigationContainerView:")
-        tapGestureRecognizer.numberOfTapsRequired = 1
-        tapGestureRecognizer.numberOfTouchesRequired = 1
-        navigationContainerView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     func didTapNavigationContainerView(gestureRecognizer: UITapGestureRecognizer) {
@@ -308,7 +324,7 @@ extension MJViewController {
 //MARK: - UIScrollViewDelegate
 extension MJViewController: UIScrollViewDelegate {
     public func scrollViewDidScroll(scrollView: UIScrollView) {
-        
+        delegate?.mjViewController?(self, contentScrollViewDidScroll: scrollView)
     }
     
     public func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
@@ -316,6 +332,7 @@ extension MJViewController: UIScrollViewDelegate {
             addContentViewToCell()
         }
         contentView.segmentedControl.selectedSegmentIndex = selectedIndex
+        delegate?.mjViewController?(self, contentScrollViewDidEndDragging: scrollView, willDecelerate: decelerate)
     }
     
     public func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
@@ -323,10 +340,12 @@ extension MJViewController: UIScrollViewDelegate {
             addContentViewToCell()
         }
         contentView.segmentedControl.selectedSegmentIndex = selectedIndex
+        delegate?.mjViewController?(self, contentScrollViewDidEndDecelerating: scrollView)
     }
     
     public func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         addContentViewToEscapeView()
+        delegate?.mjViewController?(self, contentScrollViewWillBeginDragging: scrollView)
     }
 }
 
@@ -468,6 +487,7 @@ extension MJViewController: MJTableViewControllerDelegate {
     }
     
     func tableViewController(viewController: MJTableViewController, scrollViewDidScrollToTop scrollView: UIScrollView) {
+        viewControllers.filter { $0 != self.selectedViewController }.forEach { $0.tableView.setContentOffset(.zero, animated: false) }
         if viewController != selectedViewController { return }
         delegate?.mjViewController?(self, selectedIndex: selectedIndex, scrollViewDidScrollToTop: scrollView)
     }
@@ -628,13 +648,6 @@ extension MJViewController: MJTableViewControllerDelegate {
 //MARK: - MJContentViewDelegate
 extension MJViewController: MJContentViewDelegate {
     func contentView(contentView: MJContentView, didChangeValueOfSegmentedControl segmentedControl: UISegmentedControl) {
-        addContentViewToEscapeView()
-        UIView.animateWithDuration(0.25, animations: {
-            self.scrollView.setContentOffset(CGPoint(x: self.scrollView.bounds.size.width * CGFloat(segmentedControl.selectedSegmentIndex), y: 0), animated: false)
-        }) { _ in
-            if self.contentView.superview == self.contentEscapeView && self.scrollView.contentOffset.y < self.contentEscapeViewTopConstraint?.constant {
-                self.addContentViewToCell()
-            }
-        }
+        selectedIndex = segmentedControl.selectedSegmentIndex
     }
 }

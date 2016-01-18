@@ -10,9 +10,4 @@ import UIKit
 
 extension NSIndexPath {
     var sectionRowString : String { return "\(section)-\(row)" }
-    
-    func previousSection() -> NSIndexPath {
-        if section < 1 { return self }
-        return NSIndexPath(forRow: row, inSection: section - 1)
-    }
 }

@@ -9,6 +9,13 @@
 import UIKit
 
 @objc public protocol MJViewControllerScrollDelegate: class {
+    optional func mjViewController(viewController: MJViewController, didChangeSelectedIndex selectedIndex: Int)
+    optional func mjViewController(viewController: MJViewController, contentScrollViewDidScroll scrollView: UIScrollView)
+    optional func mjViewController(viewController: MJViewController, contentScrollViewDidEndDragging scrollView: UIScrollView, willDecelerate decelerate: Bool)
+    optional func mjViewController(viewController: MJViewController, contentScrollViewDidEndDecelerating scrollView: UIScrollView)
+    optional func mjViewController(viewController: MJViewController, contentScrollViewWillBeginDragging scrollView: UIScrollView)
+    
+    
     optional func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewDidScroll scrollView: UIScrollView)
     optional func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewDidZoom scrollView: UIScrollView)
     

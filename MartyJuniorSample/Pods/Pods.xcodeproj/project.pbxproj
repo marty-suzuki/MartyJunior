@@ -33,7 +33,7 @@
 		8BD4955F5A7B65F16AEC2B39B8259BB5 /* MJViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1B3FB48904384B100631A1D0E2636A /* MJViewControllerDelegate.swift */; };
 		AB4D58828DF4EF79E49AFC49101E0BD2 /* MartyJunior-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8810024E44624AB3CB6D58C6DAFDA658 /* MartyJunior-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B25ED254F3BD50F7FDFEFC0316C78BC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FC882A8692179A1FD4D9C215FAEFDD /* Foundation.framework */; };
-		CE242B69F0776EB1296733A53C3D9E9B /* NSIndexPath+Previous.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A07CA001B7E92A7A04870220EE838 /* NSIndexPath+Previous.swift */; };
+		CE242B69F0776EB1296733A53C3D9E9B /* NSIndexPath+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A07CA001B7E92A7A04870220EE838 /* NSIndexPath+String.swift */; };
 		DA4FBAC8A5AC355C10888DE814450243 /* MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1190043EC6246F36148DB9AFA889D35 /* MisterFusion.swift */; };
 		DAC085D9A3C194D199A7D6D55CF65A5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE85F4526EC1B4B5DDCB5F19B0B1784 /* UIKit.framework */; };
 		DC2653255BADE412CA0B81942D835A58 /* MJViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5A508E992F3A88E931E7FBF2117BD0 /* MJViewController.swift */; };
@@ -140,7 +140,7 @@
 		E2693CFE4FEEFACE09F850488DF1CEA4 /* Pods-MartyJuniorSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MartyJuniorSample-frameworks.sh"; sourceTree = "<group>"; };
 		E3836932E5C57F4390801F43E6357BBD /* MJTableViewTopCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJTableViewTopCell.swift; sourceTree = "<group>"; };
 		E7B595BF4974EAC56B2C6C04F541BDCF /* MJTableViewControllerDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJTableViewControllerDataSource.swift; sourceTree = "<group>"; };
-		EA6A07CA001B7E92A7A04870220EE838 /* NSIndexPath+Previous.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSIndexPath+Previous.swift"; sourceTree = "<group>"; };
+		EA6A07CA001B7E92A7A04870220EE838 /* NSIndexPath+String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSIndexPath+String.swift"; sourceTree = "<group>"; };
 		EACB24FD43BE399D5E5451538EE6ED81 /* ReuseCellConfigure.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ReuseCellConfigure.xcconfig; sourceTree = "<group>"; };
 		EBA38EDA4A07B4CFABE4E6504CD16389 /* Pods-MartyJuniorSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MartyJuniorSample.debug.xcconfig"; sourceTree = "<group>"; };
 		ECFAFCCF6CCFA893409B01E7B5DF9ADA /* MisterFusion.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MisterFusion.modulemap; sourceTree = "<group>"; };
@@ -338,7 +338,7 @@
 				BF5A508E992F3A88E931E7FBF2117BD0 /* MJViewController.swift */,
 				9E21E2A47A6F2EC0DEB21600D6D0F8F3 /* MJViewControllerDataSource.swift */,
 				0B1B3FB48904384B100631A1D0E2636A /* MJViewControllerDelegate.swift */,
-				EA6A07CA001B7E92A7A04870220EE838 /* NSIndexPath+Previous.swift */,
+				EA6A07CA001B7E92A7A04870220EE838 /* NSIndexPath+String.swift */,
 			);
 			path = MartyJunior;
 			sourceTree = "<group>";
@@ -579,7 +579,7 @@
 				DC2653255BADE412CA0B81942D835A58 /* MJViewController.swift in Sources */,
 				1390948DAF5DCE4592169F02120D97A8 /* MJViewControllerDataSource.swift in Sources */,
 				8BD4955F5A7B65F16AEC2B39B8259BB5 /* MJViewControllerDelegate.swift in Sources */,
-				CE242B69F0776EB1296733A53C3D9E9B /* NSIndexPath+Previous.swift in Sources */,
+				CE242B69F0776EB1296733A53C3D9E9B /* NSIndexPath+String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
