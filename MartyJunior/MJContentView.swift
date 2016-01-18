@@ -31,6 +31,9 @@ class MJContentView: UIView {
             sendSubviewToBack(userDefinedView)
         }
     }
+    
+    var userDefinedTabView: UIView?
+    
     let tabContainerView: UIView = UIView()
     let segmentedControl: UISegmentedControl = UISegmentedControl()
     
@@ -46,21 +49,30 @@ class MJContentView: UIView {
     
     init() {
         super.init(frame: .zero)
-        initalize()
     }
     
-    private func initalize() {
-        segmentedControl.addTarget(self, action: "didChangeValueOfSegmentedControl:", forControlEvents: .ValueChanged)
-        
-        tabContainerView.addLayoutSubview(segmentedControl, andConstraints:
-            segmentedControl.Left |+| 8,
-            segmentedControl.Right |-| 8,
-            segmentedControl.Bottom |-| 8,
-            segmentedControl.Top |+| 8,
-            segmentedControl.Height |=| 34
-        )
-        
-        tabContainerView.backgroundColor = .whiteColor()
+    func setupTabView() {
+        if let userDefinedTabView = userDefinedTabView {
+            tabContainerView.addLayoutSubview(userDefinedTabView, andConstraints:
+                userDefinedTabView.Top,
+                userDefinedTabView.Left,
+                userDefinedTabView.Right,
+                userDefinedTabView.Bottom,
+                userDefinedTabView.Height |=| CGRectGetHeight(userDefinedTabView.frame)
+            )
+        } else {
+            segmentedControl.addTarget(self, action: "didChangeValueOfSegmentedControl:", forControlEvents: .ValueChanged)
+            
+            tabContainerView.addLayoutSubview(segmentedControl, andConstraints:
+                segmentedControl.Left |+| 8,
+                segmentedControl.Right |-| 8,
+                segmentedControl.Bottom |-| 8,
+                segmentedControl.Top |+| 8,
+                segmentedControl.Height |=| 34
+            )
+            
+            tabContainerView.backgroundColor = .whiteColor()
+        }
         
         addLayoutSubview(tabContainerView, andConstraints:
             tabContainerView.Left,
