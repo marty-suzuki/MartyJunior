@@ -12,9 +12,20 @@ import MisterFusion
 public class MJNavigationView: UIView {
     static let Height: CGFloat = 44
     
-    public let leftButton = UIButton(type: .Custom)
-    public let rightButton = UIButton(type: .Custom)
     public let titleLabel = UILabel()
+    public var leftButton: UIButton? {
+        didSet {
+            addButton(leftButton, toContainerView: leftButtonContainerView)
+        }
+    }
+    public var rightButton: UIButton? {
+        didSet {
+            addButton(rightButton, toContainerView: rightButtonContainerView)
+        }
+    }
+    
+    private let leftButtonContainerView = UIView()
+    private let rightButtonContainerView = UIView()
     
     public init() {
         super.init(frame: .zero)
@@ -26,31 +37,41 @@ public class MJNavigationView: UIView {
     }
     
     private func initialize() {
-        addLayoutSubview(leftButton, andConstraints:
-            leftButton.Top,
-            leftButton.Left,
-            leftButton.Bottom,
-            leftButton.Width |=| self.dynamicType.Height
+        addLayoutSubview(leftButtonContainerView, andConstraints:
+            leftButtonContainerView.Top,
+            leftButtonContainerView.Left,
+            leftButtonContainerView.Bottom,
+            leftButtonContainerView.Width |=| self.dynamicType.Height
         )
-        leftButton.hidden = true
+        leftButtonContainerView.backgroundColor = .clearColor()
         
-        addLayoutSubview(rightButton, andConstraints:
-            rightButton.Top,
-            rightButton.Right,
-            rightButton.Bottom,
-            rightButton.Width |=| self.dynamicType.Height
+        addLayoutSubview(rightButtonContainerView, andConstraints:
+            rightButtonContainerView.Top,
+            rightButtonContainerView.Right,
+            rightButtonContainerView.Bottom,
+            rightButtonContainerView.Width |=| self.dynamicType.Height
         )
-        rightButton.hidden = true
+        rightButtonContainerView.backgroundColor = .clearColor()
         
         addLayoutSubview(titleLabel, andConstraints:
             titleLabel.Top,
-            titleLabel.Right |==| rightButton.Left,
+            titleLabel.Right |==| rightButtonContainerView.Left,
             titleLabel.Bottom,
-            titleLabel.Left |==| leftButton.Right
+            titleLabel.Left |==| leftButtonContainerView.Right
         )
         
         titleLabel.textAlignment = .Center
         titleLabel.font = .boldSystemFontOfSize(16)
         titleLabel.textColor = .whiteColor()
+    }
+    
+    private func addButton(button: UIButton?, toContainerView containerView: UIView) {
+        guard let button = button else { return }
+        containerView.addLayoutSubview(button, andConstraints:
+            button.Top,
+            button.Right,
+            button.Left,
+            button.Bottom
+        )
     }
 }

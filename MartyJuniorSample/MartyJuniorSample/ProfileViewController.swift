@@ -17,9 +17,8 @@ class ProfileViewController: MJViewController {
     private let tabView = ProfileTabView.Nib.instantiateWithOwner(nil, options: nil).first as! ProfileTabView
     
     //MARK: - Life cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func viewWillSetupForMartyJunior() {
+        super.viewWillSetupForMartyJunior()
         delegate = self
         dataSource = self
         registerNibToAllTableViews(ProfileTweetCell.Nib, forCellReuseIdentifier: ProfileTweetCell.ReuseIdentifier)
@@ -30,9 +29,19 @@ class ProfileViewController: MJViewController {
         title = "@szk-atmosphere"
     }
     
+    override func viewDidSetupForMartyJunior() {
+        super.viewDidSetupForMartyJunior()
+        navigationView?.titleLabel.alpha = 0
+        navigationView?.rightButton = UIButton(type: .InfoDark)
+        navigationView?.rightButton?.tintColor = .whiteColor()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        navigationView?.titleLabel.alpha = 0
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -56,6 +65,10 @@ extension ProfileViewController: MJViewControllerDataSource {
     
     func mjViewController(viewController: MJViewController, didChangeSelectedIndex selectedIndex: Int) {
         tabView.selectedIndex = selectedIndex
+    }
+    
+    func mjViewControllerNumberOfTabs(viewController: MJViewController) -> Int {
+        return ProfileViewLayoutManager.TabTypes.count
     }
     
     func mjViewControllerTitlesForTab(viewController: MJViewController) -> [String] {
