@@ -47,7 +47,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgN-MQ-hGD">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgN-MQ-hGD">
                     <rect key="frame" x="37" y="150" width="300" height="70"/>
                     <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -57,7 +57,7 @@
                         <fragment content="@szk-atmophere">
                             <attributes>
                                 <color key="NSColor" red="0.18778044871794874" green="0.18778044871794874" blue="0.18778044871794874" alpha="1" colorSpace="calibratedRGB"/>
-                                <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                <font key="NSFont" size="17" name="HelveticaNeue"/>
                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                             </attributes>
                         </fragment>

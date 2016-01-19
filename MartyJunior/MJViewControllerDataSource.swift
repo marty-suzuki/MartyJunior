@@ -9,11 +9,14 @@
 import UIKit
 
 @objc public protocol MJViewControllerDataSource: class {
-    func mjViewControllerTitlesForTab(viewController: MJViewController) -> [String]
+    func mjViewControllerNumberOfTabs(viewController: MJViewController) -> Int
     func mjViewControllerContentViewForTop(viewController: MJViewController) -> UIView
-    func mjViewControllerTabViewForTop(viewController: MJViewController) -> UIView
+    optional func mjViewControllerTabViewForTop(viewController: MJViewController) -> UIView
     func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    
+    optional func mjViewControllerTitlesForTab(viewController: MJViewController) -> [String]
+    
     optional func mjViewController(viewController: MJViewController, targetIndex: Int, numberOfSectionsInTableView tableView: UITableView) -> Int
     optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, titleForFooterInSection section: Int) -> String?

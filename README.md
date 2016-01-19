@@ -13,20 +13,11 @@ You can change tab contents with swipe gesture on middle of `UITableView`!!
 ## Features
 
 - [x] Change tab middle of `UITableView`.
+- [x] Be able to scroll smoothly without two step.
 - [x] Auto fill content space when content size is not enough.
-- [x] flexible top content.
-- [x] customizable tab view.
-- [x] navigation view
-
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the `MartyJuniorSample` directory first.
-
-## Requirements
-- Xcode 7 or greater
-- iOS 8.0 or greater
-- [MisterFusion](https://github.com/szk-atmosphere/MisterFusion) (Swift DSL for AutoLayout)
-- UIKit
+- [x] Flexible and customizable top content.
+- [x] Customizable tab view.
+- [x] Navigation view.
 
 ## Installation
 
@@ -34,9 +25,88 @@ MartyJunior is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-# coming soon
-# pod "MartyJunior"
+  pod "MartyJunior"
 ```
+
+## Usage
+
+If you install from cocoapods, You have to write `import MartyJunior`.
+
+### Life cycle
+
+`viweDidLoad` -> `viewWillSetupForMartyJunior` -> `viewDidSetupForMartyJunior`
+
+You have to setup `delegate`, `dataSource` and so on in `viewWillSetupForMartyJunior` like this.
+
+```swift
+override func viewWillSetupForMartyJunior() {
+    super.viewWillSetupForMartyJunior()
+    delegate = self
+    dataSource = self
+    registerNibToAllTableViews(ProfileTweetCell.Nib, forCellReuseIdentifier: ProfileTweetCell.ReuseIdentifier)
+    registerNibToAllTableViews(ProfileUserCell.Nib, forCellReuseIdentifier: ProfileUserCell.ReuseIdentifier)
+
+    tabView.delegate = self
+
+    title = "@szk-atmosphere"
+}
+```
+
+You have to setup `NavigationView` and so on in `viewDidSetupForMartyJunior` like this.
+
+```swift
+override func viewDidSetupForMartyJunior() {
+    super.viewDidSetupForMartyJunior()
+    navigationView?.titleLabel.alpha = 0
+    navigationView?.rightButton = UIButton(type: .InfoDark)
+    navigationView?.rightButton?.tintColor = .whiteColor()
+}
+```
+
+### Specific dataSource methods
+
+```swift
+// Return number of tabs
+func mjViewControllerNumberOfTabs(viewController: MJViewController) -> Int
+
+// Return UIView you want to display as top content
+func mjViewControllerContentViewForTop(viewController: MJViewController) -> UIView
+
+// Return TabView if you want to display as custom view
+optional func mjViewControllerTabViewForTop(viewController: MJViewController) -> UIView
+```
+
+### Other dataSource methods
+
+Protocol based on `UITableViewDataSource`. It has `targetIndex` parameter to assign applicable `tableView`.
+
+- Example
+```swift
+optional func mjViewController(viewController: MJViewController, targetIndex: Int, numberOfSectionsInTableView tableView: UITableView) -> Int
+```
+
+### Specific delegate methods
+
+```swift
+// Celled when selected tab index was changed
+optional func mjViewController(viewController: MJViewController, didChangeSelectedIndex selectedIndex: Int)
+```
+
+### Other delegate methods
+
+Protocol based on `UITableViewDelegate`. It has `targetIndex` or `selectedIndex` parameter to assign applicable `tableView`.
+
+- Example
+```swift
+optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+optional func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewDidScroll scrollView: UIScrollView)
+```
+
+## Requirements
+- Xcode 7 or greater
+- iOS 8.0 or greater
+- [MisterFusion](https://github.com/szk-atmosphere/MisterFusion) (Swift DSL for AutoLayout)
+- UIKit
 
 ## Other
 

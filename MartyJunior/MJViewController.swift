@@ -29,8 +29,6 @@ public class MJViewController: UIViewController {
     //MAKR: - Properties
     public weak var delegate: MJViewControllerDelegate?
     public weak var dataSource: MJViewControllerDataSource?
-
-    private var onceToken: dispatch_once_t = 0
     
     private let scrollView: UIScrollView = UIScrollView()
     private let scrollContainerView: UIView = UIView()
@@ -54,17 +52,13 @@ public class MJViewController: UIViewController {
     }
     
     public private(set) var titles: [String]?
-    
-    public var numberOfTabs: Int {
-        return titles?.count ?? 0
-    }
+    public private(set) var numberOfTabs: Int = 0
     
     private var _selectedIndex: Int = 0 {
         didSet {
             delegate?.mjViewController?(self, didChangeSelectedIndex: _selectedIndex)
         }
     }
-    
     public var selectedIndex: Int {
         get {
             let index = Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
@@ -107,18 +101,31 @@ public class MJViewController: UIViewController {
     }
     
     //MARK: - Life cycle
+    public func viewWillSetupForMartyJunior() {}
+    public func viewDidSetupForMartyJunior() {}
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        viewWillSetupForMartyJunior()
+        
+        guard let dataSource = dataSource else { return }
+        titles = dataSource.mjViewControllerTitlesForTab?(self)
+        numberOfTabs = dataSource.mjViewControllerNumberOfTabs(self)
+        setupContentView(dataSource)
+        setupScrollView()
+        setupScrollContainerView()
+        setupContainerViews()
+        setupTableViewControllers()
+        registerNibAndClassForTableViews()
+        setupContentEscapeView()
+        setNavigationView()
+        
+        viewDidSetupForMartyJunior()
     }
     
     public override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        dispatch_once(&onceToken) {
-            self.setupViews()
-        }
-        viewControllers.forEach { $0.tableView.reloadData() }
+       viewControllers.forEach { $0.tableView.reloadData() }
     }
     
     public override func viewDidLayoutSubviews() {
@@ -133,17 +140,17 @@ public class MJViewController: UIViewController {
     }
 }
 
-//MARK: - Private
+//MARK: - Setup views
 extension MJViewController {
-    private func setupViews() {
-        guard let dataSource = dataSource else { return }
-        titles = dataSource.mjViewControllerTitlesForTab(self)
+    private func setupContentView(dataSource: MJViewControllerDataSource) {
         contentView.titles = titles
         contentView.segmentedControl.selectedSegmentIndex = 0
         contentView.userDefinedView = dataSource.mjViewControllerContentViewForTop(self)
-        contentView.userDefinedTabView = dataSource.mjViewControllerTabViewForTop(self)
+        contentView.userDefinedTabView = dataSource.mjViewControllerTabViewForTop?(self)
         contentView.setupTabView()
-        
+    }
+    
+    private func setupScrollView() {
         scrollView.scrollsToTop = false
         scrollView.pagingEnabled = true
         scrollView.delegate = self
@@ -154,7 +161,10 @@ extension MJViewController {
             scrollView.Right,
             scrollView.Bottom
         )
-        
+
+    }
+    
+    private func setupScrollContainerView() {
         scrollContainerViewWidthConstraint = scrollView.addLayoutSubview(scrollContainerView, andConstraints:
             scrollContainerView.Top,
             scrollContainerView.Left,
@@ -163,25 +173,21 @@ extension MJViewController {
             scrollContainerView.Height |==| scrollView.Height,
             scrollContainerView.Width |==| scrollView.Width |*| CGFloat(numberOfTabs)
         ).firstAttribute(.Width).first
-        
-        setupContainerViews()
-        setupTableViewControllers()
-        registerNibAndClassForTableViews()
-        
+    }
+    
+    private func setupContentEscapeView() {
         contentEscapeViewTopConstraint = view.addLayoutSubview(contentEscapeView, andConstraints:
             contentEscapeView.Top,
             contentEscapeView.Left,
             contentEscapeView.Right,
             contentEscapeView.Height |=| contentView.height
-        ).firstAttribute(.Top).first
+            ).firstAttribute(.Top).first
         
         view.layoutIfNeeded()
         
         contentEscapeView.backgroundColor = .clearColor()
         contentEscapeView.userInteractionEnabled = false
         contentEscapeView.hidden = true
-        
-        setNavigationView()
     }
     
     private func setNavigationView() {
@@ -202,10 +208,6 @@ extension MJViewController {
         )
         navigationView.titleLabel.text = title
         self.navigationView = navigationView
-    }
-    
-    func didTapNavigationContainerView(gestureRecognizer: UITapGestureRecognizer) {
-        viewControllers.forEach { $0.tableView.setContentOffset(.zero, animated: true) }
     }
     
     private func setupContainerViews() {
@@ -261,6 +263,18 @@ extension MJViewController {
         }
     }
     
+    private func registerNibAndClassForTableViews() {
+        tableViews.forEach { tableView in
+            registerCellContainer.cellNib.forEach { tableView.registerNib($0.nib, forCellReuseIdentifier: $0.reuseIdentifier) }
+            registerCellContainer.headerFooterNib.forEach { tableView.registerNib($0.nib, forHeaderFooterViewReuseIdentifier: $0.reuseIdentifier) }
+            registerCellContainer.cellClass.forEach { tableView.registerClass($0.aClass, forCellReuseIdentifier: $0.reuseIdentifier) }
+            registerCellContainer.headerFooterClass.forEach { tableView.registerClass($0.aClass, forHeaderFooterViewReuseIdentifier: $0.reuseIdentifier) }
+        }
+    }
+}
+
+//MARK: - ContentView moving
+extension MJViewController {
     private func addContentViewToCell() {
         if contentView.superview != contentEscapeView { return }
         
@@ -289,16 +303,10 @@ extension MJViewController {
         contentEscapeViewTopConstraint?.constant = -topConstant
         contentEscapeView.layoutIfNeeded()
     }
-    
-    private func registerNibAndClassForTableViews() {
-        tableViews.forEach { tableView in
-            registerCellContainer.cellNib.forEach { tableView.registerNib($0.nib, forCellReuseIdentifier: $0.reuseIdentifier) }
-            registerCellContainer.headerFooterNib.forEach { tableView.registerNib($0.nib, forHeaderFooterViewReuseIdentifier: $0.reuseIdentifier) }
-            registerCellContainer.cellClass.forEach { tableView.registerClass($0.aClass, forCellReuseIdentifier: $0.reuseIdentifier) }
-            registerCellContainer.headerFooterClass.forEach { tableView.registerClass($0.aClass, forHeaderFooterViewReuseIdentifier: $0.reuseIdentifier) }
-        }
-    }
-    
+}
+
+//MARK: - Private
+extension MJViewController {
     private func setTableViewControllersContentOffsetBasedOnScrollView(scrollView: UIScrollView, withoutSelectedViewController: Bool) {
         let viewControllers = self.viewControllers.filter { $0 != selectedViewController }
         let contentHeight = contentView.frame.size.height - headerHeight
