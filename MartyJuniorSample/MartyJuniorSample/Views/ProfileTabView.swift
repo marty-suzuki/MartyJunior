@@ -29,6 +29,7 @@ class ProfileTabView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.layoutIfNeeded()
         scrollView.setContentOffset(CGPoint(x: (bounds.size.width / 3) * 2, y: 0), animated: false)
         
         buttons.forEach {
