@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MartyJunior"
-  s.version          = "0.1.0"
+  s.version          = "0.2.0"
   s.summary          = "You can change tab contents with swipe gesture on middle of UITableView!!"
 
   s.homepage         = "https://github.com/szk-atmosphere/MartyJunior"

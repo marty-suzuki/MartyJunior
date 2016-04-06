@@ -20,7 +20,7 @@ class MJTableViewTopCell: UITableViewCell {
                 mainContentView.Top,
                 mainContentView.Left,
                 mainContentView.Right,
-                mainContentView.Height |=| mainContentView.height
+                mainContentView.Height |==| mainContentView.height
             )
         }
     }
