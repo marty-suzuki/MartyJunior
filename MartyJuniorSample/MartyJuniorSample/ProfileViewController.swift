@@ -91,7 +91,7 @@ extension ProfileViewController: MJViewControllerDelegate {
     
     func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewDidScroll scrollView: UIScrollView) {
         let value = min(1, max(0, scrollView.contentOffset.y / headerHeight))
-        profileView.backgroundImageView.blur(Float(value))
+        profileView.backgroundImageView.blur(value)
         profileView.userIconImageView.alpha = 1 - value
         profileView.textView.alpha = 1 - value
         profileView.followButton.alpha = 1 - value

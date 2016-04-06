@@ -41,7 +41,7 @@ public class MJNavigationView: UIView {
             leftButtonContainerView.Top,
             leftButtonContainerView.Left,
             leftButtonContainerView.Bottom,
-            leftButtonContainerView.Width |=| self.dynamicType.Height
+            leftButtonContainerView.Width |==| self.dynamicType.Height
         )
         leftButtonContainerView.backgroundColor = .clearColor()
         
@@ -49,7 +49,7 @@ public class MJNavigationView: UIView {
             rightButtonContainerView.Top,
             rightButtonContainerView.Right,
             rightButtonContainerView.Bottom,
-            rightButtonContainerView.Width |=| self.dynamicType.Height
+            rightButtonContainerView.Width |==| self.dynamicType.Height
         )
         rightButtonContainerView.backgroundColor = .clearColor()
         

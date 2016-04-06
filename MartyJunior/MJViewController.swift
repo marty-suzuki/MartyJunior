@@ -180,7 +180,7 @@ extension MJViewController {
             contentEscapeView.Top,
             contentEscapeView.Left,
             contentEscapeView.Right,
-            contentEscapeView.Height |=| contentView.height
+            contentEscapeView.Height |==| contentView.height
             ).firstAttribute(.Top).first
         
         view.layoutIfNeeded()
@@ -195,13 +195,13 @@ extension MJViewController {
             navigationContainerView.Top,
             navigationContainerView.Left,
             navigationContainerView.Right,
-            navigationContainerView.Height |=| navigationContainerViewHeight
+            navigationContainerView.Height |==| navigationContainerViewHeight
         )
         
         if hiddenNavigationView { return }
         let navigationView = MJNavigationView()
         navigationContainerView.addLayoutSubview(navigationView, andConstraints:
-            navigationView.Height |=| MJNavigationView.Height,
+            navigationView.Height |==| MJNavigationView.Height,
             navigationView.Left,
             navigationView.Bottom,
             navigationView.Right

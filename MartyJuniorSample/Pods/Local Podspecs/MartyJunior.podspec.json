@@ -1,7 +1,7 @@
 {
   "name": "MartyJunior",
   "version": "0.1.0",
-  "summary": "A short description of MartyJunior.",
+  "summary": "You can change tab contents with swipe gesture on middle of UITableView!!",
   "homepage": "https://github.com/szk-atmosphere/MartyJunior",
   "license": "MIT",
   "authors": {
