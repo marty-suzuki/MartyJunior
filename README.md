@@ -18,6 +18,7 @@ You can change tab contents with swipe gesture on middle of `UITableView`!!
 - [x] Flexible and customizable top content.
 - [x] Customizable tab view.
 - [x] Navigation view.
+- [x] Support Swift3 (If you want to use it in Swift3, please use [0.3.0-beta](https://github.com/szk-atmosphere/MartyJunior/tree/0.3.0-beta))
 
 ## Installation
 
