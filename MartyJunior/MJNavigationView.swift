@@ -38,40 +38,40 @@ public class MJNavigationView: UIView {
     
     private func initialize() {
         addLayoutSubview(leftButtonContainerView, andConstraints:
-            leftButtonContainerView.Top,
-            leftButtonContainerView.Left,
-            leftButtonContainerView.Bottom,
-            leftButtonContainerView.Width |==| self.dynamicType.Height
+            leftButtonContainerView.top,
+            leftButtonContainerView.left,
+            leftButtonContainerView.bottom,
+            leftButtonContainerView.width |==| self.dynamicType.Height
         )
-        leftButtonContainerView.backgroundColor = .clearColor()
+        leftButtonContainerView.backgroundColor = .clear()
         
         addLayoutSubview(rightButtonContainerView, andConstraints:
-            rightButtonContainerView.Top,
-            rightButtonContainerView.Right,
-            rightButtonContainerView.Bottom,
-            rightButtonContainerView.Width |==| self.dynamicType.Height
+            rightButtonContainerView.top,
+            rightButtonContainerView.right,
+            rightButtonContainerView.bottom,
+            rightButtonContainerView.width |==| self.dynamicType.Height
         )
-        rightButtonContainerView.backgroundColor = .clearColor()
+        rightButtonContainerView.backgroundColor = .clear()
         
         addLayoutSubview(titleLabel, andConstraints:
-            titleLabel.Top,
-            titleLabel.Right |==| rightButtonContainerView.Left,
-            titleLabel.Bottom,
-            titleLabel.Left |==| leftButtonContainerView.Right
+            titleLabel.top,
+            titleLabel.right |==| rightButtonContainerView.left,
+            titleLabel.bottom,
+            titleLabel.left |==| leftButtonContainerView.right
         )
         
-        titleLabel.textAlignment = .Center
-        titleLabel.font = .boldSystemFontOfSize(16)
-        titleLabel.textColor = .whiteColor()
+        titleLabel.textAlignment = .center
+        titleLabel.font = .boldSystemFont(ofSize: 16)
+        titleLabel.textColor = .white()
     }
     
-    private func addButton(button: UIButton?, toContainerView containerView: UIView) {
+    private func addButton(_ button: UIButton?, toContainerView containerView: UIView) {
         guard let button = button else { return }
         containerView.addLayoutSubview(button, andConstraints:
-            button.Top,
-            button.Right,
-            button.Left,
-            button.Bottom
+            button.top,
+            button.right,
+            button.left,
+            button.bottom
         )
     }
 }

@@ -9,87 +9,87 @@
 import UIKit
 
 @objc public protocol MJViewControllerScrollDelegate: class {
-    optional func mjViewController(viewController: MJViewController, didChangeSelectedIndex selectedIndex: Int)
-    optional func mjViewController(viewController: MJViewController, contentScrollViewDidScroll scrollView: UIScrollView)
-    optional func mjViewController(viewController: MJViewController, contentScrollViewDidEndDragging scrollView: UIScrollView, willDecelerate decelerate: Bool)
-    optional func mjViewController(viewController: MJViewController, contentScrollViewDidEndDecelerating scrollView: UIScrollView)
-    optional func mjViewController(viewController: MJViewController, contentScrollViewWillBeginDragging scrollView: UIScrollView)
+    @objc optional func mjViewController(_ viewController: MJViewController, didChangeSelectedIndex selectedIndex: Int)
+    @objc optional func mjViewController(_ viewController: MJViewController, contentScrollViewDidScroll scrollView: UIScrollView)
+    @objc optional func mjViewController(_ viewController: MJViewController, contentScrollViewDidEndDragging scrollView: UIScrollView, willDecelerate decelerate: Bool)
+    @objc optional func mjViewController(_ viewController: MJViewController, contentScrollViewDidEndDecelerating scrollView: UIScrollView)
+    @objc optional func mjViewController(_ viewController: MJViewController, contentScrollViewWillBeginDragging scrollView: UIScrollView)
     
     
-    optional func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewDidScroll scrollView: UIScrollView)
-    optional func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewDidZoom scrollView: UIScrollView)
+    @objc optional func mjViewController(_ viewController: MJViewController, selectedIndex: Int, scrollViewDidScroll scrollView: UIScrollView)
+    @objc optional func mjViewController(_ viewController: MJViewController, selectedIndex: Int, scrollViewDidZoom scrollView: UIScrollView)
     
-    optional func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewWillBeginDragging scrollView: UIScrollView)
-    optional func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewWillEndDragging scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
-    optional func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewDidEndDragging scrollView: UIScrollView, willDecelerate decelerate: Bool)
-    optional func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewWillBeginDecelerating scrollView: UIScrollView)
-    optional func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewDidEndDecelerating scrollView: UIScrollView)
+    @objc optional func mjViewController(_ viewController: MJViewController, selectedIndex: Int, scrollViewWillBeginDragging scrollView: UIScrollView)
+    @objc optional func mjViewController(_ viewController: MJViewController, selectedIndex: Int, scrollViewWillEndDragging scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>)
+    @objc optional func mjViewController(_ viewController: MJViewController, selectedIndex: Int, scrollViewDidEndDragging scrollView: UIScrollView, willDecelerate decelerate: Bool)
+    @objc optional func mjViewController(_ viewController: MJViewController, selectedIndex: Int, scrollViewWillBeginDecelerating scrollView: UIScrollView)
+    @objc optional func mjViewController(_ viewController: MJViewController, selectedIndex: Int, scrollViewDidEndDecelerating scrollView: UIScrollView)
     
-    optional func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewDidEndScrollingAnimation scrollView: UIScrollView)
+    @objc optional func mjViewController(_ viewController: MJViewController, selectedIndex: Int, scrollViewDidEndScrollingAnimation scrollView: UIScrollView)
     
-    optional func mjViewController(viewController: MJViewController, selectedIndex: Int, viewForZoomingInScrollView scrollView: UIScrollView) -> UIView?
-    optional func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewWillBeginZooming scrollView: UIScrollView, withView view: UIView?)
-    optional func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewDidEndZooming scrollView: UIScrollView, withView view: UIView?, atScale scale: CGFloat)
-    optional func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewShouldScrollToTop scrollView: UIScrollView) -> Bool
-    optional func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewDidScrollToTop scrollView: UIScrollView)
+    @objc optional func mjViewController(_ viewController: MJViewController, selectedIndex: Int, viewForZoomingInScrollView scrollView: UIScrollView) -> UIView?
+    @objc optional func mjViewController(_ viewController: MJViewController, selectedIndex: Int, scrollViewWillBeginZooming scrollView: UIScrollView, withView view: UIView?)
+    @objc optional func mjViewController(_ viewController: MJViewController, selectedIndex: Int, scrollViewDidEndZooming scrollView: UIScrollView, withView view: UIView?, atScale scale: CGFloat)
+    @objc optional func mjViewController(_ viewController: MJViewController, selectedIndex: Int, scrollViewShouldScrollToTop scrollView: UIScrollView) -> Bool
+    @objc optional func mjViewController(_ viewController: MJViewController, selectedIndex: Int, scrollViewDidScrollToTop scrollView: UIScrollView)
 }
 
 @objc public protocol MJViewControllerDelegate: class, MJViewControllerScrollDelegate {
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath)
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int)
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath)
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int)
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, didEndDisplayingFooterView view: UIView, forSection section: Int)
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: IndexPath)
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int)
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: IndexPath)
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int)
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, didEndDisplayingFooterView view: UIView, forSection section: Int)
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
     
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, viewForFooterInSection section: Int) -> UIView?
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: IndexPath) -> CGFloat
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, viewForFooterInSection section: Int) -> UIView?
     
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath)
-    
-    
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath)
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath)
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: IndexPath)
     
     
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath?
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, willDeselectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath?
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath)
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: IndexPath) -> Bool
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, didHighlightRowAtIndexPath indexPath: IndexPath)
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: IndexPath)
     
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String?
-    @available(iOS 8.0, *)
-    optional func mjViewController(viewController: MJViewController, selectedIndex: Int, tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?
     
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, willSelectRowAtIndexPath indexPath: IndexPath) -> IndexPath?
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, willDeselectRowAtIndexPath indexPath: IndexPath) -> IndexPath?
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath)
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, didDeselectRowAtIndexPath indexPath: IndexPath)
     
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, willBeginEditingRowAtIndexPath indexPath: NSIndexPath)
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, didEndEditingRowAtIndexPath indexPath: NSIndexPath)
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, editingStyleForRowAtIndexPath indexPath: IndexPath) -> UITableViewCellEditingStyle
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: IndexPath) -> String?
+    @objc @available(iOS 8.0, *)
+    optional func mjViewController(_ viewController: MJViewController, selectedIndex: Int, tableView: UITableView, editActionsForRowAtIndexPath indexPath: IndexPath) -> [UITableViewRowAction]?
     
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, targetIndexPathForMoveFromRowAtIndexPath sourceIndexPath: NSIndexPath, toProposedIndexPath proposedDestinationIndexPath: NSIndexPath) -> NSIndexPath
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: IndexPath) -> Bool
     
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, indentationLevelForRowAtIndexPath indexPath: NSIndexPath) -> Int
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, willBeginEditingRowAtIndexPath indexPath: IndexPath)
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, didEndEditingRowAtIndexPath indexPath: IndexPath)
     
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, shouldShowMenuForRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, targetIndexPathForMoveFromRowAtIndexPath sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath
     
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, canPerformAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, indentationLevelForRowAtIndexPath indexPath: IndexPath) -> Int
     
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, performAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?)
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, shouldShowMenuForRowAtIndexPath indexPath: IndexPath) -> Bool
     
-    @available(iOS 9.0, *)
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, canFocusRowAtIndexPath indexPath: NSIndexPath) -> Bool
-    @available(iOS 9.0, *)
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, shouldUpdateFocusInContext context: UITableViewFocusUpdateContext) -> Bool
-    @available(iOS 9.0, *)
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, didUpdateFocusInContext context: UITableViewFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator)
-    @available(iOS 9.0, *)
-    optional func mjViewController(viewController: MJViewController, targetIndex: Int, indexPathForPreferredFocusedViewInTableView tableView: UITableView) -> NSIndexPath?
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, canPerformAction action: Selector, forRowAtIndexPath indexPath: IndexPath, withSender sender: AnyObject?) -> Bool
+    
+    @objc optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, performAction action: Selector, forRowAtIndexPath indexPath: IndexPath, withSender sender: AnyObject?)
+    
+    @objc @available(iOS 9.0, *)
+    optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, canFocusRowAtIndexPath indexPath: IndexPath) -> Bool
+    @objc @available(iOS 9.0, *)
+    optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, shouldUpdateFocusInContext context: UITableViewFocusUpdateContext) -> Bool
+    @objc @available(iOS 9.0, *)
+    optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, didUpdateFocusInContext context: UITableViewFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator)
+    @objc @available(iOS 9.0, *)
+    optional func mjViewController(_ viewController: MJViewController, targetIndex: Int, indexPathForPreferredFocusedViewInTableView tableView: UITableView) -> IndexPath?
 }

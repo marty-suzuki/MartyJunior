@@ -17,10 +17,10 @@ class MJTableViewTopCell: UITableViewCell {
         didSet {
             guard let mainContentView = mainContentView else { return }
             contentView.addLayoutSubview(mainContentView, andConstraints:
-                mainContentView.Top,
-                mainContentView.Left,
-                mainContentView.Right,
-                mainContentView.Height |==| mainContentView.height
+                mainContentView.top,
+                mainContentView.left,
+                mainContentView.right,
+                mainContentView.height |==| mainContentView.currentHeight
             )
         }
     }
@@ -35,6 +35,6 @@ class MJTableViewTopCell: UITableViewCell {
     }
     
     private func initialize() {
-        selectionStyle = .None
+        selectionStyle = .none
     }
 }

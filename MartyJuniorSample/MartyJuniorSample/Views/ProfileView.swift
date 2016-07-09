@@ -11,7 +11,7 @@ import SABlurImageView
 
 extension NSObject {
     static var className: String {
-        return NSStringFromClass(self).componentsSeparatedByString(".").last! as String
+        return NSStringFromClass(self).components(separatedBy: ".").last! as String
     }
 }
 

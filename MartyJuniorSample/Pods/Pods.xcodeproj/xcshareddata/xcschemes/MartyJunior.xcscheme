@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7D1D0556C4380FF7B8BAC333A9D69910"
+               BlueprintIdentifier = "E5DCC6B57340D7D1DD44077A8B03970D"
                BuildableName = "MartyJunior.framework"
                BlueprintName = "MartyJunior"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7D1D0556C4380FF7B8BAC333A9D69910"
+            BlueprintIdentifier = "E5DCC6B57340D7D1DD44077A8B03970D"
             BuildableName = "MartyJunior.framework"
             BlueprintName = "MartyJunior"
             ReferencedContainer = "container:Pods.xcodeproj">

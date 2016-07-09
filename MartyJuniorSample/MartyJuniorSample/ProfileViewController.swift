@@ -13,8 +13,8 @@ import ReuseCellConfigure
 class ProfileViewController: MJViewController {
     //MARK: - Properties
     private let layoutManager = ProfileViewLayoutManager()
-    private let profileView = ProfileView.Nib.instantiateWithOwner(nil, options: nil).first as! ProfileView
-    private let tabView = ProfileTabView.Nib.instantiateWithOwner(nil, options: nil).first as! ProfileTabView
+    private let profileView = ProfileView.Nib.instantiate(withOwner: nil, options: nil).first as! ProfileView
+    private let tabView = ProfileTabView.Nib.instantiate(withOwner: nil, options: nil).first as! ProfileTabView
     
     //MARK: - Life cycle
     override func viewWillSetupForMartyJunior() {
@@ -32,20 +32,20 @@ class ProfileViewController: MJViewController {
     override func viewDidSetupForMartyJunior() {
         super.viewDidSetupForMartyJunior()
         navigationView?.titleLabel.alpha = 0
-        navigationView?.rightButton = UIButton(type: .InfoDark)
-        navigationView?.rightButton?.tintColor = .whiteColor()
+        navigationView?.rightButton = UIButton(type: .infoDark)
+        navigationView?.rightButton?.tintColor = .white()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+        return .lightContent
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,41 +55,41 @@ class ProfileViewController: MJViewController {
 }
 
 extension ProfileViewController: MJViewControllerDataSource {
-    func mjViewControllerContentViewForTop(viewController: MJViewController) -> UIView {
+    func mjViewControllerContentViewForTop(_ viewController: MJViewController) -> UIView {
         return profileView
     }
     
-    func mjViewControllerTabViewForTop(viewController: MJViewController) -> UIView {
+    func mjViewControllerTabViewForTop(_ viewController: MJViewController) -> UIView {
         return tabView
     }
     
-    func mjViewController(viewController: MJViewController, didChangeSelectedIndex selectedIndex: Int) {
+    func mjViewController(_ viewController: MJViewController, didChangeSelectedIndex selectedIndex: Int) {
         tabView.selectedIndex = selectedIndex
     }
     
-    func mjViewControllerNumberOfTabs(viewController: MJViewController) -> Int {
+    func mjViewControllerNumberOfTabs(_ viewController: MJViewController) -> Int {
         return ProfileViewLayoutManager.TabTypes.count
     }
     
-    func mjViewControllerTitlesForTab(viewController: MJViewController) -> [String] {
+    func mjViewControllerTitlesForTab(_ viewController: MJViewController) -> [String] {
         return ProfileViewLayoutManager.TabTypes.map { $0.rawValue }
     }
     
-    func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
         return layoutManager.cellForTargetIndex(targetIndex, indexPath: indexPath, tableView: tableView)
     }
     
-    func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return layoutManager.numberOfRowsInTargetIndex(targetIndex)
     }
 }
 
 extension ProfileViewController: MJViewControllerDelegate {
-    func mjViewController(viewController: MJViewController, contentScrollViewDidScroll scrollView: UIScrollView) {
+    func mjViewController(_ viewController: MJViewController, contentScrollViewDidScroll scrollView: UIScrollView) {
         tabView.syncOtherScrollView(scrollView)
     }
     
-    func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewDidScroll scrollView: UIScrollView) {
+    func mjViewController(_ viewController: MJViewController, selectedIndex: Int, scrollViewDidScroll scrollView: UIScrollView) {
         let value = min(1, max(0, scrollView.contentOffset.y / headerHeight))
         profileView.backgroundImageView.blur(value)
         profileView.userIconImageView.alpha = 1 - value
@@ -98,18 +98,18 @@ extension ProfileViewController: MJViewControllerDelegate {
         navigationView?.titleLabel.alpha = value
     }
     
-    func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
         return layoutManager.heightForTargetIndex(targetIndex)
     }
     
-    func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         print("targetIndex = \(targetIndex) indexPath = \(indexPath)")
     }
 }
 
 extension ProfileViewController: ProfileTabViewDelegate {
-    func profileTabView(view: ProfileTabView, didTapTab button: UIButton, index: Int) {
+    func profileTabView(_ view: ProfileTabView, didTapTab button: UIButton, index: Int) {
         selectedIndex = index
     }
 }

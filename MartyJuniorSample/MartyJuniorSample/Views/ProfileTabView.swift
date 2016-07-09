@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ProfileTabViewDelegate: class {
-    func profileTabView(view: ProfileTabView, didTapTab button: UIButton, index: Int)
+    func profileTabView(_ view: ProfileTabView, didTapTab button: UIButton, index: Int)
 }
 
 class ProfileTabView: UIView {
@@ -21,8 +21,8 @@ class ProfileTabView: UIView {
     
     var selectedIndex: Int = 0 {
         didSet {
-            buttons.enumerate().forEach {
-                $0.element.selected = $0.index == selectedIndex
+            buttons.enumerated().forEach {
+                $0.element.isSelected = $0.offset == selectedIndex
             }
         }
     }
@@ -33,17 +33,17 @@ class ProfileTabView: UIView {
         scrollView.setContentOffset(CGPoint(x: (bounds.size.width / 3) * 2, y: 0), animated: false)
         
         buttons.forEach {
-            $0.setTitleColor(self.indicatorView.backgroundColor, forState: .Selected)
-            $0.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
+            $0.setTitleColor(self.indicatorView.backgroundColor, for: .selected)
+            $0.setTitleColor(UIColor.lightGray(), for: UIControlState())
         }
-        buttons[0].selected = true
+        buttons[0].isSelected = true
     }
     
-    @IBAction func didTapButton(sender: UIButton) {
-        delegate?.profileTabView(self, didTapTab: sender, index: buttons.indexOf(sender) ?? 0)
+    @IBAction func didTapButton(_ sender: UIButton) {
+        delegate?.profileTabView(self, didTapTab: sender, index: buttons.index(of: sender) ?? 0)
     }
     
-    func syncOtherScrollView(scrollView: UIScrollView) {
+    func syncOtherScrollView(_ scrollView: UIScrollView) {
         let maxValue = (bounds.size.width / 3) * 2
         let point = CGPoint(x: max(0, min(maxValue - (scrollView.contentOffset.x / 3), maxValue)), y: 0)
         self.scrollView.setContentOffset(point, animated: false)

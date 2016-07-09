@@ -1,23 +1,45 @@
 PODS:
-  - MartyJunior (0.1.0):
-    - MisterFusion
-  - MisterFusion (1.2.0)
-  - ReuseCellConfigure (0.1.0)
-  - SABlurImageView (2.1.1)
+  - MartyJunior (0.3.0)
+  - MisterFusion (2.0.0)
+  - ReuseCellConfigure (0.3.0)
+  - SABlurImageView (3.0.0)
 
 DEPENDENCIES:
   - MartyJunior (from `../`)
-  - ReuseCellConfigure
-  - SABlurImageView
+  - MisterFusion (from `https://github.com/szk-atmosphere/MisterFusion.git`, tag `2.0.0-beta`)
+  - ReuseCellConfigure (from `https://github.com/szk-atmosphere/ReuseCellConfigure.git`,
+    tag `0.3.0-beta`)
+  - SABlurImageView (from `https://github.com/szk-atmosphere/SABlurImageView.git`,
+    tag `3.0.0-beta`)
 
 EXTERNAL SOURCES:
   MartyJunior:
     :path: "../"
+  MisterFusion:
+    :git: https://github.com/szk-atmosphere/MisterFusion.git
+    :tag: 2.0.0-beta
+  ReuseCellConfigure:
+    :git: https://github.com/szk-atmosphere/ReuseCellConfigure.git
+    :tag: 0.3.0-beta
+  SABlurImageView:
+    :git: https://github.com/szk-atmosphere/SABlurImageView.git
+    :tag: 3.0.0-beta
+
+CHECKOUT OPTIONS:
+  MisterFusion:
+    :git: https://github.com/szk-atmosphere/MisterFusion.git
+    :tag: 2.0.0-beta
+  ReuseCellConfigure:
+    :git: https://github.com/szk-atmosphere/ReuseCellConfigure.git
+    :tag: 0.3.0-beta
+  SABlurImageView:
+    :git: https://github.com/szk-atmosphere/SABlurImageView.git
+    :tag: 3.0.0-beta
 
 SPEC CHECKSUMS:
-  MartyJunior: 622e20a4fae94a5f546e21b2ddfbc71fe9697802
-  MisterFusion: 0c6cf64452f576d463a9097522ed281208443339
-  ReuseCellConfigure: ecebae2b0aef0677c9f0428006d20088697221ae
-  SABlurImageView: 60fd7f18c20b4bb2bb6b1e4446464d6a480c5754
+  MartyJunior: a678d16e5f9d832088e35c36d1393e7c2628c609
+  MisterFusion: bd71d218ad9fa2054f45070178409b043c144448
+  ReuseCellConfigure: 6ed849db55b9d886ed52ea76a8a22446771bfb9f
+  SABlurImageView: 7078f9226c4a26ea4dedf69ad140f1376679e02d
 
 COCOAPODS: 0.39.0

@@ -169,11 +169,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Taiki Suzuki";
 				TargetAttributes = {
 					379DD1E31C0615BB00A7FA9D = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -382,12 +383,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D7CDE48793FEC877CE99A46 /* Pods-MartyJuniorSample.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MartyJuniorSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "szk-atmosphere.MartyJuniorSample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -395,12 +398,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 23C4260EC0736D367CE0D23C /* Pods-MartyJuniorSample.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MartyJuniorSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "szk-atmosphere.MartyJuniorSample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

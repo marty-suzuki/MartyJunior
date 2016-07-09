@@ -41,16 +41,16 @@ public class MJTableViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         view.addLayoutSubview(tableView, andConstraints:
-            tableView.Top,
-            tableView.Left,
-            tableView.Right,
-            tableView.Bottom
+            tableView.top,
+            tableView.left,
+            tableView.right,
+            tableView.bottom
         )
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.registerClass(MJTableViewTopCell.self, forCellReuseIdentifier: MJTableViewTopCell.ReuseIdentifier)
-        tableView.registerClass(MJDummyCell.self, forCellReuseIdentifier: MJTableViewController.ReuseIdentifier)
+        tableView.register(MJTableViewTopCell.self, forCellReuseIdentifier: MJTableViewTopCell.ReuseIdentifier)
+        tableView.register(MJDummyCell.self, forCellReuseIdentifier: MJTableViewController.ReuseIdentifier)
     }
     
     public override func didReceiveMemoryWarning() {
@@ -58,17 +58,17 @@ public class MJTableViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    private func isDummySection(section: Int) -> Bool {
+    private func isDummySection(_ section: Int) -> Bool {
         return section == tableView.numberOfSections - 1
     }
 }
 
 //MARK: - UITableViewDataSource
 extension MJTableViewController: UITableViewDataSource {
-    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if !isDummySection(indexPath.section) {
-            if indexPath.section == 0 && indexPath.row == 0 {
-                let cell = tableView.dequeueReusableCellWithIdentifier(MJTableViewTopCell.ReuseIdentifier) as! MJTableViewTopCell
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if !isDummySection((indexPath as NSIndexPath).section) {
+            if (indexPath as NSIndexPath).section == 0 && (indexPath as NSIndexPath).row == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: MJTableViewTopCell.ReuseIdentifier) as! MJTableViewTopCell
                 delegate?.tableViewController(self, tableViewTopCell: cell)
                 return cell
             }
@@ -77,70 +77,70 @@ extension MJTableViewController: UITableViewDataSource {
                 return cell
             }
         }
-        return tableView.dequeueReusableCellWithIdentifier(MJTableViewController.ReuseIdentifier)!
+        return tableView.dequeueReusableCell(withIdentifier: MJTableViewController.ReuseIdentifier)!
     }
     
-    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 || isDummySection(section) {
             return 1
         }
         return dataSource?.tableViewController(self, tableView: tableView, numberOfRowsInSection: section - 1) ?? 0
     }
     
-    public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         guard let numberOfSections = dataSource?.tableViewController(self, numberOfSectionsInTableView: tableView) else {
             return 3
         }
         return numberOfSections + 2
     }
 
-    public func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 { return nil }
         return dataSource?.tableViewController(self, tableView: tableView, titleForHeaderInSection: section - 1)
     }
     
-    public func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    public func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         if section == 0 { return nil }
         return dataSource?.tableViewController(self, tableView: tableView, titleForFooterInSection: section - 1)
     }
    
-    public func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        if indexPath.section == 0 { return false }
+    public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if (indexPath as NSIndexPath).section == 0 { return false }
         return dataSource?.tableViewController(self, tableView: tableView, canEditRowAtIndexPath: indexPath) ?? false
     }
 
-    public func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        if indexPath.section == 0 { return false }
+    public func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        if (indexPath as NSIndexPath).section == 0 { return false }
         return dataSource?.tableViewController(self, tableView: tableView, canMoveRowAtIndexPath: indexPath) ?? false
     }
     
-    public func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
+    public func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         guard let titles = dataSource?.tableViewController(self, sectionIndexTitlesForTableView: tableView) else { return nil }
         return Array([[""], titles].flatten())
     }
     
-    public func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
+    public func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
         return dataSource?.tableViewController(self, tableView: tableView, sectionForSectionIndexTitle: title, atIndex: index) ?? 0
     }
     
-    public func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 { return }
+    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (indexPath as NSIndexPath).section == 0 { return }
         dataSource?.tableViewController(self, tableView: tableView, commitEditingStyle: editingStyle, forRowAtIndexPath: indexPath)
     }
  
-    public func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
-        if (sourceIndexPath.section == 0 || destinationIndexPath.section == 0) { return }
+    public func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        if ((sourceIndexPath as NSIndexPath).section == 0 || (destinationIndexPath as NSIndexPath).section == 0) { return }
         dataSource?.tableViewController(self, tableView: tableView, moveRowAtIndexPath: sourceIndexPath, toIndexPath: destinationIndexPath)
     }
 }
 
 //MARK: - UITableViewDelegate
 extension MJTableViewController: UITableViewDelegate {
-    public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let height: CGFloat
-        if isDummySection(indexPath.section) {
+        if isDummySection((indexPath as NSIndexPath).section) {
             height = dummyCellHeight
-        } else if indexPath.section == 0 {
+        } else if (indexPath as NSIndexPath).section == 0 {
             height = delegate?.tableViewController(self, tableView: tableView, heightForTopCellAtIndexPath: indexPath) ?? 0
         } else {
             height = delegate?.tableViewController(self, tableView: tableView, heightForRowAtIndexPath: indexPath) ?? 44
@@ -149,37 +149,37 @@ extension MJTableViewController: UITableViewDelegate {
         return height
     }
     
-    public func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 { return }
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if (indexPath as NSIndexPath).section == 0 { return }
         delegate?.tableViewController(self, tableView: tableView, willDisplayCell: cell, forRowAtIndexPath: indexPath)
     }
     
-    public func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    public func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         if section == 0 { return }
         delegate?.tableViewController(self, tableView: tableView, willDisplayHeaderView: view, forSection: section - 1)
     }
 
-    public func tableView(tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+    public func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
         if section == 0 { return }
         delegate?.tableViewController(self, tableView: tableView, willDisplayFooterView: view, forSection: section - 1)
     }
     
-    public func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 { return }
+    public func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if (indexPath as NSIndexPath).section == 0 { return }
         delegate?.tableViewController(self, tableView: tableView, didEndDisplayingCell: cell, forRowAtIndexPath: indexPath)
     }
     
-    public func tableView(tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int) {
+    public func tableView(_ tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int) {
         if section == 0 { return }
         delegate?.tableViewController(self, tableView: tableView, didEndDisplayingHeaderView: view, forSection: section - 1)
     }
     
-    public func tableView(tableView: UITableView, didEndDisplayingFooterView view: UIView, forSection section: Int) {
+    public func tableView(_ tableView: UITableView, didEndDisplayingFooterView view: UIView, forSection section: Int) {
         if section == 0 { return }
         delegate?.tableViewController(self, tableView: tableView, didEndDisplayingFooterView: view, forSection: section - 1)
     }
     
-    public func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let height: CGFloat
         if section == 0 || isDummySection(section) {
             height = 0
@@ -190,7 +190,7 @@ extension MJTableViewController: UITableViewDelegate {
         return height
     }
     
-    public func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         let height: CGFloat
         if section == 0 || isDummySection(section) {
             height = 0
@@ -201,11 +201,11 @@ extension MJTableViewController: UITableViewDelegate {
         return height
     }
 
-    public func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         let height: CGFloat
-        if isDummySection(indexPath.section) {
+        if isDummySection((indexPath as NSIndexPath).section) {
             height = dummyCellHeight
-        } else if indexPath.section == 0 {
+        } else if (indexPath as NSIndexPath).section == 0 {
             height = delegate?.tableViewController(self, tableView: tableView, estimatedHeightForTopCellAtIndexPath: indexPath) ?? 0
         } else {
             height = delegate?.tableViewController(self, tableView: tableView, estimatedHeightForRowAtIndexPath: indexPath) ?? 0
@@ -214,7 +214,7 @@ extension MJTableViewController: UITableViewDelegate {
         return height
     }
     
-    public func tableView(tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
         let height: CGFloat
         if section == 0 || isDummySection(section) {
             height = 0
@@ -225,7 +225,7 @@ extension MJTableViewController: UITableViewDelegate {
         return height
     }
     
-    public func tableView(tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, estimatedHeightForFooterInSection section: Int) -> CGFloat {
         let height: CGFloat
         if section == 0 || isDummySection(section) {
             height = 0
@@ -236,187 +236,187 @@ extension MJTableViewController: UITableViewDelegate {
         return height
     }
     
-    public func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 { return nil }
         return delegate?.tableViewController(self, tableView: tableView, viewForHeaderInSection: section - 1)
     }
 
-    public func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         if section == 0 { return nil }
         return delegate?.tableViewController(self, tableView: tableView, viewForFooterInSection: section - 1)
     }
     
-    public func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 { return }
+    public func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        if (indexPath as NSIndexPath).section == 0 { return }
         delegate?.tableViewController(self, tableView: tableView, accessoryButtonTappedForRowWithIndexPath: indexPath)
     }
     
-    public func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        if indexPath.section == 0 { return false }
+    public func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        if (indexPath as NSIndexPath).section == 0 { return false }
         return delegate?.tableViewController(self, tableView: tableView, shouldHighlightRowAtIndexPath: indexPath) ?? true
     }
     
-    public func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 { return }
+    public func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        if (indexPath as NSIndexPath).section == 0 { return }
         delegate?.tableViewController(self, tableView: tableView, didHighlightRowAtIndexPath: indexPath)
     }
     
-    public func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 { return }
+    public func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+        if (indexPath as NSIndexPath).section == 0 { return }
         delegate?.tableViewController(self, tableView: tableView, didUnhighlightRowAtIndexPath: indexPath)
     }
     
-    public func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        if indexPath.section == 0 { return nil }
+    public func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if (indexPath as NSIndexPath).section == 0 { return nil }
         return delegate?.tableViewController(self, tableView: tableView, willSelectRowAtIndexPath: indexPath) ?? indexPath
     }
     
-    public func tableView(tableView: UITableView, willDeselectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        if indexPath.section == 0 { return nil }
+    public func tableView(_ tableView: UITableView, willDeselectRowAt indexPath: IndexPath) -> IndexPath? {
+        if (indexPath as NSIndexPath).section == 0 { return nil }
         return delegate?.tableViewController(self, tableView: tableView, willDeselectRowAtIndexPath: indexPath) ?? indexPath
     }
     
-    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 { return }
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (indexPath as NSIndexPath).section == 0 { return }
         delegate?.tableViewController(self, tableView: tableView, didSelectRowAtIndexPath: indexPath)
     }
     
-    public func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 { return }
+    public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if (indexPath as NSIndexPath).section == 0 { return }
         delegate?.tableViewController(self, tableView: tableView, didDeselectRowAtIndexPath: indexPath)
     }
     
-    public func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
-        if indexPath.section == 0 { return .None }
-        return delegate?.tableViewController(self, tableView: tableView, editingStyleForRowAtIndexPath: indexPath) ?? .None
+    public func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        if (indexPath as NSIndexPath).section == 0 { return .none }
+        return delegate?.tableViewController(self, tableView: tableView, editingStyleForRowAtIndexPath: indexPath) ?? .none
     }
     
-    public func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
-        if indexPath.section == 0 { return nil }
+    public func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        if (indexPath as NSIndexPath).section == 0 { return nil }
         return delegate?.tableViewController(self, tableView: tableView, titleForDeleteConfirmationButtonForRowAtIndexPath: indexPath)
     }
     
     @available(iOS 8.0, *)
-    public func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        if indexPath.section == 0 { return nil }
+    public func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        if (indexPath as NSIndexPath).section == 0 { return nil }
         return delegate?.tableViewController(self, tableView: tableView, editActionsForRowAtIndexPath: indexPath)
     }
     
-    public func tableView(tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        if indexPath.section == 0 { return false }
+    public func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        if (indexPath as NSIndexPath).section == 0 { return false }
         return delegate?.tableViewController(self, tableView: tableView, shouldIndentWhileEditingRowAtIndexPath: indexPath) ?? true
     }
     
-    public func tableView(tableView: UITableView, willBeginEditingRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 { return }
+    public func tableView(_ tableView: UITableView, willBeginEditingRowAt indexPath: IndexPath) {
+        if (indexPath as NSIndexPath).section == 0 { return }
         delegate?.tableViewController(self, tableView: tableView, willBeginEditingRowAtIndexPath: indexPath)
     }
     
-    public func tableView(tableView: UITableView, didEndEditingRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 { return }
+    public func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath) {
+        if (indexPath as NSIndexPath).section == 0 { return }
         delegate?.tableViewController(self, tableView: tableView, didEndEditingRowAtIndexPath: indexPath)
     }
     
-    public func tableView(tableView: UITableView, targetIndexPathForMoveFromRowAtIndexPath sourceIndexPath: NSIndexPath, toProposedIndexPath proposedDestinationIndexPath: NSIndexPath) -> NSIndexPath {
-        if sourceIndexPath.section == 0 || proposedDestinationIndexPath.section == 0 {
-            return NSIndexPath(forRow: 0, inSection: 0)
+    public func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {
+        if (sourceIndexPath as NSIndexPath).section == 0 || (proposedDestinationIndexPath as NSIndexPath).section == 0 {
+            return IndexPath(row: 0, section: 0)
         }
-        return delegate?.tableViewController(self, tableView: tableView, targetIndexPathForMoveFromRowAtIndexPath: sourceIndexPath, toProposedIndexPath: proposedDestinationIndexPath) ?? NSIndexPath(forRow: 0, inSection: 1)
+        return delegate?.tableViewController(self, tableView: tableView, targetIndexPathForMoveFromRowAtIndexPath: sourceIndexPath, toProposedIndexPath: proposedDestinationIndexPath) ?? IndexPath(row: 0, section: 1)
     }
     
-    public func tableView(tableView: UITableView, indentationLevelForRowAtIndexPath indexPath: NSIndexPath) -> Int {
-        if indexPath.section == 0 { return 0 }
+    public func tableView(_ tableView: UITableView, indentationLevelForRowAt indexPath: IndexPath) -> Int {
+        if (indexPath as NSIndexPath).section == 0 { return 0 }
         return delegate?.tableViewController(self, tableView: tableView, indentationLevelForRowAtIndexPath: indexPath) ?? 1
     }
     
-    public func tableView(tableView: UITableView, shouldShowMenuForRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        if indexPath.section == 0 { return false }
+    public func tableView(_ tableView: UITableView, shouldShowMenuForRowAt indexPath: IndexPath) -> Bool {
+        if (indexPath as NSIndexPath).section == 0 { return false }
         return delegate?.tableViewController(self, tableView: tableView, shouldShowMenuForRowAtIndexPath: indexPath) ?? false
     }
     
-    public func tableView(tableView: UITableView, canPerformAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-        if indexPath.section == 0 { return false }
+    public func tableView(_ tableView: UITableView, canPerformAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: AnyObject?) -> Bool {
+        if (indexPath as NSIndexPath).section == 0 { return false }
         return delegate?.tableViewController(self, tableView: tableView, canPerformAction: action, forRowAtIndexPath: indexPath, withSender: sender) ?? false
     }
     
-    public func tableView(tableView: UITableView, performAction action: Selector, forRowAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
-        if indexPath.section == 0 { return }
+    public func tableView(_ tableView: UITableView, performAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: AnyObject?) {
+        if (indexPath as NSIndexPath).section == 0 { return }
         delegate?.tableViewController(self, tableView: tableView, performAction: action, forRowAtIndexPath: indexPath, withSender: sender)
     }
     
     @available(iOS 9.0, *)
-    public func tableView(tableView: UITableView, canFocusRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        if indexPath.section == 0 { return false }
+    public func tableView(_ tableView: UITableView, canFocusRowAt indexPath: IndexPath) -> Bool {
+        if (indexPath as NSIndexPath).section == 0 { return false }
         return delegate?.tableViewController(self, tableView: tableView, canFocusRowAtIndexPath: indexPath) ?? true
     }
     
     @available(iOS 9.0, *)
-    public func tableView(tableView: UITableView, shouldUpdateFocusInContext context: UITableViewFocusUpdateContext) -> Bool {
+    public func tableView(_ tableView: UITableView, shouldUpdateFocusIn context: UITableViewFocusUpdateContext) -> Bool {
         return delegate?.tableViewController(self, tableView: tableView, shouldUpdateFocusInContext: context) ?? true
     }
     
     @available(iOS 9.0, *)
-    public func tableView(tableView: UITableView, didUpdateFocusInContext context: UITableViewFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
+    public func tableView(_ tableView: UITableView, didUpdateFocusIn context: UITableViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
         delegate?.tableViewController(self, tableView: tableView, didUpdateFocusInContext: context, withAnimationCoordinator: coordinator)
     }
     
     @available(iOS 9.0, *)
-    public func indexPathForPreferredFocusedViewInTableView(tableView: UITableView) -> NSIndexPath? {
+    public func indexPathForPreferredFocusedView(in tableView: UITableView) -> IndexPath? {
         return delegate?.tableViewController(self, indexPathForPreferredFocusedViewInTableView: tableView)
     }
 }
 
 //MARK: - UIScrollViewDelegate
 extension MJTableViewController: UIScrollViewDelegate {
-    public func scrollViewDidScroll(scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         delegate?.tableViewController(self, scrollViewDidScroll: scrollView)
     }
     
-    public func scrollViewDidZoom(scrollView: UIScrollView) {
+    public func scrollViewDidZoom(_ scrollView: UIScrollView) {
         delegate?.tableViewController(self, scrollViewDidZoom: scrollView)
     }
     
-    public func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         delegate?.tableViewController(self, scrollViewWillBeginDragging: scrollView)
     }
     
-    public func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         delegate?.tableViewController(self, scrollViewWillEndDragging: scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
     }
     
-    public func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         delegate?.tableViewController(self, scrollViewDidEndDragging: scrollView, willDecelerate: decelerate)
     }
     
-    public func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
+    public func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
         delegate?.tableViewController(self, scrollViewWillBeginDecelerating: scrollView)
     }
     
-    public func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         delegate?.tableViewController(self, scrollViewDidEndDecelerating: scrollView)
     }
     
-    public func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
+    public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         delegate?.tableViewController(self, scrollViewDidEndScrollingAnimation: scrollView)
     }
     
-    public func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+    public func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return delegate?.tableViewController(self, viewForZoomingInScrollView: scrollView)
     }
     
-    public func scrollViewWillBeginZooming(scrollView: UIScrollView, withView view: UIView?) {
+    public func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
         delegate?.tableViewController(self, scrollViewWillBeginZooming: scrollView, withView: view)
     }
     
-    public func scrollViewDidEndZooming(scrollView: UIScrollView, withView view: UIView?, atScale scale: CGFloat) {
+    public func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
         delegate?.tableViewController(self, scrollViewDidEndZooming: scrollView, withView: view, atScale: scale)
     }
     
-    public func scrollViewShouldScrollToTop(scrollView: UIScrollView) -> Bool {
+    public func scrollViewShouldScroll(toTop scrollView: UIScrollView) -> Bool {
         return delegate?.tableViewController(self, scrollViewShouldScrollToTop: scrollView) ?? true
     }
     
-    public func scrollViewDidScrollToTop(scrollView: UIScrollView) {
+    public func scrollViewDidScroll(toTop scrollView: UIScrollView) {
         delegate?.tableViewController(self, scrollViewDidScrollToTop: scrollView)
     }
 }

@@ -8,6 +8,6 @@
 
 import UIKit
 
-extension NSIndexPath {
+extension IndexPath {
     var sectionRowString : String { return "\(section)-\(row)" }
 }

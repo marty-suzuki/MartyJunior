@@ -57,22 +57,22 @@ class ProfileViewLayoutManager {
 
 //MARK: - Configurations
 extension ProfileViewLayoutManager {
-    func cellForTargetIndex(index: Int, indexPath: NSIndexPath, tableView: UITableView) -> UITableViewCell {
+    func cellForTargetIndex(_ index: Int, indexPath: IndexPath, tableView: UITableView) -> UITableViewCell {
         switch self[index] {
         case .Tweets:
-            return tableView.dequeueReusableCellWithIdentifier(ProfileTweetCell.ReuseIdentifier, classForCell: ProfileTweetCell.self) {
-                $0.textView.text = self.dynamicType.TweetsCellContents[indexPath.row]
+            return tableView.dequeueReusableCell(withIdentifier: ProfileTweetCell.ReuseIdentifier, to: ProfileTweetCell.self) {
+                $0.textView.text = self.dynamicType.TweetsCellContents[(indexPath as IndexPath).row]
             }!
         case .Following:
-            return tableView.dequeueReusableCellWithIdentifier(ProfileUserCell.ReuseIdentifier, classForCell: ProfileUserCell.self) {
-                let user = self.dynamicType.FollowingCellContents[indexPath.row]
+            return tableView.dequeueReusableCell(withIdentifier: ProfileUserCell.ReuseIdentifier, to: ProfileUserCell.self) {
+                let user = self.dynamicType.FollowingCellContents[(indexPath as IndexPath).row]
                 $0.userNameLabel.text = user.name
                 $0.userDescriptionLabel.text = user.description
                 $0.userIconImageView.image = UIImage(named: user.imageName)
             }!
         case .Followers:
-            return tableView.dequeueReusableCellWithIdentifier(ProfileUserCell.ReuseIdentifier, classForCell: ProfileUserCell.self) {
-                let user = self.dynamicType.FollowerCellContents[indexPath.row]
+            return tableView.dequeueReusableCell(withIdentifier: ProfileUserCell.ReuseIdentifier, to: ProfileUserCell.self) {
+                let user = self.dynamicType.FollowerCellContents[(indexPath as IndexPath).row]
                 $0.userNameLabel.text = user.name
                 $0.userDescriptionLabel.text = user.description
                 $0.userIconImageView.image = UIImage(named: user.imageName)
@@ -80,7 +80,7 @@ extension ProfileViewLayoutManager {
         }
     }
     
-    func numberOfRowsInTargetIndex(index: Int) -> Int {
+    func numberOfRowsInTargetIndex(_ index: Int) -> Int {
         switch self[index] {
             case .Tweets: return self.dynamicType.TweetsCellContents.count
             case .Following: return self.dynamicType.FollowingCellContents.count
@@ -88,7 +88,7 @@ extension ProfileViewLayoutManager {
         }
     }
     
-    func heightForTargetIndex(index: Int) -> CGFloat {
+    func heightForTargetIndex(_ index: Int) -> CGFloat {
         switch self[index] {
             case .Tweets: return ProfileTweetCell.Height
             case .Following: return ProfileUserCell.Height
