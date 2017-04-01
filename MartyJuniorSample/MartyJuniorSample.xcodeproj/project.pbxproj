@@ -21,11 +21,10 @@
 		379DD1EF1C0615BB00A7FA9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 379DD1EE1C0615BB00A7FA9D /* Assets.xcassets */; };
 		379DD1F21C0615BB00A7FA9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379DD1F01C0615BB00A7FA9D /* LaunchScreen.storyboard */; };
 		37A7D0081C4C10390073D7C4 /* ProfileViewLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7D0071C4C10390073D7C4 /* ProfileViewLayoutManager.swift */; };
-		9DB2A7023F0341846B65BFBB /* Pods_MartyJuniorSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A750A04869DE350E8FDCCFAB /* Pods_MartyJuniorSample.framework */; };
+		E35D3B322946939861363CD8 /* Pods_MartyJuniorSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9318CD279BD5ACBDD9D39089 /* Pods_MartyJuniorSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		23C4260EC0736D367CE0D23C /* Pods-MartyJuniorSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MartyJuniorSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MartyJuniorSample/Pods-MartyJuniorSample.release.xcconfig"; sourceTree = "<group>"; };
 		3718F4F31C4AB36C00DABDFC /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3718F4F41C4AB36C00DABDFC /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 		3718F4F81C4AB3BD00DABDFC /* ProfileTweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTweetCell.swift; sourceTree = "<group>"; };
@@ -42,8 +41,9 @@
 		379DD1F11C0615BB00A7FA9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		379DD1F31C0615BB00A7FA9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37A7D0071C4C10390073D7C4 /* ProfileViewLayoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewLayoutManager.swift; sourceTree = "<group>"; };
-		8D7CDE48793FEC877CE99A46 /* Pods-MartyJuniorSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MartyJuniorSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MartyJuniorSample/Pods-MartyJuniorSample.debug.xcconfig"; sourceTree = "<group>"; };
-		A750A04869DE350E8FDCCFAB /* Pods_MartyJuniorSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MartyJuniorSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3802BF25AAC095F31CB8D09E /* Pods-MartyJuniorSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MartyJuniorSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MartyJuniorSample/Pods-MartyJuniorSample.release.xcconfig"; sourceTree = "<group>"; };
+		4A96FBBB7D5CAF98453EFF49 /* Pods-MartyJuniorSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MartyJuniorSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MartyJuniorSample/Pods-MartyJuniorSample.debug.xcconfig"; sourceTree = "<group>"; };
+		9318CD279BD5ACBDD9D39089 /* Pods_MartyJuniorSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MartyJuniorSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DB2A7023F0341846B65BFBB /* Pods_MartyJuniorSample.framework in Frameworks */,
+				E35D3B322946939861363CD8 /* Pods_MartyJuniorSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,8 +85,8 @@
 			children = (
 				379DD1E61C0615BB00A7FA9D /* MartyJuniorSample */,
 				379DD1E51C0615BB00A7FA9D /* Products */,
-				9D471E25E0B9D6D66AB8E2BA /* Pods */,
-				CB312544AFAF19415EB252FD /* Frameworks */,
+				941BDE97B07CBB9257ADA200 /* Pods */,
+				F289455C427A85BE1597222C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,19 +122,19 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		9D471E25E0B9D6D66AB8E2BA /* Pods */ = {
+		941BDE97B07CBB9257ADA200 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8D7CDE48793FEC877CE99A46 /* Pods-MartyJuniorSample.debug.xcconfig */,
-				23C4260EC0736D367CE0D23C /* Pods-MartyJuniorSample.release.xcconfig */,
+				4A96FBBB7D5CAF98453EFF49 /* Pods-MartyJuniorSample.debug.xcconfig */,
+				3802BF25AAC095F31CB8D09E /* Pods-MartyJuniorSample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		CB312544AFAF19415EB252FD /* Frameworks */ = {
+		F289455C427A85BE1597222C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A750A04869DE350E8FDCCFAB /* Pods_MartyJuniorSample.framework */,
+				9318CD279BD5ACBDD9D39089 /* Pods_MartyJuniorSample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -146,12 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 379DD1F61C0615BB00A7FA9D /* Build configuration list for PBXNativeTarget "MartyJuniorSample" */;
 			buildPhases = (
-				91C2C90BF36141F9D7F3D6A0 /* Check Pods Manifest.lock */,
+				E3199EC9B01FDB9C4B718A05 /* [CP] Check Pods Manifest.lock */,
 				379DD1E01C0615BB00A7FA9D /* Sources */,
 				379DD1E11C0615BB00A7FA9D /* Frameworks */,
 				379DD1E21C0615BB00A7FA9D /* Resources */,
-				9218FBE24A76275684B19A7E /* Embed Pods Frameworks */,
-				1AC409C826C06920AEB0D131 /* Copy Pods Resources */,
+				0D97F5E3C075537ECE3000A2 /* [CP] Embed Pods Frameworks */,
+				3FBA9283B4453E07C30DAF21 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,14 +214,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1AC409C826C06920AEB0D131 /* Copy Pods Resources */ = {
+		0D97F5E3C075537ECE3000A2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MartyJuniorSample/Pods-MartyJuniorSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FBA9283B4453E07C30DAF21 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,34 +244,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MartyJuniorSample/Pods-MartyJuniorSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		91C2C90BF36141F9D7F3D6A0 /* Check Pods Manifest.lock */ = {
+		E3199EC9B01FDB9C4B718A05 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		9218FBE24A76275684B19A7E /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MartyJuniorSample/Pods-MartyJuniorSample-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -381,9 +381,9 @@
 		};
 		379DD1F71C0615BB00A7FA9D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D7CDE48793FEC877CE99A46 /* Pods-MartyJuniorSample.debug.xcconfig */;
+			baseConfigurationReference = 4A96FBBB7D5CAF98453EFF49 /* Pods-MartyJuniorSample.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MartyJuniorSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -396,9 +396,9 @@
 		};
 		379DD1F81C0615BB00A7FA9D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23C4260EC0736D367CE0D23C /* Pods-MartyJuniorSample.release.xcconfig */;
+			baseConfigurationReference = 3802BF25AAC095F31CB8D09E /* Pods-MartyJuniorSample.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MartyJuniorSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

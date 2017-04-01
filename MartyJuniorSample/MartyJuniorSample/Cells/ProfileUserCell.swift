@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileUserCell: UITableViewCell {
 
-    static var Height: CGFloat = 56
+    static var defaultHeight: CGFloat = 56
     @IBOutlet weak var userIconImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userDescriptionLabel: UILabel!

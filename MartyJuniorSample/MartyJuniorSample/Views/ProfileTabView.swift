@@ -34,7 +34,7 @@ class ProfileTabView: UIView {
         
         buttons.forEach {
             $0.setTitleColor(self.indicatorView.backgroundColor, for: .selected)
-            $0.setTitleColor(UIColor.lightGray(), for: UIControlState())
+            $0.setTitleColor(.lightGray, for: UIControlState())
         }
         buttons[0].isSelected = true
     }

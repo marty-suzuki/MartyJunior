@@ -18,7 +18,7 @@ You can change tab contents with swipe gesture on middle of `UITableView`!!
 - [x] Flexible and customizable top content.
 - [x] Customizable tab view.
 - [x] Navigation view.
-- [x] Support Swift3 (If you want to use it in Swift3, please use [0.3.0-beta](https://github.com/szk-atmosphere/MartyJunior/tree/0.3.0-beta))
+- [x] Support Swift3 (If you want to use it in Swift3
 
 ## Installation
 
@@ -44,8 +44,8 @@ override func viewWillSetupForMartyJunior() {
     super.viewWillSetupForMartyJunior()
     delegate = self
     dataSource = self
-    registerNibToAllTableViews(ProfileTweetCell.Nib, forCellReuseIdentifier: ProfileTweetCell.ReuseIdentifier)
-    registerNibToAllTableViews(ProfileUserCell.Nib, forCellReuseIdentifier: ProfileUserCell.ReuseIdentifier)
+    registerNibToAllTableViews(ProfileTweetCell.nib, forCellReuseIdentifier: ProfileTweetCell.ReuseIdentifier)
+    registerNibToAllTableViews(ProfileUserCell.nib, forCellReuseIdentifier: ProfileUserCell.ReuseIdentifier)
 
     tabView.delegate = self
 
@@ -60,7 +60,7 @@ override func viewDidSetupForMartyJunior() {
     super.viewDidSetupForMartyJunior()
     navigationView?.titleLabel.alpha = 0
     navigationView?.rightButton = UIButton(type: .InfoDark)
-    navigationView?.rightButton?.tintColor = .whiteColor()
+    navigationView?.rightButton?.tintColor = .white
 }
 ```
 
@@ -99,22 +99,22 @@ Protocol based on `UITableViewDelegate`. It has `targetIndex` or `selectedIndex`
 
 - Example
 ```swift
-optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+optional func mjViewController(viewController: MJViewController, targetIndex: Int, tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath)
 optional func mjViewController(viewController: MJViewController, selectedIndex: Int, scrollViewDidScroll scrollView: UIScrollView)
 ```
 
 ## Requirements
-- Xcode 7 or greater
+- Xcode 8 or greater
 - iOS 8.0 or greater
-- [MisterFusion](https://github.com/szk-atmosphere/MisterFusion) (Swift DSL for AutoLayout)
+- [MisterFusion](https://github.com/marty-suzuki/MisterFusion) (Swift DSL for AutoLayout)
 - UIKit
 
 ## Other
 
 [A sample of this project](./MartyJuniorSample) uses
 
-- [SABlurImageView](https://github.com/szk-atmosphere/SABlurImageView) (for animation blur)
-- [ReuseCellConfigure](https://github.com/szk-atmosphere/ReuseCellConfigure) (for cell configuration)
+- [SABlurImageView](https://github.com/marty-suzuki/SABlurImageView) (for animation blur)
+- [ReuseCellConfigure](https://github.com/marty-suzuki/ReuseCellConfigure) (for cell configuration)
 
 ## Author
 

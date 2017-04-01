@@ -9,7 +9,7 @@
 import UIKit
 import MisterFusion
 
-public class MJViewController: UIViewController {
+open class MJViewController: UIViewController {
     //MARK: - Inner class
     private class RegisterCellContainer {
         struct NibAndIdentifierContainer {
@@ -34,15 +34,15 @@ public class MJViewController: UIViewController {
     private let scrollContainerView: UIView = UIView()
     private var scrollContainerViewWidthConstraint: NSLayoutConstraint?
     
-    private let contentView: MJContentView = MJContentView()
-    private let contentEscapeView: UIView = UIView()
-    private var contentEscapeViewTopConstraint: NSLayoutConstraint?
+    fileprivate let contentView: MJContentView = MJContentView()
+    fileprivate let contentEscapeView: UIView = UIView()
+    fileprivate var contentEscapeViewTopConstraint: NSLayoutConstraint?
     
     public private(set) var navigationView: MJNavigationView?
     private let navigationContainerView = UIView()
     
     private var containerViews: [UIView] = []
-    private var viewControllers: [MJTableViewController] = []
+    fileprivate var viewControllers: [MJTableViewController] = []
     private let registerCellContainer: RegisterCellContainer = RegisterCellContainer()
     
     public var hiddenNavigationView: Bool = false
@@ -74,7 +74,8 @@ public class MJViewController: UIViewController {
             UIView.animate(withDuration: 0.25, animations: {
                 self.scrollView.setContentOffset(CGPoint(x: self.scrollView.bounds.size.width * CGFloat(newValue), y: 0), animated: false)
             }) { _ in
-                if self.contentView.superview == self.contentEscapeView && self.scrollView.contentOffset.y < self.contentEscapeViewTopConstraint?.constant {
+                if let superview = self.contentView.superview, let constant = self.contentEscapeViewTopConstraint?.constant,
+                   superview == self.contentEscapeView && self.scrollView.contentOffset.y < constant {
                     self.addContentViewToCell()
                 }
             }
@@ -90,21 +91,21 @@ public class MJViewController: UIViewController {
     }
     
     private var navigationContainerViewHeight: CGFloat {
-        let sharedApplication = UIApplication.shared()
+        let sharedApplication = UIApplication.shared
         let statusBarHeight = sharedApplication.isStatusBarHidden ? 0 : sharedApplication.statusBarFrame.size.height
         let navigationViewHeight: CGFloat = hiddenNavigationView ? 0 : 44
         return statusBarHeight + navigationViewHeight
     }
     
-    private func indexOfViewController(_ viewController: MJTableViewController) -> Int {
+    fileprivate func indexOfViewController(_ viewController: MJTableViewController) -> Int {
         return viewControllers.index(of: viewController) ?? 0
     }
     
     //MARK: - Life cycle
-    public func viewWillSetupForMartyJunior() {}
-    public func viewDidSetupForMartyJunior() {}
+    open func viewWillSetupForMartyJunior() {}
+    open func viewDidSetupForMartyJunior() {}
     
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         viewWillSetupForMartyJunior()
         
@@ -123,25 +124,23 @@ public class MJViewController: UIViewController {
         viewDidSetupForMartyJunior()
     }
     
-    public override func viewWillAppear(_ animated: Bool) {
+    open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
        viewControllers.forEach { $0.tableView.reloadData() }
     }
     
-    public override func viewDidLayoutSubviews() {
+    open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         view.setNeedsDisplay()
         view.layoutIfNeeded()
     }
     
-    public override func didReceiveMemoryWarning() {
+    open override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-}
-
-//MARK: - Setup views
-extension MJViewController {
+    
+    //MARK: - Setup views
     private func setupContentView(_ dataSource: MJViewControllerDataSource) {
         contentView.titles = titles
         contentView.segmentedControl.selectedSegmentIndex = 0
@@ -185,7 +184,7 @@ extension MJViewController {
         
         view.layoutIfNeeded()
         
-        contentEscapeView.backgroundColor = .clear()
+        contentEscapeView.backgroundColor = .clear
         contentEscapeView.isUserInteractionEnabled = false
         contentEscapeView.isHidden = true
     }
@@ -271,11 +270,9 @@ extension MJViewController {
             registerCellContainer.headerFooterClass.forEach { tableView.register($0.aClass, forHeaderFooterViewReuseIdentifier: $0.reuseIdentifier) }
         }
     }
-}
 
-//MARK: - ContentView moving
-extension MJViewController {
-    private func addContentViewToCell() {
+    //MARK: - ContentView moving
+    fileprivate func addContentViewToCell() {
         if contentView.superview != contentEscapeView { return }
         
         contentEscapeView.isHidden = true
@@ -286,7 +283,7 @@ extension MJViewController {
         cell?.mainContentView = contentView
     }
     
-    private func addContentViewToEscapeView() {
+    fileprivate func addContentViewToEscapeView() {
         if contentView.superview == contentEscapeView { return }
         
         contentEscapeView.isHidden = false
@@ -303,11 +300,9 @@ extension MJViewController {
         contentEscapeViewTopConstraint?.constant = -topConstant
         contentEscapeView.layoutIfNeeded()
     }
-}
 
-//MARK: - Private
-extension MJViewController {
-    private func setTableViewControllersContentOffsetBasedOnScrollView(_ scrollView: UIScrollView, withoutSelectedViewController: Bool) {
+    //MARK: - Private
+    fileprivate func setTableViewControllersContentOffsetBasedOnScrollView(_ scrollView: UIScrollView, withoutSelectedViewController: Bool) {
         let viewControllers = self.viewControllers.filter { $0 != selectedViewController }
         let contentHeight = contentView.frame.size.height - headerHeight
         viewControllers.forEach {
@@ -321,10 +316,8 @@ extension MJViewController {
             tableView.setContentOffset(contentOffset, animated: false)
         }
     }
-}
 
-//MARK: - Public
-extension MJViewController {
+    //MARK: - Public
     public func registerNibToAllTableViews(_ nib: UINib?, forCellReuseIdentifier reuseIdentifier: String) {
         registerCellContainer.cellNib += [RegisterCellContainer.NibAndIdentifierContainer(nib: nib, reuseIdentifier: reuseIdentifier)]
     }
@@ -349,7 +342,7 @@ extension MJViewController: UIScrollViewDelegate {
     }
     
     public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if !decelerate && scrollView.contentOffset.y < contentEscapeViewTopConstraint?.constant {
+        if let constant = contentEscapeViewTopConstraint?.constant, !decelerate && scrollView.contentOffset.y < constant {
             addContentViewToCell()
         }
         contentView.segmentedControl.selectedSegmentIndex = selectedIndex
@@ -357,7 +350,7 @@ extension MJViewController: UIScrollViewDelegate {
     }
     
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y < contentEscapeViewTopConstraint?.constant {
+        if let constant = contentEscapeViewTopConstraint?.constant, scrollView.contentOffset.y < constant {
             addContentViewToCell()
         }
         contentView.segmentedControl.selectedSegmentIndex = selectedIndex

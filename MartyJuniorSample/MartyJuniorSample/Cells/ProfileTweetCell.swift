@@ -15,14 +15,14 @@ extension UITableViewCell {
 }
 
 class ProfileTweetCell: UITableViewCell {
-    static var Height: CGFloat = 88
+    static var defaultHeight: CGFloat = 88
     
     @IBOutlet weak var textView: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        textView.textContainerInset = UIEdgeInsetsZero
+        textView.textContainerInset = .zero
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

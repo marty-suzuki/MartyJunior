@@ -41,17 +41,17 @@ public class MJNavigationView: UIView {
             leftButtonContainerView.top,
             leftButtonContainerView.left,
             leftButtonContainerView.bottom,
-            leftButtonContainerView.width |==| self.dynamicType.Height
+            leftButtonContainerView.width |==| MJNavigationView.Height
         )
-        leftButtonContainerView.backgroundColor = .clear()
+        leftButtonContainerView.backgroundColor = .clear
         
         addLayoutSubview(rightButtonContainerView, andConstraints:
             rightButtonContainerView.top,
             rightButtonContainerView.right,
             rightButtonContainerView.bottom,
-            rightButtonContainerView.width |==| self.dynamicType.Height
+            rightButtonContainerView.width |==| MJNavigationView.Height
         )
-        rightButtonContainerView.backgroundColor = .clear()
+        rightButtonContainerView.backgroundColor = .clear
         
         addLayoutSubview(titleLabel, andConstraints:
             titleLabel.top,
@@ -62,7 +62,7 @@ public class MJNavigationView: UIView {
         
         titleLabel.textAlignment = .center
         titleLabel.font = .boldSystemFont(ofSize: 16)
-        titleLabel.textColor = .white()
+        titleLabel.textColor = .white
     }
     
     private func addButton(_ button: UIButton?, toContainerView containerView: UIView) {

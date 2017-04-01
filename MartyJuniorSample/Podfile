@@ -5,8 +5,7 @@ use_frameworks!
 
 target 'MartyJuniorSample' do
 pod 'MartyJunior', :path => '../'
-pod 'MisterFusion', :git => 'https://github.com/szk-atmosphere/MisterFusion.git', :tag => '2.0.0-beta'
-pod 'ReuseCellConfigure', :git => 'https://github.com/szk-atmosphere/ReuseCellConfigure.git', :tag => '0.3.0-beta'
-pod 'SABlurImageView', :git => 'https://github.com/szk-atmosphere/SABlurImageView.git', :tag => '3.0.0-beta'
+pod 'ReuseCellConfigure'
+pod 'SABlurImageView'
 end
 

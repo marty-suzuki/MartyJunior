@@ -1,2719 +1,1150 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>00C46CB1EB9D802D86862029DC7B7C5D</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>1026C21753D782A477BA7D87A64B7D89</string>
-			<key>buildPhases</key>
-			<array>
-				<string>604099372274DB00C046DFB64021C451</string>
-				<string>D3C16221FE0DD416C96B59C9501C7E28</string>
-				<string>76C6C49E561C5BF1C1290EDF65A41A38</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ReuseCellConfigure</string>
-			<key>productName</key>
-			<string>ReuseCellConfigure</string>
-			<key>productReference</key>
-			<string>D8462AED845FC9A9BCE5796852CFFED6</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>024B4D1D8304174D630938CCFFE72DFC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>UIImage+BlurEffect.swift</string>
-			<key>path</key>
-			<string>SABlurImageView/UIImage+BlurEffect.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>03CB7A2095BC396C671FF34F4A48C0A2</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_MartyJuniorSample.framework</string>
-			<key>path</key>
-			<string>Pods_MartyJuniorSample.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>055C206A9AEAAFA34AB030DD52A8AFF9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8EA0B1B6C87EF026B640C0C69386EFAF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>075CA74FD49B31CBF1C2FB4C2B3C8E7D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>2374AFA7677552980B1494FF0CDF0E09</string>
-				<string>C5ED472F0B2E413C923114C199416901</string>
-				<string>3E2751D895936DE57F97F616F1DBEF05</string>
-				<string>3B706311A833D9A56AA73CC6A36B835C</string>
-				<string>CB7AF8D9447FE6950C9E490B527BE191</string>
-				<string>673C22793695DFF76DA2513DCDE1F02D</string>
-				<string>AB87E3A1EDB146160136451DDF8FB8D2</string>
-				<string>17E1629E6D44F9543770AB1C6FCFFE6D</string>
-				<string>97074EC8172CB222498D97E1D740E322</string>
-				<string>2F5DFFC00981F086503C8577FF252794</string>
-				<string>57570EE70159C126702F09F77F216680</string>
-				<string>C149FD36EB65F39ABA6F8C7FCEB40B68</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>08FBC9BAEA62E06F7F875A60FF33B319</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5B300CEE56F7076EA8364D1C80ECA3AB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0A84E3C077DFDF0A259DD770FB7B2F29</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>8B3FB443BEC51B6B963212D7311826FA</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/MisterFusion/MisterFusion-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/MisterFusion/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/MisterFusion/MisterFusion.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>MisterFusion</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>0AD67B1AE7D626502CB0314EBC71B169</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0BAA7A2A97BC1ED2D291029B3C9A4F89</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>7B45C6C739B08C392F596038CC97DC8F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/MartyJunior/MartyJunior-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/MartyJunior/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/MartyJunior/MartyJunior.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>MartyJunior</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>1026C21753D782A477BA7D87A64B7D89</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>43D0771BFC2A05149FF0BD1591DCAF13</string>
-				<string>4A112E232F4F9442F46F94893E15D1DB</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>13F8C3EEA4C78F886C8F120F65D8BE30</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>00C46CB1EB9D802D86862029DC7B7C5D</string>
-			<key>remoteInfo</key>
-			<string>ReuseCellConfigure</string>
-		</dict>
-		<key>14B8B9B15ECBE87983FF987239AB2D7B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>35891B0FDFEB04FDD15421753FA5B9D7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>17E1629E6D44F9543770AB1C6FCFFE6D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4779170121AFAB067FA321C46691E358</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1813C0A6856927AE3FC17DBE27EA2509</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SABlurImageView-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>19032C496A8B8DB35ADE4525CD646108</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>678AD8E88CD5D36E302535C4A1885DAE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>1DE7A9037D01870CAE72CAA8FF8A6A54</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-MartyJuniorSample.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1F7A6318B6B6C53574961F50C591F297</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>22636CE1C55E8CA607798DEEABC3E8B7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E87623A19AC06E74328699359519CC17</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>22F3765417B8C078A2C9DEA4C144B52A</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>E38A7CF040961F22A1E6D000029120B8</string>
-			<key>remoteInfo</key>
-			<string>SABlurImageView</string>
-		</dict>
-		<key>2374AFA7677552980B1494FF0CDF0E09</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E3B627BEC25735E6B15FED49A5E2AB7D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>238A66A6FE6837111DD2F86058385187</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2460B1188C4A4C8AB2ACC3F7B382CE0B</string>
-				<string>3139591A8ECEC1C3F112F13AC4B9A8D3</string>
-				<string>8B3FB443BEC51B6B963212D7311826FA</string>
-				<string>E87623A19AC06E74328699359519CC17</string>
-				<string>B8469F7605C04E0296F6A5A796C924C0</string>
-				<string>E59DDB386983D203930DFDE8557FE0B7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/MisterFusion</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>23FF4D54D9A9EB38DD12B68AC5BBB179</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2460B1188C4A4C8AB2ACC3F7B382CE0B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>274F497A667F1080F2802DDCDFAF7E9E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>92B548075EDDD192DC9A07256EEFA3A0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>A70CDAD61F90AC503C7D04CC22DA2923</string>
-				<string>FB45FFD90572718D82AB9092B750F0CA</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2F5DFFC00981F086503C8577FF252794</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7EB310C52F14510E02D28B4E508672B7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3139591A8ECEC1C3F112F13AC4B9A8D3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>MisterFusion.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>31D0197B1C1AF1253A90E83C73B6C8C6</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9EA3BCE00D8E79896DFF7A1823D55044</string>
-				<string>9E88D3D4D7D5E1F811FD4B13917FC500</string>
-				<string>03CB7A2095BC396C671FF34F4A48C0A2</string>
-				<string>D8462AED845FC9A9BCE5796852CFFED6</string>
-				<string>CA4D6C2B0FC9555C601A95E04B26EB6F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>32F2EC125B952FD78AEAADA88E7C4014</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>6639EEF52936A00888C4712FC9AC208D</string>
-				<string>E19F2E678C0FCE6F38E7BF77C955D102</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>3484838E9A1EE933606B930317182DF4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CD20858069BE3FD835488CE950F000AA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Development Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>34A370A9C5CE9BD6977A7374F91D2AD4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A608B4942BF723624F07B37BF6B85859</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>35891B0FDFEB04FDD15421753FA5B9D7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>478F0BBA725626FFE9A7DE2D5034DF8B</string>
-				<string>8EA0B1B6C87EF026B640C0C69386EFAF</string>
-				<string>8C03939B2EB142FFCFA9CACC9698B2C2</string>
-				<string>7AB5E9160CAA2677328BF9618CD52E91</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>36EEA4949841ADCCD1D72A2DA99B2709</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FF1F848B1920B6BEE78CE5D60007AA96</string>
-				<string>5B300CEE56F7076EA8364D1C80ECA3AB</string>
-				<string>024B4D1D8304174D630938CCFFE72DFC</string>
-				<string>7385B376D8B0F89B657576934F289D33</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>SABlurImageView</string>
-			<key>path</key>
-			<string>SABlurImageView</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A30800481C187C957A47568EE7EFCA3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MJViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3B333CCC237559B42D03C09C4D5CC8EB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>MartyJunior.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3B706311A833D9A56AA73CC6A36B835C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8BFE3D930FADD2362D492A1BB11A07D9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3D838ED276E92566EE1D00AB82FA5B95</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MJViewControllerDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3E2751D895936DE57F97F616F1DBEF05</key>
-		<dict>
-			<key>fileRef</key>
-			<string>43839808DAF2234E2AEB14B26B624EE3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3E5B8BCFDC41B32C68B95A1934C925CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B70FD06A84A7FA7AF81A42865ED75CAE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>401C3B74D50B18A0E8A6A0C3CF66C84C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1F7A6318B6B6C53574961F50C591F297</string>
-				<string>A388AF3BCCB5693726C49D2B547D167B</string>
-				<string>EB37FFF7AF98323B00274D6535DC6822</string>
-				<string>FE27A105B888DBAAAE27D46189E0A0F9</string>
-				<string>CFA8979EC73D19059ADCD9F6C2CCC305</string>
-				<string>A608B4942BF723624F07B37BF6B85859</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/ReuseCellConfigure</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>43839808DAF2234E2AEB14B26B624EE3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MJContentView.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>43ADDD6189D5D492A53462D36B328E0E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E1CDFDE9F36E1FE761BF3D2FA4617F36</string>
-				<string>055C206A9AEAAFA34AB030DD52A8AFF9</string>
-				<string>81D9D47C642DDB1119FFBB9E0368BBCA</string>
-				<string>777FC8DF8C119982756A21CD22911B72</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>43D0771BFC2A05149FF0BD1591DCAF13</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>EB37FFF7AF98323B00274D6535DC6822</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/ReuseCellConfigure/ReuseCellConfigure-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/ReuseCellConfigure/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/ReuseCellConfigure/ReuseCellConfigure.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>ReuseCellConfigure</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>4779170121AFAB067FA321C46691E358</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MJTableViewTopCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>478F0BBA725626FFE9A7DE2D5034DF8B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Accelerate.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Accelerate.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>4945BD06BB9DA3AC9AB5EB4C6AF6C938</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CFCE9780F11AA1741CFBBDBEE9F8FD76</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>4A112E232F4F9442F46F94893E15D1DB</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>EB37FFF7AF98323B00274D6535DC6822</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/ReuseCellConfigure/ReuseCellConfigure-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/ReuseCellConfigure/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/ReuseCellConfigure/ReuseCellConfigure.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>ReuseCellConfigure</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>4A471766E157C3DFA8588E490B4A57EE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FE27A105B888DBAAAE27D46189E0A0F9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4F90FE78EE410D415BC5540065734D6C</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>FD55E63F76BE358E29BE74B7CB9F2EB6</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/SABlurImageView/SABlurImageView-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/SABlurImageView/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/SABlurImageView/SABlurImageView.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>SABlurImageView</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>4FB5E9A3E6C9C0F9A1DD7B316BC22D2B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FF1F848B1920B6BEE78CE5D60007AA96</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>53EE8DE41682CE1D265BE8B60ED69A11</key>
-		<dict>
-			<key>fileRef</key>
-			<string>645CC08D3AD27DEA56A461EBE8E54E6B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>54C77337B476137FCBAD1AB008AFCC03</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EE6E4183E3F9C468C244DAE05651626A</string>
-				<string>B2AC28704B5159D1E6C0642B3FEA19ED</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5545C3431B494FACA9EC707FD8A8D4F2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>274F497A667F1080F2802DDCDFAF7E9E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5605B71F5B044E661A0EBAFD3DD147E5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8EA0B1B6C87EF026B640C0C69386EFAF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>57570EE70159C126702F09F77F216680</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3D838ED276E92566EE1D00AB82FA5B95</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>589B562D36F104A93524D0296FCD1AA2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>MisterFusion</string>
-			<key>target</key>
-			<string>9FC843BD22328DEFBCAB1DA4A92108F7</string>
-			<key>targetProxy</key>
-			<string>C7A9CA9603AAAD18CC8454BB9BB2B8C7</string>
-		</dict>
-		<key>5B300CEE56F7076EA8364D1C80ECA3AB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>SABlurImageView.swift</string>
-			<key>path</key>
-			<string>SABlurImageView/SABlurImageView.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E7702F1E80E2696D9185BFED3A6B50A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E97A332AFCB13BB4E1857CA5BCB2A357</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>604099372274DB00C046DFB64021C451</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4A471766E157C3DFA8588E490B4A57EE</string>
-				<string>EDD198DEA289E82F22D9681BA899C215</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>608AA5B17D33FF4509ED336B9743BBFE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9E10FE93C3AA4891DB7E9FFE327FC74B</string>
-				<string>F460F7249534B617C456160F6940966A</string>
-				<string>36EEA4949841ADCCD1D72A2DA99B2709</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>626DA46AD865A6E93C834821AA87C1B6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>NSIndexPath+String.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>645CC08D3AD27DEA56A461EBE8E54E6B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Array+MisterFusion.swift</string>
-			<key>path</key>
-			<string>MisterFusion/Array+MisterFusion.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>661BCD2A992CE12CF2F0E7B6B7C2292B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5605B71F5B044E661A0EBAFD3DD147E5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>6639EEF52936A00888C4712FC9AC208D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8EA0B1B6C87EF026B640C0C69386EFAF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>668220EB7740AFED9982BDDF29F56B4E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-MartyJuniorSample-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>668F8E50ACCD064B685669CD4BF1E4FF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>864399C3995C08D37F9D4B4DA83333BF</string>
-				<string>3B333CCC237559B42D03C09C4D5CC8EB</string>
-				<string>7B45C6C739B08C392F596038CC97DC8F</string>
-				<string>E3B627BEC25735E6B15FED49A5E2AB7D</string>
-				<string>908AA520245D911DCB0D6BC4C6C2A591</string>
-				<string>CFCE9780F11AA1741CFBBDBEE9F8FD76</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>MartyJuniorSample/Pods/Target Support Files/MartyJunior</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>673C22793695DFF76DA2513DCDE1F02D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A83437693D367F606259A26436499D43</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>678AD8E88CD5D36E302535C4A1885DAE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>98DA216C29F7CEC42A055372C81E475D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>70931852AF5C4E8F7AF9E908ED61F163</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>23FF4D54D9A9EB38DD12B68AC5BBB179</string>
-				<string>87C5C867DDC885107CC7819566618CE3</string>
-				<string>B826B79B392B058D3B63DD917DEFB923</string>
-				<string>668220EB7740AFED9982BDDF29F56B4E</string>
-				<string>92B548075EDDD192DC9A07256EEFA3A0</string>
-				<string>E2693CFE4FEEFACE09F850488DF1CEA4</string>
-				<string>F0730B6B176AFFD305693C76CC810BF0</string>
-				<string>98DA216C29F7CEC42A055372C81E475D</string>
-				<string>EBA38EDA4A07B4CFABE4E6504CD16389</string>
-				<string>1DE7A9037D01870CAE72CAA8FF8A6A54</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-MartyJuniorSample</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-MartyJuniorSample</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>72C4F66531E9E5D983B130D0DC33E3C4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>024B4D1D8304174D630938CCFFE72DFC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7385B376D8B0F89B657576934F289D33</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>0AD67B1AE7D626502CB0314EBC71B169</string>
-				<string>8BD83E31C3AFF717ED43EAB6A004740E</string>
-				<string>FD55E63F76BE358E29BE74B7CB9F2EB6</string>
-				<string>EF2370DE0631F0DBAD4275B1EC1C99BC</string>
-				<string>1813C0A6856927AE3FC17DBE27EA2509</string>
-				<string>B70FD06A84A7FA7AF81A42865ED75CAE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/SABlurImageView</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>76C6C49E561C5BF1C1290EDF65A41A38</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>34A370A9C5CE9BD6977A7374F91D2AD4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>777FC8DF8C119982756A21CD22911B72</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7AB5E9160CAA2677328BF9618CD52E91</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>796D94352C6BDCE993514BD069AB185E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EF2370DE0631F0DBAD4275B1EC1C99BC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>798CCA8B8E353A8BA35DEAE1EAA3130B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4945BD06BB9DA3AC9AB5EB4C6AF6C938</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7A44600D166E73C8048891A9DC6136A2</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>A9A334371EEC5B0914D5A0883F5AE6A1</string>
-				<string>0BAA7A2A97BC1ED2D291029B3C9A4F89</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7AB5E9160CAA2677328BF9618CD52E91</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>7AC6A6FDCD210966993AF5AD71108FFA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MisterFusion+MartyJunior.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B45C6C739B08C392F596038CC97DC8F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>MartyJunior.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7DB346D0F39D3F0E887471402A8071AB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>3484838E9A1EE933606B930317182DF4</string>
-				<string>14B8B9B15ECBE87983FF987239AB2D7B</string>
-				<string>608AA5B17D33FF4509ED336B9743BBFE</string>
-				<string>31D0197B1C1AF1253A90E83C73B6C8C6</string>
-				<string>E9FD2F84A0B85FD65E1B687ACE48F8C9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E85116D8D66D874B1D16F6104DF62DB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MJTableViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7EB310C52F14510E02D28B4E508672B7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MJViewControllerDataSource.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>81D9D47C642DDB1119FFBB9E0368BBCA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8C03939B2EB142FFCFA9CACC9698B2C2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8273F3D2FFDD0842CFFF407EE813E30F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7AB5E9160CAA2677328BF9618CD52E91</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>864399C3995C08D37F9D4B4DA83333BF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>87C5C867DDC885107CC7819566618CE3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods-MartyJuniorSample.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8B3FB443BEC51B6B963212D7311826FA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>MisterFusion.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8BD83E31C3AFF717ED43EAB6A004740E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>SABlurImageView.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8BFE3D930FADD2362D492A1BB11A07D9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MJNavigationView.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C03939B2EB142FFCFA9CACC9698B2C2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>QuartzCore.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>8EA0B1B6C87EF026B640C0C69386EFAF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>908AA520245D911DCB0D6BC4C6C2A591</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>MartyJunior-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>92B548075EDDD192DC9A07256EEFA3A0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-MartyJuniorSample-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>944B9E66D65AE4B880200FA8B2396013</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>1DE7A9037D01870CAE72CAA8FF8A6A54</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-MartyJuniorSample/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-MartyJuniorSample/Pods-MartyJuniorSample.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_MartyJuniorSample</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>97074EC8172CB222498D97E1D740E322</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3A30800481C187C957A47568EE7EFCA3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98819D7144BFC0B905DD9D19287ACEEC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>53EE8DE41682CE1D265BE8B60ED69A11</string>
-				<string>22636CE1C55E8CA607798DEEABC3E8B7</string>
-				<string>A03C84FA56C1EFBCE51BD48F9EBD5CD3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>98DA216C29F7CEC42A055372C81E475D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-MartyJuniorSample-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9E10FE93C3AA4891DB7E9FFE327FC74B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>645CC08D3AD27DEA56A461EBE8E54E6B</string>
-				<string>ABB26389EFD31BF206E1075BA589267C</string>
-				<string>238A66A6FE6837111DD2F86058385187</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>MisterFusion</string>
-			<key>path</key>
-			<string>MisterFusion</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9E88D3D4D7D5E1F811FD4B13917FC500</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MisterFusion.framework</string>
-			<key>path</key>
-			<string>MisterFusion.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>9EA3BCE00D8E79896DFF7A1823D55044</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MartyJunior.framework</string>
-			<key>path</key>
-			<string>MartyJunior.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>9FC843BD22328DEFBCAB1DA4A92108F7</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>D527E849301E62CDDB55A973DEBA607C</string>
-			<key>buildPhases</key>
-			<array>
-				<string>98819D7144BFC0B905DD9D19287ACEEC</string>
-				<string>54C77337B476137FCBAD1AB008AFCC03</string>
-				<string>5E7702F1E80E2696D9185BFED3A6B50A</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>MisterFusion</string>
-			<key>productName</key>
-			<string>MisterFusion</string>
-			<key>productReference</key>
-			<string>9E88D3D4D7D5E1F811FD4B13917FC500</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>A02619840164F0470390990B4CF606AA</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>FD55E63F76BE358E29BE74B7CB9F2EB6</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/SABlurImageView/SABlurImageView-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/SABlurImageView/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/SABlurImageView/SABlurImageView.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>SABlurImageView</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>A03C84FA56C1EFBCE51BD48F9EBD5CD3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>ABB26389EFD31BF206E1075BA589267C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A388AF3BCCB5693726C49D2B547D167B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ReuseCellConfigure.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A608B4942BF723624F07B37BF6B85859</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ReuseCellConfigure-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A70CDAD61F90AC503C7D04CC22DA2923</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>A8320CBFBF3301A67FB36E3255229DAE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>ReuseCellConfigure</string>
-			<key>target</key>
-			<string>00C46CB1EB9D802D86862029DC7B7C5D</string>
-			<key>targetProxy</key>
-			<string>13F8C3EEA4C78F886C8F120F65D8BE30</string>
-		</dict>
-		<key>A83437693D367F606259A26436499D43</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MJTableViewControllerDataSource.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A9A334371EEC5B0914D5A0883F5AE6A1</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>7B45C6C739B08C392F596038CC97DC8F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/MartyJunior/MartyJunior-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/MartyJunior/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/MartyJunior/MartyJunior.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>MartyJunior</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>AB87E3A1EDB146160136451DDF8FB8D2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B9A59145A8896C5A28D57A945B5DFA97</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>ABB26389EFD31BF206E1075BA589267C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>MisterFusion.swift</string>
-			<key>path</key>
-			<string>MisterFusion/MisterFusion.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B2AC28704B5159D1E6C0642B3FEA19ED</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7AB5E9160CAA2677328BF9618CD52E91</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B70FD06A84A7FA7AF81A42865ED75CAE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SABlurImageView-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B826B79B392B058D3B63DD917DEFB923</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-MartyJuniorSample-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B8469F7605C04E0296F6A5A796C924C0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>MisterFusion-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B9A59145A8896C5A28D57A945B5DFA97</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MJTableViewControllerDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>BA9B25CD472507EC63F471D055815362</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4FB5E9A3E6C9C0F9A1DD7B316BC22D2B</string>
-				<string>796D94352C6BDCE993514BD069AB185E</string>
-				<string>08FBC9BAEA62E06F7F875A60FF33B319</string>
-				<string>72C4F66531E9E5D983B130D0DC33E3C4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>BB9D8406934875C5E574A0219F10015A</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>8B3FB443BEC51B6B963212D7311826FA</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/MisterFusion/MisterFusion-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/MisterFusion/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/MisterFusion/MisterFusion.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>MisterFusion</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>BF5F5AEE66F5AE452F7AADB77D5CD415</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>FB8A2102BC2CC1FA436E3BFCACF5EBC9</string>
-			<key>buildPhases</key>
-			<array>
-				<string>5545C3431B494FACA9EC707FD8A8D4F2</string>
-				<string>661BCD2A992CE12CF2F0E7B6B7C2292B</string>
-				<string>19032C496A8B8DB35ADE4525CD646108</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>EDFE5489E3FB7A4D52DC1C9919726629</string>
-				<string>589B562D36F104A93524D0296FCD1AA2</string>
-				<string>A8320CBFBF3301A67FB36E3255229DAE</string>
-				<string>CF56675AE85E575C57E29DD875DA0B57</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-MartyJuniorSample</string>
-			<key>productName</key>
-			<string>Pods-MartyJuniorSample</string>
-			<key>productReference</key>
-			<string>03CB7A2095BC396C671FF34F4A48C0A2</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>C149FD36EB65F39ABA6F8C7FCEB40B68</key>
-		<dict>
-			<key>fileRef</key>
-			<string>626DA46AD865A6E93C834821AA87C1B6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C15BE48E2261A19F24FD3EA025C5A8B5</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>4F90FE78EE410D415BC5540065734D6C</string>
-				<string>A02619840164F0470390990B4CF606AA</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C2DB3512CE49036C75377641ACF6CDAD</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3E5B8BCFDC41B32C68B95A1934C925CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C5ED472F0B2E413C923114C199416901</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7AC6A6FDCD210966993AF5AD71108FFA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C7A9CA9603AAAD18CC8454BB9BB2B8C7</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>9FC843BD22328DEFBCAB1DA4A92108F7</string>
-			<key>remoteInfo</key>
-			<string>MisterFusion</string>
-		</dict>
-		<key>CA4D6C2B0FC9555C601A95E04B26EB6F</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>SABlurImageView.framework</string>
-			<key>path</key>
-			<string>SABlurImageView.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>CB7AF8D9447FE6950C9E490B527BE191</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7E85116D8D66D874B1D16F6104DF62DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CD20858069BE3FD835488CE950F000AA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>ED144926287873C11865505032BCBFAC</string>
-				<string>668F8E50ACCD064B685669CD4BF1E4FF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>MartyJunior</string>
-			<key>path</key>
-			<string>../..</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CF56675AE85E575C57E29DD875DA0B57</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>SABlurImageView</string>
-			<key>target</key>
-			<string>E38A7CF040961F22A1E6D000029120B8</string>
-			<key>targetProxy</key>
-			<string>22F3765417B8C078A2C9DEA4C144B52A</string>
-		</dict>
-		<key>CFA8979EC73D19059ADCD9F6C2CCC305</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ReuseCellConfigure-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFCE9780F11AA1741CFBBDBEE9F8FD76</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>MartyJunior-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D23D585C753E1BC55BF6BD8EE857915B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>ReuseCellConfigure.swift</string>
-			<key>path</key>
-			<string>ReuseCellConfigure/ReuseCellConfigure.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D3C16221FE0DD416C96B59C9501C7E28</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F96712CDE1E44F6B71AA20E9C0AE04C8</string>
-				<string>8273F3D2FFDD0842CFFF407EE813E30F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D41D8CD98F00B204E9800998ECF8427E</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0700</string>
-				<key>LastUpgradeCheck</key>
-				<string>0700</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7DB346D0F39D3F0E887471402A8071AB</string>
-			<key>productRefGroup</key>
-			<string>31D0197B1C1AF1253A90E83C73B6C8C6</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>E5DCC6B57340D7D1DD44077A8B03970D</string>
-				<string>9FC843BD22328DEFBCAB1DA4A92108F7</string>
-				<string>BF5F5AEE66F5AE452F7AADB77D5CD415</string>
-				<string>00C46CB1EB9D802D86862029DC7B7C5D</string>
-				<string>E38A7CF040961F22A1E6D000029120B8</string>
-			</array>
-		</dict>
-		<key>D527E849301E62CDDB55A973DEBA607C</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>0A84E3C077DFDF0A259DD770FB7B2F29</string>
-				<string>BB9D8406934875C5E574A0219F10015A</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>D8462AED845FC9A9BCE5796852CFFED6</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>ReuseCellConfigure.framework</string>
-			<key>path</key>
-			<string>ReuseCellConfigure.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>E19F2E678C0FCE6F38E7BF77C955D102</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7AB5E9160CAA2677328BF9618CD52E91</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E1CDFDE9F36E1FE761BF3D2FA4617F36</key>
-		<dict>
-			<key>fileRef</key>
-			<string>478F0BBA725626FFE9A7DE2D5034DF8B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E2693CFE4FEEFACE09F850488DF1CEA4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-MartyJuniorSample-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E38A7CF040961F22A1E6D000029120B8</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>C15BE48E2261A19F24FD3EA025C5A8B5</string>
-			<key>buildPhases</key>
-			<array>
-				<string>BA9B25CD472507EC63F471D055815362</string>
-				<string>43ADDD6189D5D492A53462D36B328E0E</string>
-				<string>C2DB3512CE49036C75377641ACF6CDAD</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>SABlurImageView</string>
-			<key>productName</key>
-			<string>SABlurImageView</string>
-			<key>productReference</key>
-			<string>CA4D6C2B0FC9555C601A95E04B26EB6F</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>E3B627BEC25735E6B15FED49A5E2AB7D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>MartyJunior-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E59DDB386983D203930DFDE8557FE0B7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>MisterFusion-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E5DCC6B57340D7D1DD44077A8B03970D</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>7A44600D166E73C8048891A9DC6136A2</string>
-			<key>buildPhases</key>
-			<array>
-				<string>075CA74FD49B31CBF1C2FB4C2B3C8E7D</string>
-				<string>32F2EC125B952FD78AEAADA88E7C4014</string>
-				<string>798CCA8B8E353A8BA35DEAE1EAA3130B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>MartyJunior</string>
-			<key>productName</key>
-			<string>MartyJunior</string>
-			<key>productReference</key>
-			<string>9EA3BCE00D8E79896DFF7A1823D55044</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>E87623A19AC06E74328699359519CC17</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>MisterFusion-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E97A332AFCB13BB4E1857CA5BCB2A357</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E59DDB386983D203930DFDE8557FE0B7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>E9FD2F84A0B85FD65E1B687ACE48F8C9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>70931852AF5C4E8F7AF9E908ED61F163</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EB37FFF7AF98323B00274D6535DC6822</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>ReuseCellConfigure.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EBA38EDA4A07B4CFABE4E6504CD16389</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-MartyJuniorSample.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>ED144926287873C11865505032BCBFAC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7AC6A6FDCD210966993AF5AD71108FFA</string>
-				<string>43839808DAF2234E2AEB14B26B624EE3</string>
-				<string>8BFE3D930FADD2362D492A1BB11A07D9</string>
-				<string>7E85116D8D66D874B1D16F6104DF62DB</string>
-				<string>A83437693D367F606259A26436499D43</string>
-				<string>B9A59145A8896C5A28D57A945B5DFA97</string>
-				<string>4779170121AFAB067FA321C46691E358</string>
-				<string>3A30800481C187C957A47568EE7EFCA3</string>
-				<string>7EB310C52F14510E02D28B4E508672B7</string>
-				<string>3D838ED276E92566EE1D00AB82FA5B95</string>
-				<string>626DA46AD865A6E93C834821AA87C1B6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>MartyJunior</string>
-			<key>path</key>
-			<string>MartyJunior</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EDD198DEA289E82F22D9681BA899C215</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D23D585C753E1BC55BF6BD8EE857915B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EDFE5489E3FB7A4D52DC1C9919726629</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>MartyJunior</string>
-			<key>target</key>
-			<string>E5DCC6B57340D7D1DD44077A8B03970D</string>
-			<key>targetProxy</key>
-			<string>FB5779F8EE722EB53F9704E577B66503</string>
-		</dict>
-		<key>EE6E4183E3F9C468C244DAE05651626A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8EA0B1B6C87EF026B640C0C69386EFAF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EF2370DE0631F0DBAD4275B1EC1C99BC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SABlurImageView-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F0730B6B176AFFD305693C76CC810BF0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-MartyJuniorSample-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F33DA25DE6F3609A80A09268B34C4CE3</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>EBA38EDA4A07B4CFABE4E6504CD16389</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-MartyJuniorSample/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-MartyJuniorSample/Pods-MartyJuniorSample.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_MartyJuniorSample</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>F460F7249534B617C456160F6940966A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D23D585C753E1BC55BF6BD8EE857915B</string>
-				<string>401C3B74D50B18A0E8A6A0C3CF66C84C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>ReuseCellConfigure</string>
-			<key>path</key>
-			<string>ReuseCellConfigure</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F96712CDE1E44F6B71AA20E9C0AE04C8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8EA0B1B6C87EF026B640C0C69386EFAF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FB45FFD90572718D82AB9092B750F0CA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>FB5779F8EE722EB53F9704E577B66503</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>E5DCC6B57340D7D1DD44077A8B03970D</string>
-			<key>remoteInfo</key>
-			<string>MartyJunior</string>
-		</dict>
-		<key>FB8A2102BC2CC1FA436E3BFCACF5EBC9</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>F33DA25DE6F3609A80A09268B34C4CE3</string>
-				<string>944B9E66D65AE4B880200FA8B2396013</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>FD55E63F76BE358E29BE74B7CB9F2EB6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>SABlurImageView.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FE27A105B888DBAAAE27D46189E0A0F9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ReuseCellConfigure-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FF1F848B1920B6BEE78CE5D60007AA96</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>CATransition+Closure.swift</string>
-			<key>path</key>
-			<string>SABlurImageView/CATransition+Closure.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>D41D8CD98F00B204E9800998ECF8427E</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0603455250AB405FD46B076D25B2F0CA /* MJContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43839808DAF2234E2AEB14B26B624EE3 /* MJContentView.swift */; };
+		128CE4509FC2FF4850B2E472396069AB /* MisterFusion-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 93758F9BC0622E16F9C7953E3E41504F /* MisterFusion-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19A3E9C70C899170B934A54674FCB94F /* MisterFusion-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DB6A4E0F33B424D0D500298E62ABFB /* MisterFusion-dummy.m */; };
+		1E50E4B185E085FF5FD74CEB0532DAE5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823D30D5451B92DB71E5E3E9F845C3DA /* Accelerate.framework */; };
+		21E8389BF7290A93B603B903D7C72FEB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2066A3CE14560F28EF32B7FD9DB36A58 /* QuartzCore.framework */; };
+		27BC50DAB5DB4D56E57F40CA00921AC7 /* UIImage+BlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A146F7D8F8620275ABD3EE98DE9F9 /* UIImage+BlurEffect.swift */; };
+		2BB77FD7495A16BDE1F0D705C4FAB243 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FAADD7BBCD5AD15BFD5EE2F07FEC70 /* UIKit.framework */; };
+		2E4DC2E228686D7E9A4996FB293D5CA9 /* MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BACB91C6DB4DBB7346CC167F2E0EE9C /* MisterFusion.swift */; };
+		457F31A4FD7C1B1B108D000F4ACCB177 /* ReuseCellConfigure-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19C9FC7AA703B92339485FE3E7D99D1B /* ReuseCellConfigure-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D171FF6E83B93AD5EAB48E85A50B221 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DB6CA8A653A3DA3936908F848073DB /* Foundation.framework */; };
+		4ED92B74B1BEC758A405F944B521A5DC /* SABlurImageView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58477D55866B982FE59D0A5805681004 /* SABlurImageView-dummy.m */; };
+		5391A4C9C2CA32346013865EE6E7D130 /* Pods-MartyJuniorSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98DA216C29F7CEC42A055372C81E475D /* Pods-MartyJuniorSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58321D82116935652BD6CC49171C445D /* MJTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85116D8D66D874B1D16F6104DF62DB /* MJTableViewController.swift */; };
+		58DAD01AC52CC9D633692DFFD1B622F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FAADD7BBCD5AD15BFD5EE2F07FEC70 /* UIKit.framework */; };
+		5FEB7801510E41363115A2D8D3005F7E /* SABlurImageView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C1EB01649961FD0232BDBF5EDED290F /* SABlurImageView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7175E7A019EAA0979335D7DA1E5393CB /* MJTableViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83437693D367F606259A26436499D43 /* MJTableViewControllerDataSource.swift */; };
+		77C318512DBD1DE4CA504D005B6631C3 /* MJViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB310C52F14510E02D28B4E508672B7 /* MJViewControllerDataSource.swift */; };
+		79E0596DB7CFF6B1BCF7B4857D63E487 /* MartyJunior-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B627BEC25735E6B15FED49A5E2AB7D /* MartyJunior-dummy.m */; };
+		899490EFB0A981455F09477755787326 /* ReuseCellConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA8B04CA1DAEEAC4CBF9C7CBA87C156 /* ReuseCellConfigure.swift */; };
+		8FA1346FA1C80AF375E154E8569641A8 /* SABlurImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DD1EDF72B26249678F86F10CDC05E7 /* SABlurImageView.swift */; };
+		9744B1FBDA015442E27CFD40E6D45780 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FAADD7BBCD5AD15BFD5EE2F07FEC70 /* UIKit.framework */; };
+		9832C84429A6016AB5A6F5EE045412C1 /* MisterFusionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1435917FF672C0D825682E94E1098E24 /* MisterFusionExtension.swift */; };
+		A161213456280F9B80D36DE381156A95 /* MisterFusion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 120C454255883818FA9A95517AF5FE3B /* MisterFusion.framework */; };
+		A320954337459E9D1F90A189E2A32DE6 /* MJNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFE3D930FADD2362D492A1BB11A07D9 /* MJNavigationView.swift */; };
+		A8E8D59D7EDC572F695FB034449ECF13 /* ReuseCellConfigure-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C21357ED9CB17064544FA5C391537 /* ReuseCellConfigure-dummy.m */; };
+		A9040611AE95024C669E07576C93BD55 /* MisterFusion+MartyJunior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC6A6FDCD210966993AF5AD71108FFA /* MisterFusion+MartyJunior.swift */; };
+		ABDE6A8F5133770CE2AC185ECF863A32 /* CATransition+Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50273107A38373CDEE6F3F300166827C /* CATransition+Closure.swift */; };
+		B6B98456541EE608167B28116EE30246 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DB6CA8A653A3DA3936908F848073DB /* Foundation.framework */; };
+		BD065DC58E6BEE5B1DB12CDA6620F2FB /* MJTableViewTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4779170121AFAB067FA321C46691E358 /* MJTableViewTopCell.swift */; };
+		BDFBCD07A95F268E5FF28C47D5534133 /* MJTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A59145A8896C5A28D57A945B5DFA97 /* MJTableViewControllerDelegate.swift */; };
+		BF62072FA870205A7F5E1D7E30F4A23A /* Array+MisterFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B173107CCF045106F77A00AF9B6DF8DB /* Array+MisterFusion.swift */; };
+		CE813B135DCC03F454BC7F61D503E5C5 /* MJViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30800481C187C957A47568EE7EFCA3 /* MJViewController.swift */; };
+		D5D168DE9850E8DC24C9B0B9723AF723 /* MJViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D838ED276E92566EE1D00AB82FA5B95 /* MJViewControllerDelegate.swift */; };
+		E17D07D071B4AEABCACB3922ADA8DE2C /* MartyJunior-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CFCE9780F11AA1741CFBBDBEE9F8FD76 /* MartyJunior-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1B59467ADA429A01B0149506DBADC87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DB6CA8A653A3DA3936908F848073DB /* Foundation.framework */; };
+		E2E39388F85DFB43BFD349B3F55E5820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DB6CA8A653A3DA3936908F848073DB /* Foundation.framework */; };
+		E6318F37AD0AA7F7104FC37B285C902A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45FAADD7BBCD5AD15BFD5EE2F07FEC70 /* UIKit.framework */; };
+		ECB479EBC4DC05BD3B3D0E18D8A31685 /* NSIndexPath+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626DA46AD865A6E93C834821AA87C1B6 /* NSIndexPath+String.swift */; };
+		EF1221393AD1D8EC58E76539186C86C8 /* Pods-MartyJuniorSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B548075EDDD192DC9A07256EEFA3A0 /* Pods-MartyJuniorSample-dummy.m */; };
+		F83CDC804E36FD7F136F90B90B1345E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DB6CA8A653A3DA3936908F848073DB /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0E393477499B4B0C6342B55835C6E260 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7427CB4111B9F71D12ACDCAE516DF0E;
+			remoteInfo = MisterFusion;
+		};
+		1437FE0DCD56A91F9E479E392E778E1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 043C3E315C60E7590C9A30EC6FCFB962;
+			remoteInfo = SABlurImageView;
+		};
+		4152C73F73A9D13062CC0BE52116AEF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B2CCA093145AAAA42B7D40EC2AA4EB3;
+			remoteInfo = MartyJunior;
+		};
+		846355268896A9CD0199E9259089548A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7427CB4111B9F71D12ACDCAE516DF0E;
+			remoteInfo = MisterFusion;
+		};
+		FA39D26BF0674033EEE65F68BF36ACF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7A2B522D0A7B2CA6831C4739DCFB2A9;
+			remoteInfo = ReuseCellConfigure;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0269FF93E1D75FDF70FE9687436CDB08 /* ReuseCellConfigure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ReuseCellConfigure.framework; path = ReuseCellConfigure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02AAC5006ADA00E3370F46C7A6141556 /* SABlurImageView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SABlurImageView.modulemap; sourceTree = "<group>"; };
+		0D87B25036FDBF9C428A358CEF3F0010 /* ReuseCellConfigure.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ReuseCellConfigure.modulemap; sourceTree = "<group>"; };
+		0E419DF5CA4C11DB0167014AE6EC4868 /* MisterFusion.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MisterFusion.xcconfig; sourceTree = "<group>"; };
+		0E8C21357ED9CB17064544FA5C391537 /* ReuseCellConfigure-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ReuseCellConfigure-dummy.m"; sourceTree = "<group>"; };
+		120C454255883818FA9A95517AF5FE3B /* MisterFusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MisterFusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1435917FF672C0D825682E94E1098E24 /* MisterFusionExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MisterFusionExtension.swift; path = MisterFusion/MisterFusionExtension.swift; sourceTree = "<group>"; };
+		19C9FC7AA703B92339485FE3E7D99D1B /* ReuseCellConfigure-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReuseCellConfigure-umbrella.h"; sourceTree = "<group>"; };
+		1DE7A9037D01870CAE72CAA8FF8A6A54 /* Pods-MartyJuniorSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MartyJuniorSample.release.xcconfig"; sourceTree = "<group>"; };
+		2066A3CE14560F28EF32B7FD9DB36A58 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		23FF4D54D9A9EB38DD12B68AC5BBB179 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EA7A972B063A8B763A29885BB960E95 /* SABlurImageView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SABlurImageView-prefix.pch"; sourceTree = "<group>"; };
+		36CD9C63B63CFCA8FF6700AD8C63D1AA /* MartyJunior.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MartyJunior.framework; path = MartyJunior.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A30800481C187C957A47568EE7EFCA3 /* MJViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJViewController.swift; sourceTree = "<group>"; };
+		3B333CCC237559B42D03C09C4D5CC8EB /* MartyJunior.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MartyJunior.modulemap; sourceTree = "<group>"; };
+		3D838ED276E92566EE1D00AB82FA5B95 /* MJViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJViewControllerDelegate.swift; sourceTree = "<group>"; };
+		43839808DAF2234E2AEB14B26B624EE3 /* MJContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJContentView.swift; sourceTree = "<group>"; };
+		44DB6A4E0F33B424D0D500298E62ABFB /* MisterFusion-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MisterFusion-dummy.m"; sourceTree = "<group>"; };
+		45FAADD7BBCD5AD15BFD5EE2F07FEC70 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		4779170121AFAB067FA321C46691E358 /* MJTableViewTopCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJTableViewTopCell.swift; sourceTree = "<group>"; };
+		4EF080A64A4249365DF85724EFB2DB47 /* SABlurImageView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SABlurImageView.xcconfig; sourceTree = "<group>"; };
+		50273107A38373CDEE6F3F300166827C /* CATransition+Closure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CATransition+Closure.swift"; path = "SABlurImageView/CATransition+Closure.swift"; sourceTree = "<group>"; };
+		58477D55866B982FE59D0A5805681004 /* SABlurImageView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SABlurImageView-dummy.m"; sourceTree = "<group>"; };
+		626DA46AD865A6E93C834821AA87C1B6 /* NSIndexPath+String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSIndexPath+String.swift"; sourceTree = "<group>"; };
+		668220EB7740AFED9982BDDF29F56B4E /* Pods-MartyJuniorSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MartyJuniorSample-acknowledgements.plist"; sourceTree = "<group>"; };
+		733D43DC773509C4CD7B2DCD72FCF136 /* Pods_MartyJuniorSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MartyJuniorSample.framework; path = "Pods-MartyJuniorSample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76D21921FF704107D4D8B688BB85D49E /* SABlurImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SABlurImageView.framework; path = SABlurImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7784198350EF1EDEBA34AF651AF7E6C4 /* ReuseCellConfigure.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ReuseCellConfigure.xcconfig; sourceTree = "<group>"; };
+		7AC6A6FDCD210966993AF5AD71108FFA /* MisterFusion+MartyJunior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "MisterFusion+MartyJunior.swift"; sourceTree = "<group>"; };
+		7B45C6C739B08C392F596038CC97DC8F /* MartyJunior.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MartyJunior.xcconfig; sourceTree = "<group>"; };
+		7BACB91C6DB4DBB7346CC167F2E0EE9C /* MisterFusion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MisterFusion.swift; path = MisterFusion/MisterFusion.swift; sourceTree = "<group>"; };
+		7C1EB01649961FD0232BDBF5EDED290F /* SABlurImageView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SABlurImageView-umbrella.h"; sourceTree = "<group>"; };
+		7E1D6B621DA34D3BAD4EB11CECBCEC44 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E85116D8D66D874B1D16F6104DF62DB /* MJTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJTableViewController.swift; sourceTree = "<group>"; };
+		7EB310C52F14510E02D28B4E508672B7 /* MJViewControllerDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJViewControllerDataSource.swift; sourceTree = "<group>"; };
+		823D30D5451B92DB71E5E3E9F845C3DA /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		858A146F7D8F8620275ABD3EE98DE9F9 /* UIImage+BlurEffect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+BlurEffect.swift"; path = "SABlurImageView/UIImage+BlurEffect.swift"; sourceTree = "<group>"; };
+		864399C3995C08D37F9D4B4DA83333BF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87C5C867DDC885107CC7819566618CE3 /* Pods-MartyJuniorSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MartyJuniorSample.modulemap"; sourceTree = "<group>"; };
+		8BFE3D930FADD2362D492A1BB11A07D9 /* MJNavigationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJNavigationView.swift; sourceTree = "<group>"; };
+		908AA520245D911DCB0D6BC4C6C2A591 /* MartyJunior-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MartyJunior-prefix.pch"; sourceTree = "<group>"; };
+		92B548075EDDD192DC9A07256EEFA3A0 /* Pods-MartyJuniorSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MartyJuniorSample-dummy.m"; sourceTree = "<group>"; };
+		93758F9BC0622E16F9C7953E3E41504F /* MisterFusion-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MisterFusion-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94DD1EDF72B26249678F86F10CDC05E7 /* SABlurImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SABlurImageView.swift; path = SABlurImageView/SABlurImageView.swift; sourceTree = "<group>"; };
+		952637CD122C9BE29311EC24F9A26E38 /* ReuseCellConfigure-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReuseCellConfigure-prefix.pch"; sourceTree = "<group>"; };
+		98DA216C29F7CEC42A055372C81E475D /* Pods-MartyJuniorSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MartyJuniorSample-umbrella.h"; sourceTree = "<group>"; };
+		9D395DD50BFB714C5F266169D7B69BFB /* MisterFusion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MisterFusion.framework; path = MisterFusion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A439E303634FB17CE1ECC53555F65CBF /* MisterFusion.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MisterFusion.modulemap; sourceTree = "<group>"; };
+		A83437693D367F606259A26436499D43 /* MJTableViewControllerDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJTableViewControllerDataSource.swift; sourceTree = "<group>"; };
+		B173107CCF045106F77A00AF9B6DF8DB /* Array+MisterFusion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+MisterFusion.swift"; path = "MisterFusion/Array+MisterFusion.swift"; sourceTree = "<group>"; };
+		B61C8DB8186E62F2B07F7946593B2338 /* MisterFusion-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MisterFusion-prefix.pch"; sourceTree = "<group>"; };
+		B826B79B392B058D3B63DD917DEFB923 /* Pods-MartyJuniorSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MartyJuniorSample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B8DB6CA8A653A3DA3936908F848073DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B9A59145A8896C5A28D57A945B5DFA97 /* MJTableViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MJTableViewControllerDelegate.swift; sourceTree = "<group>"; };
+		CFCE9780F11AA1741CFBBDBEE9F8FD76 /* MartyJunior-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MartyJunior-umbrella.h"; sourceTree = "<group>"; };
+		D852B098A0E59FCDA66814EFFFA9B81C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBA2C1CEE24E513F138C31FEBDEE2DB4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2693CFE4FEEFACE09F850488DF1CEA4 /* Pods-MartyJuniorSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MartyJuniorSample-frameworks.sh"; sourceTree = "<group>"; };
+		E3B627BEC25735E6B15FED49A5E2AB7D /* MartyJunior-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MartyJunior-dummy.m"; sourceTree = "<group>"; };
+		EBA38EDA4A07B4CFABE4E6504CD16389 /* Pods-MartyJuniorSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MartyJuniorSample.debug.xcconfig"; sourceTree = "<group>"; };
+		F0730B6B176AFFD305693C76CC810BF0 /* Pods-MartyJuniorSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MartyJuniorSample-resources.sh"; sourceTree = "<group>"; };
+		FDA8B04CA1DAEEAC4CBF9C7CBA87C156 /* ReuseCellConfigure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReuseCellConfigure.swift; path = ReuseCellConfigure/ReuseCellConfigure.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1774018C033A7276DD0D436A53B136DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D171FF6E83B93AD5EAB48E85A50B221 /* Foundation.framework in Frameworks */,
+				58DAD01AC52CC9D633692DFFD1B622F6 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AF168905FA852EEFE5B05A026D8CD9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E50E4B185E085FF5FD74CEB0532DAE5 /* Accelerate.framework in Frameworks */,
+				E2E39388F85DFB43BFD349B3F55E5820 /* Foundation.framework in Frameworks */,
+				21E8389BF7290A93B603B903D7C72FEB /* QuartzCore.framework in Frameworks */,
+				9744B1FBDA015442E27CFD40E6D45780 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53547F0C7FAD6691299838B94E8F98F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6B98456541EE608167B28116EE30246 /* Foundation.framework in Frameworks */,
+				E6318F37AD0AA7F7104FC37B285C902A /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6369D28EE6E9567FC5165C25D60A2062 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F83CDC804E36FD7F136F90B90B1345E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		657852F562C13930488F44DAF00EF01B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1B59467ADA429A01B0149506DBADC87 /* Foundation.framework in Frameworks */,
+				A161213456280F9B80D36DE381156A95 /* MisterFusion.framework in Frameworks */,
+				2BB77FD7495A16BDE1F0D705C4FAB243 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04805285BEFF77CF888D49153ACA26D7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBA2C1CEE24E513F138C31FEBDEE2DB4 /* Info.plist */,
+				02AAC5006ADA00E3370F46C7A6141556 /* SABlurImageView.modulemap */,
+				4EF080A64A4249365DF85724EFB2DB47 /* SABlurImageView.xcconfig */,
+				58477D55866B982FE59D0A5805681004 /* SABlurImageView-dummy.m */,
+				2EA7A972B063A8B763A29885BB960E95 /* SABlurImageView-prefix.pch */,
+				7C1EB01649961FD0232BDBF5EDED290F /* SABlurImageView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SABlurImageView";
+			sourceTree = "<group>";
+		};
+		3484838E9A1EE933606B930317182DF4 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD20858069BE3FD835488CE950F000AA /* MartyJunior */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		5C4BED23D2DB351E4B0CB5D9630B06CA /* SABlurImageView */ = {
+			isa = PBXGroup;
+			children = (
+				50273107A38373CDEE6F3F300166827C /* CATransition+Closure.swift */,
+				94DD1EDF72B26249678F86F10CDC05E7 /* SABlurImageView.swift */,
+				858A146F7D8F8620275ABD3EE98DE9F9 /* UIImage+BlurEffect.swift */,
+				04805285BEFF77CF888D49153ACA26D7 /* Support Files */,
+			);
+			name = SABlurImageView;
+			path = SABlurImageView;
+			sourceTree = "<group>";
+		};
+		632952A022739BE88AB3554561C4F872 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E1D6B621DA34D3BAD4EB11CECBCEC44 /* Info.plist */,
+				0D87B25036FDBF9C428A358CEF3F0010 /* ReuseCellConfigure.modulemap */,
+				7784198350EF1EDEBA34AF651AF7E6C4 /* ReuseCellConfigure.xcconfig */,
+				0E8C21357ED9CB17064544FA5C391537 /* ReuseCellConfigure-dummy.m */,
+				952637CD122C9BE29311EC24F9A26E38 /* ReuseCellConfigure-prefix.pch */,
+				19C9FC7AA703B92339485FE3E7D99D1B /* ReuseCellConfigure-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ReuseCellConfigure";
+			sourceTree = "<group>";
+		};
+		668F8E50ACCD064B685669CD4BF1E4FF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				864399C3995C08D37F9D4B4DA83333BF /* Info.plist */,
+				3B333CCC237559B42D03C09C4D5CC8EB /* MartyJunior.modulemap */,
+				7B45C6C739B08C392F596038CC97DC8F /* MartyJunior.xcconfig */,
+				E3B627BEC25735E6B15FED49A5E2AB7D /* MartyJunior-dummy.m */,
+				908AA520245D911DCB0D6BC4C6C2A591 /* MartyJunior-prefix.pch */,
+				CFCE9780F11AA1741CFBBDBEE9F8FD76 /* MartyJunior-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "MartyJuniorSample/Pods/Target Support Files/MartyJunior";
+			sourceTree = "<group>";
+		};
+		70931852AF5C4E8F7AF9E908ED61F163 /* Pods-MartyJuniorSample */ = {
+			isa = PBXGroup;
+			children = (
+				23FF4D54D9A9EB38DD12B68AC5BBB179 /* Info.plist */,
+				87C5C867DDC885107CC7819566618CE3 /* Pods-MartyJuniorSample.modulemap */,
+				B826B79B392B058D3B63DD917DEFB923 /* Pods-MartyJuniorSample-acknowledgements.markdown */,
+				668220EB7740AFED9982BDDF29F56B4E /* Pods-MartyJuniorSample-acknowledgements.plist */,
+				92B548075EDDD192DC9A07256EEFA3A0 /* Pods-MartyJuniorSample-dummy.m */,
+				E2693CFE4FEEFACE09F850488DF1CEA4 /* Pods-MartyJuniorSample-frameworks.sh */,
+				F0730B6B176AFFD305693C76CC810BF0 /* Pods-MartyJuniorSample-resources.sh */,
+				98DA216C29F7CEC42A055372C81E475D /* Pods-MartyJuniorSample-umbrella.h */,
+				EBA38EDA4A07B4CFABE4E6504CD16389 /* Pods-MartyJuniorSample.debug.xcconfig */,
+				1DE7A9037D01870CAE72CAA8FF8A6A54 /* Pods-MartyJuniorSample.release.xcconfig */,
+			);
+			name = "Pods-MartyJuniorSample";
+			path = "Target Support Files/Pods-MartyJuniorSample";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				3484838E9A1EE933606B930317182DF4 /* Development Pods */,
+				843B2891B58701BB407C301E79B82F48 /* Frameworks */,
+				940446695E81E7EE5414DF6917E201C8 /* Pods */,
+				C0116DCFD8050C6D747A4BCD9FD5D995 /* Products */,
+				E9FD2F84A0B85FD65E1B687ACE48F8C9 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		843B2891B58701BB407C301E79B82F48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				120C454255883818FA9A95517AF5FE3B /* MisterFusion.framework */,
+				910F3CADE787F9CB606C784516E5881D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		910F3CADE787F9CB606C784516E5881D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				823D30D5451B92DB71E5E3E9F845C3DA /* Accelerate.framework */,
+				B8DB6CA8A653A3DA3936908F848073DB /* Foundation.framework */,
+				2066A3CE14560F28EF32B7FD9DB36A58 /* QuartzCore.framework */,
+				45FAADD7BBCD5AD15BFD5EE2F07FEC70 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		940446695E81E7EE5414DF6917E201C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDC6CA38C9A1E21AB5049C8A4C72FF32 /* MisterFusion */,
+				A53596A6A90805497F9FACC2B8C4F9FE /* ReuseCellConfigure */,
+				5C4BED23D2DB351E4B0CB5D9630B06CA /* SABlurImageView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A53596A6A90805497F9FACC2B8C4F9FE /* ReuseCellConfigure */ = {
+			isa = PBXGroup;
+			children = (
+				FDA8B04CA1DAEEAC4CBF9C7CBA87C156 /* ReuseCellConfigure.swift */,
+				632952A022739BE88AB3554561C4F872 /* Support Files */,
+			);
+			name = ReuseCellConfigure;
+			path = ReuseCellConfigure;
+			sourceTree = "<group>";
+		};
+		C0116DCFD8050C6D747A4BCD9FD5D995 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36CD9C63B63CFCA8FF6700AD8C63D1AA /* MartyJunior.framework */,
+				9D395DD50BFB714C5F266169D7B69BFB /* MisterFusion.framework */,
+				733D43DC773509C4CD7B2DCD72FCF136 /* Pods_MartyJuniorSample.framework */,
+				0269FF93E1D75FDF70FE9687436CDB08 /* ReuseCellConfigure.framework */,
+				76D21921FF704107D4D8B688BB85D49E /* SABlurImageView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA41FAB4FF7A454FBB5BF5AA4A6A89A3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D852B098A0E59FCDA66814EFFFA9B81C /* Info.plist */,
+				A439E303634FB17CE1ECC53555F65CBF /* MisterFusion.modulemap */,
+				0E419DF5CA4C11DB0167014AE6EC4868 /* MisterFusion.xcconfig */,
+				44DB6A4E0F33B424D0D500298E62ABFB /* MisterFusion-dummy.m */,
+				B61C8DB8186E62F2B07F7946593B2338 /* MisterFusion-prefix.pch */,
+				93758F9BC0622E16F9C7953E3E41504F /* MisterFusion-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MisterFusion";
+			sourceTree = "<group>";
+		};
+		CD20858069BE3FD835488CE950F000AA /* MartyJunior */ = {
+			isa = PBXGroup;
+			children = (
+				ED144926287873C11865505032BCBFAC /* MartyJunior */,
+				668F8E50ACCD064B685669CD4BF1E4FF /* Support Files */,
+			);
+			name = MartyJunior;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		DDC6CA38C9A1E21AB5049C8A4C72FF32 /* MisterFusion */ = {
+			isa = PBXGroup;
+			children = (
+				B173107CCF045106F77A00AF9B6DF8DB /* Array+MisterFusion.swift */,
+				7BACB91C6DB4DBB7346CC167F2E0EE9C /* MisterFusion.swift */,
+				1435917FF672C0D825682E94E1098E24 /* MisterFusionExtension.swift */,
+				CA41FAB4FF7A454FBB5BF5AA4A6A89A3 /* Support Files */,
+			);
+			name = MisterFusion;
+			path = MisterFusion;
+			sourceTree = "<group>";
+		};
+		E9FD2F84A0B85FD65E1B687ACE48F8C9 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				70931852AF5C4E8F7AF9E908ED61F163 /* Pods-MartyJuniorSample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		ED144926287873C11865505032BCBFAC /* MartyJunior */ = {
+			isa = PBXGroup;
+			children = (
+				7AC6A6FDCD210966993AF5AD71108FFA /* MisterFusion+MartyJunior.swift */,
+				43839808DAF2234E2AEB14B26B624EE3 /* MJContentView.swift */,
+				8BFE3D930FADD2362D492A1BB11A07D9 /* MJNavigationView.swift */,
+				7E85116D8D66D874B1D16F6104DF62DB /* MJTableViewController.swift */,
+				A83437693D367F606259A26436499D43 /* MJTableViewControllerDataSource.swift */,
+				B9A59145A8896C5A28D57A945B5DFA97 /* MJTableViewControllerDelegate.swift */,
+				4779170121AFAB067FA321C46691E358 /* MJTableViewTopCell.swift */,
+				3A30800481C187C957A47568EE7EFCA3 /* MJViewController.swift */,
+				7EB310C52F14510E02D28B4E508672B7 /* MJViewControllerDataSource.swift */,
+				3D838ED276E92566EE1D00AB82FA5B95 /* MJViewControllerDelegate.swift */,
+				626DA46AD865A6E93C834821AA87C1B6 /* NSIndexPath+String.swift */,
+			);
+			name = MartyJunior;
+			path = MartyJunior;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0F37FBC3490FD0D1D89D4744E918A9EA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				457F31A4FD7C1B1B108D000F4ACCB177 /* ReuseCellConfigure-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EB9BDEAFCC33342EBB229A1B43B5879 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5391A4C9C2CA32346013865EE6E7D130 /* Pods-MartyJuniorSample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6988E28CF052EBCF4013BA55DE364C60 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				128CE4509FC2FF4850B2E472396069AB /* MisterFusion-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B28B1A69707200D8BF5E8722D57FCFA6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FEB7801510E41363115A2D8D3005F7E /* SABlurImageView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0363AC2F05A944A8114815EC550D58C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E17D07D071B4AEABCACB3922ADA8DE2C /* MartyJunior-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		043C3E315C60E7590C9A30EC6FCFB962 /* SABlurImageView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CBDE60D2776CA595EF4523E79B5C8E5 /* Build configuration list for PBXNativeTarget "SABlurImageView" */;
+			buildPhases = (
+				1A346135E0FEB644BAF028B907C3433E /* Sources */,
+				1AF168905FA852EEFE5B05A026D8CD9A /* Frameworks */,
+				B28B1A69707200D8BF5E8722D57FCFA6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SABlurImageView;
+			productName = SABlurImageView;
+			productReference = 76D21921FF704107D4D8B688BB85D49E /* SABlurImageView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7B2CCA093145AAAA42B7D40EC2AA4EB3 /* MartyJunior */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 276031EF0356ED296A81237011A982BC /* Build configuration list for PBXNativeTarget "MartyJunior" */;
+			buildPhases = (
+				60F455CE19AFA46D85FEE2FE9327A770 /* Sources */,
+				657852F562C13930488F44DAF00EF01B /* Frameworks */,
+				D0363AC2F05A944A8114815EC550D58C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F487A79E5DF6E627B58AB48D12951EF /* PBXTargetDependency */,
+			);
+			name = MartyJunior;
+			productName = MartyJunior;
+			productReference = 36CD9C63B63CFCA8FF6700AD8C63D1AA /* MartyJunior.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B437B138EE5411023B90EC0C93EA4DB6 /* Pods-MartyJuniorSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B1A555D73CDC8CCC0EEF2639D654BA3 /* Build configuration list for PBXNativeTarget "Pods-MartyJuniorSample" */;
+			buildPhases = (
+				78F2C3A5E5392557A9744EBC3CAA39CB /* Sources */,
+				6369D28EE6E9567FC5165C25D60A2062 /* Frameworks */,
+				5EB9BDEAFCC33342EBB229A1B43B5879 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6DE79614B7D980F3CC2BE92AD61855A /* PBXTargetDependency */,
+				12828CFD7AEF6CD0A384731056375E36 /* PBXTargetDependency */,
+				120FE07E38A14ECC343A07387F8075F7 /* PBXTargetDependency */,
+				4E2D4CA1504675903F58C9DFBB3616A4 /* PBXTargetDependency */,
+			);
+			name = "Pods-MartyJuniorSample";
+			productName = "Pods-MartyJuniorSample";
+			productReference = 733D43DC773509C4CD7B2DCD72FCF136 /* Pods_MartyJuniorSample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E7427CB4111B9F71D12ACDCAE516DF0E /* MisterFusion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95B50D77607FD3B4C557E0BF643F4CFB /* Build configuration list for PBXNativeTarget "MisterFusion" */;
+			buildPhases = (
+				70BB71A09C452E846B9FBABB04C36048 /* Sources */,
+				1774018C033A7276DD0D436A53B136DA /* Frameworks */,
+				6988E28CF052EBCF4013BA55DE364C60 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MisterFusion;
+			productName = MisterFusion;
+			productReference = 9D395DD50BFB714C5F266169D7B69BFB /* MisterFusion.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E7A2B522D0A7B2CA6831C4739DCFB2A9 /* ReuseCellConfigure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DBD4E447E8412460BE096A89BEBB9C3 /* Build configuration list for PBXNativeTarget "ReuseCellConfigure" */;
+			buildPhases = (
+				CF406D6D885F6AC2E10CC7F4C8B7DD9D /* Sources */,
+				53547F0C7FAD6691299838B94E8F98F2 /* Frameworks */,
+				0F37FBC3490FD0D1D89D4744E918A9EA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReuseCellConfigure;
+			productName = ReuseCellConfigure;
+			productReference = 0269FF93E1D75FDF70FE9687436CDB08 /* ReuseCellConfigure.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C0116DCFD8050C6D747A4BCD9FD5D995 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B2CCA093145AAAA42B7D40EC2AA4EB3 /* MartyJunior */,
+				E7427CB4111B9F71D12ACDCAE516DF0E /* MisterFusion */,
+				B437B138EE5411023B90EC0C93EA4DB6 /* Pods-MartyJuniorSample */,
+				E7A2B522D0A7B2CA6831C4739DCFB2A9 /* ReuseCellConfigure */,
+				043C3E315C60E7590C9A30EC6FCFB962 /* SABlurImageView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A346135E0FEB644BAF028B907C3433E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABDE6A8F5133770CE2AC185ECF863A32 /* CATransition+Closure.swift in Sources */,
+				4ED92B74B1BEC758A405F944B521A5DC /* SABlurImageView-dummy.m in Sources */,
+				8FA1346FA1C80AF375E154E8569641A8 /* SABlurImageView.swift in Sources */,
+				27BC50DAB5DB4D56E57F40CA00921AC7 /* UIImage+BlurEffect.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60F455CE19AFA46D85FEE2FE9327A770 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79E0596DB7CFF6B1BCF7B4857D63E487 /* MartyJunior-dummy.m in Sources */,
+				A9040611AE95024C669E07576C93BD55 /* MisterFusion+MartyJunior.swift in Sources */,
+				0603455250AB405FD46B076D25B2F0CA /* MJContentView.swift in Sources */,
+				A320954337459E9D1F90A189E2A32DE6 /* MJNavigationView.swift in Sources */,
+				58321D82116935652BD6CC49171C445D /* MJTableViewController.swift in Sources */,
+				7175E7A019EAA0979335D7DA1E5393CB /* MJTableViewControllerDataSource.swift in Sources */,
+				BDFBCD07A95F268E5FF28C47D5534133 /* MJTableViewControllerDelegate.swift in Sources */,
+				BD065DC58E6BEE5B1DB12CDA6620F2FB /* MJTableViewTopCell.swift in Sources */,
+				CE813B135DCC03F454BC7F61D503E5C5 /* MJViewController.swift in Sources */,
+				77C318512DBD1DE4CA504D005B6631C3 /* MJViewControllerDataSource.swift in Sources */,
+				D5D168DE9850E8DC24C9B0B9723AF723 /* MJViewControllerDelegate.swift in Sources */,
+				ECB479EBC4DC05BD3B3D0E18D8A31685 /* NSIndexPath+String.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70BB71A09C452E846B9FBABB04C36048 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF62072FA870205A7F5E1D7E30F4A23A /* Array+MisterFusion.swift in Sources */,
+				19A3E9C70C899170B934A54674FCB94F /* MisterFusion-dummy.m in Sources */,
+				2E4DC2E228686D7E9A4996FB293D5CA9 /* MisterFusion.swift in Sources */,
+				9832C84429A6016AB5A6F5EE045412C1 /* MisterFusionExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78F2C3A5E5392557A9744EBC3CAA39CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF1221393AD1D8EC58E76539186C86C8 /* Pods-MartyJuniorSample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF406D6D885F6AC2E10CC7F4C8B7DD9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8E8D59D7EDC572F695FB034449ECF13 /* ReuseCellConfigure-dummy.m in Sources */,
+				899490EFB0A981455F09477755787326 /* ReuseCellConfigure.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		120FE07E38A14ECC343A07387F8075F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ReuseCellConfigure;
+			target = E7A2B522D0A7B2CA6831C4739DCFB2A9 /* ReuseCellConfigure */;
+			targetProxy = FA39D26BF0674033EEE65F68BF36ACF8 /* PBXContainerItemProxy */;
+		};
+		12828CFD7AEF6CD0A384731056375E36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MisterFusion;
+			target = E7427CB4111B9F71D12ACDCAE516DF0E /* MisterFusion */;
+			targetProxy = 846355268896A9CD0199E9259089548A /* PBXContainerItemProxy */;
+		};
+		4E2D4CA1504675903F58C9DFBB3616A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SABlurImageView;
+			target = 043C3E315C60E7590C9A30EC6FCFB962 /* SABlurImageView */;
+			targetProxy = 1437FE0DCD56A91F9E479E392E778E1E /* PBXContainerItemProxy */;
+		};
+		5F487A79E5DF6E627B58AB48D12951EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MisterFusion;
+			target = E7427CB4111B9F71D12ACDCAE516DF0E /* MisterFusion */;
+			targetProxy = 0E393477499B4B0C6342B55835C6E260 /* PBXContainerItemProxy */;
+		};
+		C6DE79614B7D980F3CC2BE92AD61855A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MartyJunior;
+			target = 7B2CCA093145AAAA42B7D40EC2AA4EB3 /* MartyJunior */;
+			targetProxy = 4152C73F73A9D13062CC0BE52116AEF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		0D679AD4F344F2AF48946609F6D63F6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7784198350EF1EDEBA34AF651AF7E6C4 /* ReuseCellConfigure.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ReuseCellConfigure/ReuseCellConfigure-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReuseCellConfigure/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ReuseCellConfigure/ReuseCellConfigure.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ReuseCellConfigure;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		15DF07BF2EC39E3C40B42D10B24D5DAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E419DF5CA4C11DB0167014AE6EC4868 /* MisterFusion.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MisterFusion/MisterFusion-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MisterFusion/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MisterFusion/MisterFusion.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MisterFusion;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2260638901DE4779A8349DA6D2EBAAF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E419DF5CA4C11DB0167014AE6EC4868 /* MisterFusion.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MisterFusion/MisterFusion-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MisterFusion/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MisterFusion/MisterFusion.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MisterFusion;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3E29FC5A5E10A5AD2EE53A0BEA45DA24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DE7A9037D01870CAE72CAA8FF8A6A54 /* Pods-MartyJuniorSample.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MartyJuniorSample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MartyJuniorSample/Pods-MartyJuniorSample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MartyJuniorSample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		41FEB7CE93BBAC5D209D7A37B303FB0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBA38EDA4A07B4CFABE4E6504CD16389 /* Pods-MartyJuniorSample.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MartyJuniorSample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MartyJuniorSample/Pods-MartyJuniorSample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MartyJuniorSample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEE2F1458E2E1C74DB39D39EDF0C9E76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EF080A64A4249365DF85724EFB2DB47 /* SABlurImageView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SABlurImageView/SABlurImageView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SABlurImageView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SABlurImageView/SABlurImageView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SABlurImageView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D36C27A114B7BE64070E4B5728EE77B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B45C6C739B08C392F596038CC97DC8F /* MartyJunior.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MartyJunior/MartyJunior-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MartyJunior/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MartyJunior/MartyJunior.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MartyJunior;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DCD5438DB68F5BE843726ECFB29A6D97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7784198350EF1EDEBA34AF651AF7E6C4 /* ReuseCellConfigure.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ReuseCellConfigure/ReuseCellConfigure-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReuseCellConfigure/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ReuseCellConfigure/ReuseCellConfigure.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ReuseCellConfigure;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E033777ABEBAC978F0F9C05E75A90760 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B45C6C739B08C392F596038CC97DC8F /* MartyJunior.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MartyJunior/MartyJunior-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MartyJunior/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MartyJunior/MartyJunior.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MartyJunior;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FA197915A3AC27A1B257CC9C69415063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EF080A64A4249365DF85724EFB2DB47 /* SABlurImageView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SABlurImageView/SABlurImageView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SABlurImageView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SABlurImageView/SABlurImageView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SABlurImageView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		276031EF0356ED296A81237011A982BC /* Build configuration list for PBXNativeTarget "MartyJunior" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E033777ABEBAC978F0F9C05E75A90760 /* Debug */,
+				D36C27A114B7BE64070E4B5728EE77B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B1A555D73CDC8CCC0EEF2639D654BA3 /* Build configuration list for PBXNativeTarget "Pods-MartyJuniorSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41FEB7CE93BBAC5D209D7A37B303FB0D /* Debug */,
+				3E29FC5A5E10A5AD2EE53A0BEA45DA24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95B50D77607FD3B4C557E0BF643F4CFB /* Build configuration list for PBXNativeTarget "MisterFusion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15DF07BF2EC39E3C40B42D10B24D5DAB /* Debug */,
+				2260638901DE4779A8349DA6D2EBAAF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CBDE60D2776CA595EF4523E79B5C8E5 /* Build configuration list for PBXNativeTarget "SABlurImageView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA197915A3AC27A1B257CC9C69415063 /* Debug */,
+				AEE2F1458E2E1C74DB39D39EDF0C9E76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DBD4E447E8412460BE096A89BEBB9C3 /* Build configuration list for PBXNativeTarget "ReuseCellConfigure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCD5438DB68F5BE843726ECFB29A6D97 /* Debug */,
+				0D679AD4F344F2AF48946609F6D63F6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

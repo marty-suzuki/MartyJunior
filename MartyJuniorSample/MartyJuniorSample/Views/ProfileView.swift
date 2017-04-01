@@ -11,12 +11,12 @@ import SABlurImageView
 
 extension NSObject {
     static var className: String {
-        return NSStringFromClass(self).components(separatedBy: ".").last! as String
+        return String(describing: self)
     }
 }
 
 extension UIView {
-    static var Nib: UINib {
+    static var nib: UINib {
         return UINib(nibName: className, bundle: nil)
     }
 }

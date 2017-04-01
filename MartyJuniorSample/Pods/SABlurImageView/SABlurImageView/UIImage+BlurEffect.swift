@@ -11,21 +11,22 @@ import QuartzCore
 import Accelerate
 
 extension UIImage {
-    class func blurEffect(_ cgImage: CGImage, boxSize: CGFloat) -> UIImage! {
-        return UIImage(cgImage: cgImage.blurEffect(boxSize))
+    class func blurEffect(_ cgImage: CGImage, boxSize: CGFloat) -> UIImage? {
+        return UIImage(cgImage: (cgImage.blurEffect(boxSize) ?? cgImage))
     }
     
-    func blurEffect(_ boxSize: CGFloat) -> UIImage! {
-        return UIImage(cgImage: bluredCGImage(boxSize))
+    func blurEffect(_ boxSize: CGFloat) -> UIImage? {
+        guard let imageRef = bluredCGImage(boxSize) else { return nil }
+        return UIImage(cgImage: imageRef)
     }
     
-    func bluredCGImage(_ boxSize: CGFloat) -> CGImage! {
-        return cgImage!.blurEffect(boxSize)
+    func bluredCGImage(_ boxSize: CGFloat) -> CGImage? {
+        return cgImage?.blurEffect(boxSize)
     }
 }
 
 extension CGImage {
-    func blurEffect(_ boxSize: CGFloat) -> CGImage! {
+    func blurEffect(_ boxSize: CGFloat) -> CGImage? {
         
         let boxSize = boxSize - (boxSize.truncatingRemainder(dividingBy: 2)) + 1
         
@@ -36,7 +37,7 @@ extension CGImage {
         let rowBytes = self.bytesPerRow
         
         let inBitmapData = inProvider?.data
-        let inData = UnsafeMutablePointer<Void>(CFDataGetBytePtr(inBitmapData))
+        let inData = UnsafeMutableRawPointer(mutating: CFDataGetBytePtr(inBitmapData))
         var inBuffer = vImage_Buffer(data: inData, height: height, width: width, rowBytes: rowBytes)
         
         let outData = malloc(self.bytesPerRow * self.height)
@@ -47,7 +48,7 @@ extension CGImage {
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let context = CGContext(data: outBuffer.data, width: Int(outBuffer.width), height: Int(outBuffer.height), bitsPerComponent: 8, bytesPerRow: outBuffer.rowBytes, space: colorSpace, bitmapInfo: self.bitmapInfo.rawValue)
         let imageRef = context?.makeImage()
-        
+
         free(outData)
         
         return imageRef

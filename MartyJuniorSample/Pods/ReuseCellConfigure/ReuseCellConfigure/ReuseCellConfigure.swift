@@ -10,13 +10,30 @@ import UIKit
 
 //MARK: - UITableView Extension
 public extension UITableView {
-    public func dequeueReusableCell<T where T: UITableViewCell>(withIdentifier identifier: String, to classType: T.Type, @noescape configure: (T) -> Void) -> T? {
+    @available(*, deprecated:7.0, renamed: "dequeueReusableCell(withIdentifier:configure:)")
+    public func dequeueReusableCell<T: UITableViewCell>(withIdentifier identifier: String, to classType: T.Type, configure: (T) -> Void) -> T? {
         guard let cell = dequeueReusableCell(withIdentifier: identifier) as? T else { return nil }
         configure(cell)
         return cell
     }
     
-    public func dequeueReusableCell<T where T: UITableViewCell>(withIdentifier identifier: String, for indexPath: IndexPath, to classType: T.Type, @noescape configure: (T) -> Void) -> UITableViewCell {
+    @available(*, introduced:7.0)
+    public func dequeueReusableCell<T: UITableViewCell>(withIdentifier identifier: String, configure: (T) -> Void) -> T? {
+        guard let cell = dequeueReusableCell(withIdentifier: identifier) as? T else { return nil }
+        configure(cell)
+        return cell
+    }
+    
+    @available(*, deprecated:7.0, renamed: "dequeueReusableCell(withIdentifier:forIndexPath:configure:)")
+    public func dequeueReusableCell<T: UITableViewCell>(withIdentifier identifier: String, for indexPath: IndexPath, to classType: T.Type, configure: (T) -> Void) -> UITableViewCell {
+        let reusableCell = dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        guard let cell = reusableCell as? T else { return reusableCell }
+        configure(cell)
+        return cell
+    }
+    
+    @available(*, introduced:7.0)
+    public func dequeueReusableCell<T: UITableViewCell>(withIdentifier identifier: String, for indexPath: IndexPath, configure: (T) -> Void) -> UITableViewCell {
         let reusableCell = dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         guard let cell = reusableCell as? T else { return reusableCell }
         configure(cell)
@@ -30,7 +47,7 @@ public extension UICollectionView {
         case header
         case footer
         
-        init?(rawValue: String) {
+        public init?(rawValue: String) {
             switch rawValue {
             case UICollectionElementKindSectionHeader: self = .header
             case UICollectionElementKindSectionFooter: self = .footer
@@ -38,7 +55,7 @@ public extension UICollectionView {
             }
         }
         
-        var value: String {
+        public var value: String {
             switch self {
             case .header: return UICollectionElementKindSectionHeader
             case .footer: return UICollectionElementKindSectionFooter
@@ -58,14 +75,32 @@ public extension UICollectionView {
         return dequeueReusableSupplementaryView(ofKind: elementKind.value, withReuseIdentifier: identifier, for: indexPath)
     }
     
-    public func dequeueReusableSupplementaryView<T where T: UICollectionReusableView>(ofKind elementKind: ElementKind, withReuseIdentifier identifier: String, for indexPath: IndexPath, to classType: T.Type, @noescape configure: (T) -> Void) -> UICollectionReusableView {
+    @available(*, deprecated:7.0, renamed: "dequeueReusableSupplementaryView(ofKind:withReuseIdentifier:forIndexPath:configure:)")
+    public func dequeueReusableSupplementaryView<T: UICollectionReusableView>(ofKind elementKind: ElementKind, withReuseIdentifier identifier: String, for indexPath: IndexPath, to classType: T.Type, configure: (T) -> Void) -> UICollectionReusableView {
         let reusableView = dequeueReusableSupplementaryView(ofKind: elementKind, withReuseIdentifier: identifier, for: indexPath)
         guard let view = reusableView as? T else { return reusableView }
         configure(view)
         return view
     }
     
-    public func dequeueReusableCell<T where T: UICollectionViewCell>(withReuseIdentifier identifier: String, for indexPath: IndexPath, to classType: T.Type, @noescape configure: (T) -> Void) -> UICollectionViewCell {
+    @available(*, introduced:7.0)
+    public func dequeueReusableSupplementaryView<T: UICollectionReusableView>(ofKind elementKind: ElementKind, withReuseIdentifier identifier: String, for indexPath: IndexPath, configure: (T) -> Void) -> UICollectionReusableView  {
+        let reusableView = dequeueReusableSupplementaryView(ofKind: elementKind, withReuseIdentifier: identifier, for: indexPath)
+        guard let view = reusableView as? T else { return reusableView }
+        configure(view)
+        return view
+    }
+
+    @available(*, deprecated:7.0, renamed: "dequeueReusableCell(withReuseIdentifier:forIndexPath:configure:)")
+    public func dequeueReusableCell<T: UICollectionViewCell>(withReuseIdentifier identifier: String, for indexPath: IndexPath, to classType: T.Type, configure: (T) -> Void) -> UICollectionViewCell {
+        let reusableCell = dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
+        guard let cell = reusableCell as? T else { return reusableCell }
+        configure(cell)
+        return cell
+    }
+
+    @available(*, introduced:7.0)
+    public func dequeueReusableCell<T: UICollectionViewCell>(withReuseIdentifier identifier: String, for indexPath: IndexPath, configure: (T) -> Void) -> UICollectionViewCell {
         let reusableCell = dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
         guard let cell = reusableCell as? T else { return reusableCell }
         configure(cell)

@@ -17,5 +17,10 @@
   },
   "requires_arc": true,
   "source_files": "MartyJunior/*.{swift}",
-  "frameworks": "UIKit"
+  "frameworks": "UIKit",
+  "dependencies": {
+    "MisterFusion": [
+
+    ]
+  }
 }

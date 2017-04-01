@@ -61,7 +61,7 @@ class MJContentView: UIView {
                 userDefinedTabView.height |==| userDefinedTabView.frame.height
             )
         } else {
-            segmentedControl.addTarget(self, action: #selector(self.dynamicType.didChangeValueOfSegmentedControl(_:)), for: .valueChanged)
+            segmentedControl.addTarget(self, action: #selector(MJContentView.didChangeValueOfSegmentedControl(_:)), for: .valueChanged)
             
             tabContainerView.addLayoutSubview(segmentedControl, andConstraints:
                 segmentedControl.left |+| 8,
@@ -71,7 +71,7 @@ class MJContentView: UIView {
                 segmentedControl.height |==| 34
             )
             
-            tabContainerView.backgroundColor = .white()
+            tabContainerView.backgroundColor = .white
         }
         
         addLayoutSubview(tabContainerView, andConstraints:

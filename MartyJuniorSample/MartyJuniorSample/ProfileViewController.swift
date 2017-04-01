@@ -12,28 +12,28 @@ import ReuseCellConfigure
 
 class ProfileViewController: MJViewController {
     //MARK: - Properties
-    private let layoutManager = ProfileViewLayoutManager()
-    private let profileView = ProfileView.Nib.instantiate(withOwner: nil, options: nil).first as! ProfileView
-    private let tabView = ProfileTabView.Nib.instantiate(withOwner: nil, options: nil).first as! ProfileTabView
+    fileprivate let layoutManager = ProfileViewLayoutManager()
+    fileprivate let profileView = ProfileView.nib.instantiate(withOwner: nil, options: nil).first as! ProfileView
+    fileprivate let tabView = ProfileTabView.nib.instantiate(withOwner: nil, options: nil).first as! ProfileTabView
     
     //MARK: - Life cycle
     override func viewWillSetupForMartyJunior() {
         super.viewWillSetupForMartyJunior()
         delegate = self
         dataSource = self
-        registerNibToAllTableViews(ProfileTweetCell.Nib, forCellReuseIdentifier: ProfileTweetCell.ReuseIdentifier)
-        registerNibToAllTableViews(ProfileUserCell.Nib, forCellReuseIdentifier: ProfileUserCell.ReuseIdentifier)
+        registerNibToAllTableViews(ProfileTweetCell.nib, forCellReuseIdentifier: ProfileTweetCell.ReuseIdentifier)
+        registerNibToAllTableViews(ProfileUserCell.nib, forCellReuseIdentifier: ProfileUserCell.ReuseIdentifier)
         
         tabView.delegate = self
         
-        title = "@szk-atmosphere"
+        title = "@marty-suzuki"
     }
     
     override func viewDidSetupForMartyJunior() {
         super.viewDidSetupForMartyJunior()
         navigationView?.titleLabel.alpha = 0
         navigationView?.rightButton = UIButton(type: .infoDark)
-        navigationView?.rightButton?.tintColor = .white()
+        navigationView?.rightButton?.tintColor = .white
     }
     
     override func viewDidLoad() {
@@ -44,7 +44,7 @@ class ProfileViewController: MJViewController {
         super.viewWillAppear(animated)
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
 
@@ -68,11 +68,11 @@ extension ProfileViewController: MJViewControllerDataSource {
     }
     
     func mjViewControllerNumberOfTabs(_ viewController: MJViewController) -> Int {
-        return ProfileViewLayoutManager.TabTypes.count
+        return ProfileViewLayoutManager.tabTypes.count
     }
     
     func mjViewControllerTitlesForTab(_ viewController: MJViewController) -> [String] {
-        return ProfileViewLayoutManager.TabTypes.map { $0.rawValue }
+        return ProfileViewLayoutManager.tabTypes.map { $0.rawValue }
     }
     
     func mjViewController(_ viewController: MJViewController, targetIndex: Int, tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
